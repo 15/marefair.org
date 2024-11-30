@@ -1,0 +1,66 @@
+---
+import { getImage } from "astro:assets";
+import bgImage from "@assets/backgrounds/bg-4000lighter.png";
+const optimizedBackgroundImage = await getImage({
+  src: bgImage,
+  format: "avif",
+  width: 1080,
+});
+
+import hoof1 from "@assets/hoof/fair_flyer.png";
+import card1 from "@assets/cards/mare_fair_postcard_1.png";
+
+const [optimizedHoof1, optimizedCard1] = await Promise.all(
+  [hoof1, card1].map(async (v, i) => {
+    if (i === 0) {
+      return getImage({
+        src: v,
+        format: "avif",
+        width: 300,
+      });
+    } else {
+      return getImage({
+        src: v,
+        format: "avif",
+        height: 600,
+      });
+    }
+  })
+);
+
+import ornament3 from "@assets/ornaments/DeskItemsMF24-InkWell.png";
+import ornament8 from "@assets/ornaments/DeskItemsMF24-Scroll.png";
+
+const [optimizedOrnament3, optimizedOrnament8] = await Promise.all(
+  [ornament3, ornament8].map(async (v) =>
+    getImage({
+      src: v,
+      format: "avif",
+      width: 400,
+    })
+  )
+);
+---
+
+<link
+  rel="preload"
+  href={optimizedBackgroundImage.src}
+  as="image"
+  fetchpriority="high"
+/>
+
+<link rel="preload" href={optimizedHoof1.src} as="image" fetchpriority="high" />
+
+<link
+  rel="preload"
+  href={optimizedOrnament3.src}
+  as="image"
+  fetchpriority="high"
+/>
+<link
+  rel="preload"
+  href={optimizedOrnament8.src}
+  as="image"
+  fetchpriority="high"
+/>
+<link rel="preload" href={optimizedCard1.src} as="image" fetchpriority="high" />

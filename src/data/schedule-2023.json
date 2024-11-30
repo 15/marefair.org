@@ -1,0 +1,1000 @@
+[
+  {
+    "context": "E",
+    "context-id": 87,
+    "room-or-table-id": "Mare Gallery",
+    "start-time": "2023-09-29 13:00:00",
+    "end-time": "2023-09-29 17:59:00",
+    "business-name": "Lunar Harmony",
+    "application-name": "Mare Gallery",
+    "Panel description": [
+      "Looking for some culture? Stop by the Mare Gallery to see a bespoke collection of first-class, mare-centric art pieces handcrafted by some of the most beloved artists known to /mlp/. Most of these pieces will be sold to private collectors (you?) at the charity auction, so come feast your eyes while you can! "
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 87,
+    "room-or-table-id": "Mare Gallery",
+    "start-time": "2023-09-30 11:00:00",
+    "end-time": "2023-09-30 18:59:00",
+    "business-name": "Lunar Harmony",
+    "application-name": "Mare Gallery",
+    "Panel description": [
+      "Looking for some culture? Stop by the Mare Gallery to see a bespoke collection of first-class, mare-centric art pieces handcrafted by some of the most beloved artists known to /mlp/. Most of these pieces will be sold to private collectors (you?) at the charity auction, so come feast your eyes while you can! "
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 25,
+    "room-or-table-id": "Mare Lair",
+    "start-time": "2023-09-29 13:30:00",
+    "end-time": "2023-09-29 14:59:00",
+    "business-name": "PurpPone",
+    "application-name": "Mare-itory Control: IRL",
+    "Panel description": [
+      "The IRL version of your favorite online convention mass drawing game! Represent your favorite mare by drawing her on a giant shared canvas. The mare that covers the most of it at the end is the one with the most dedicated fans and worthy husbandos ^:)",
+      "All skill levels welcome! Beginners encouraged!"
+    ],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 2,
+    "room-or-table-id": "Mare Lair",
+    "start-time": "2023-09-29 17:30:00",
+    "end-time": "2023-09-29 18:59:00",
+    "business-name": "Buttercupsaiyan",
+    "application-name": "How to Draw a Pony",
+    "Panel description": [
+      "A mixture of how to draw a cartoon and we'll be covering how to draw pony anatomy.  We'll cover basic anatomy tips with snouts, hooves, tail placement, ears, eyes, and tips on drawing convincing anatomy and lines."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 12,
+    "room-or-table-id": "Mare Lair",
+    "start-time": "2023-09-29 21:00:00",
+    "end-time": "2023-09-29 21:59:00",
+    "business-name": "BlondieAnon",
+    "application-name": "Horsewords and (You): Characters & Motivation",
+    "Panel description": [
+      "We all know what writing is, and we all know the high school terms and definitions... but do we know how to make it feel real? From epic adventures to <q>Seinfeld but with ponies,</q> they all focus on characters. Let's find out what makes a mare."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 88,
+    "room-or-table-id": "Mare Lair",
+    "start-time": "2023-09-29 22:30:00",
+    "end-time": "2023-09-30 00:29:00",
+    "business-name": "Party_Grunt (PlushWaifus)",
+    "application-name": "Plushie Meetup",
+    "Panel description": [
+      "Have a cool pony plush and want to show it off?  We'll pose our plushies on some tables and take some pictures.  It'll be fun, I promise.",
+      "(*Promise is not guaranteed.)"
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 60,
+    "room-or-table-id": "Mare Lair",
+    "start-time": "2023-09-30 13:00:00",
+    "end-time": "2023-09-30 13:29:00",
+    "business-name": "JCV / jayceevee",
+    "application-name": "Stallion Stable",
+    "Panel description": [
+      "Stallions? At <strong>MY</strong> Mare Fair?! It's more likely than you think! Come and talk about the other half and why you love them and maybe even spam us about your favorite secondary character/background character/OC/whatever the fuck that you personally really dig. All the stallions. Bonus points if they've got a great mane."
+    ],
+    "What rating would you give your panel?": [
+      "explicit - we're going to be showing clop images and/or reading actual clop fics"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 29,
+    "room-or-table-id": "Mare Lair",
+    "start-time": "2023-09-30 14:29:00",
+    "end-time": "2023-09-30 14:59:00",
+    "business-name": "Twifag",
+    "application-name": "Anon Story Hour: Zigger Beans",
+    "Panel description": [
+      "Join an anonymous twifag for a special reading of the classic tale Zigger Beans by Diane Redfield Massie.  The book will be auctioned off during the charity auction!"
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 26,
+    "room-or-table-id": "Mare Lair",
+    "start-time": "2023-09-30 18:00:00",
+    "end-time": "2023-09-30 18:59:00",
+    "business-name": "Anonymous",
+    "application-name": "MANDATORY ANONFILLY INSPECTION",
+    "Panel description": [
+      "<strong>ATTENTION ANONFILLY OWNER",
+      "PLEASE REPORT TO THE PANEL ROOM AT THE INDICATED TIME FOR INSPECTION OF ALL ANONFILLY PLUSH HORSE SOFT TOY",
+      "INSPECTION OF <q>anon suit</q> COSTUMES WILL ALSO BE TAKING PLACE</strong>"
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 47,
+    "room-or-table-id": "Mare Lair",
+    "start-time": "2023-09-30 19:30:00",
+    "end-time": "2023-09-30 20:59:00",
+    "business-name": "Taurson and Seafood Dinner",
+    "application-name": "Pony Sketchbook Swap",
+    "Panel description": [
+      "Bring over your sketchbooks and have fun drawing cute mares in other people's sketchbooks while yours gets drawn in too! No worries if you're not the best artist, we're all here for fun and most importantly, mares! Highly recommended to bring your sketchbook, drawing supplies, and of course, your character references (preferably printed out, but a badge is fine too)!"
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 51,
+    "room-or-table-id": "Mare Lair",
+    "start-time": "2023-09-30 21:00:00",
+    "end-time": "2023-09-30 22:59:00",
+    "business-name": "Seafood Dinner",
+    "application-name": "Sketchbook Swap After Dark!",
+    "Panel description": [
+      "Don't feel like drawing wholesome mares? Bring over your sketchbooks and have fun drawing spicy doodles in other people's sketchbooks while yours gets drawn in too! No worries if you're not the best artist, we're all here for fun and most importantly, mares! Highly recommended to bring your sketchbook, drawing supplies, a list of your interests (to be drawn), and of course, your character references (preferably printed out, but a badge is fine too)!"
+    ],
+    "What rating would you give your panel?": [
+      "explicit - we're going to be showing clop images and/or reading actual clop fics"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 6,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-29 11:00:00",
+    "end-time": "2023-09-29 11:59:00",
+    "business-name": "Mare Fair 2023",
+    "application-name": "Opening Ceremony",
+    "Panel description": [
+      "Are you ready to <strong><em>MARE</em></strong>?????",
+      "Let's get together and kick off this weekend with some fun and frivolity and MARES.",
+      "Let's go do a Mare Fair!"
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 67,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-29 12:29:00",
+    "end-time": "2023-09-29 12:59:00",
+    "business-name": "Neighsayer",
+    "application-name": "Pony Merch eBay Adventures Shopping Spree",
+    "Panel description": [
+      "Neighsayer needs your help finding the perfect gift for his girlfriend (who is real(human)). Explore the wacky, wild, lawless world of second-hand pony merch and discover shameful officially licensed goods, bold bootleg products (with even bolder price tags), and even brand new mares unseen & unheard of outside of their plastic marketing prisons.   "
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 61,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-29 13:30:00",
+    "end-time": "2023-09-29 14:59:00",
+    "business-name": "Corpulent Brony",
+    "application-name": "Alternative Pony Sites",
+    "Panel description": [
+      "Sick of YouTube, Twitter, Pastebin, etc.?",
+      "How about the increasing censorship on popular fandom sites like Derpibooru or Fimfiction?",
+      "Ever wondered if there was an alternative, preferably one pony themed?",
+      "There probably is!",
+      "This panel will explore the world of pony-themed alternative sites, which ones are available, and how to find and use them.",
+      "Hosted by the guy who helps run twibooru, smutty.horse, pony.tube, pone.social, mlp.chat, and mlp.stream.",
+      "Hopefully we'll also have some co-hosts who run other sites to join in on the conversation."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 36,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-29 15:30:00",
+    "end-time": "2023-09-29 16:29:00",
+    "business-name": "Rebane (hobune.stream), Neighsayer, JCV",
+    "application-name": "Pony Archival Panel",
+    "Panel description": [
+      "The pony fandom has a rich history of awesome fan-made content, but unfortunately so much of it has disappeared overnight. This panel discusses the preservation of such content, how we do it, and how you can help too! These thirty minutes might be the only thing saving you from that dreaded [ Deleted Video ] in your playlist."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 59,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-29 17:00:00",
+    "end-time": "2023-09-29 18:29:00",
+    "business-name": "metasepp\u00f8 and Toffo",
+    "application-name": "My Little Mareblade\u2122\ufe0f: Battle for the Crown of Waifu",
+    "Panel description": [
+      "Witness the electrifying My Little Mareblade\u2122\ufe0f tournament as 24 of Equestria's most enchanting mares clash in a whirlwind of magic, friendship, and breathtaking acrobatics. Experience the thrilling climax where the ultimate waifu emerges, igniting the crowd with awe and reminding us of the boundless power of love and unity. Those in attendance will have the chance to be the champion for their waifu in the ring of honor. One participating audience member could walk away with a fully snowpity-embued Mareblade\u2122\ufe0f of their waifu and attain the title of \"Ultimate Super Pony-Power Beyblade Mareblade\u2122\ufe0f Master 2023.\""
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 22,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-29 19:00:00",
+    "end-time": "2023-09-29 19:59:00",
+    "business-name": "Pony for Hire",
+    "application-name": "Convention War-Stories",
+    "Panel description": [
+      "After attending 20 Pony/Furry cons, PfH has some tea to spill. From helping staff with <q>the oatmeal</q> indecent, to landing at the wrong airport, to being a last second panelist for a NSFW drawing panel.",
+      "",
+      "Comedic panel brought to you by Pony for Hire."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 66,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-29 21:30:00",
+    "end-time": "2023-09-29 22:29:00",
+    "business-name": "Party_Grunt (PlushWaifus) and Corpulent Brony",
+    "application-name": "Everything You Always Wanted to Know About Pony Plushies* (*But Were Afraid to Ask)",
+    "Panel description": [
+      "<style>.spoiler, .spoiler > * { transition: 0.5s } .spoiler:not(:hover) { color: black; background-color: black } .spoiler:not(:hover) > * { opacity: 0 }</style>Learn the secrets of commissioning a pony mare plushie!",
+      "How do you take care of your new mare?",
+      "What are the warning signs that a plushmaker is going to ghost you?",
+      "How do you avoid getting scammed?",
+      "How can you tell if a plush is well-made or just low quality?",
+      "<strong>WHY NOT MAKE A MARE YOURSELF?</strong>",
+      "",
+      "An experienced <q>literalwho</q> plushmaker hosts this panel, which will cover the entire gamut of plushie topics, including:",
+      "- How to select a plushmaker",
+      "- How to choose a pattern (laying vs. standing)",
+      "- How to keep your mares clean",
+      "- How to fix your mare if she breaks",
+      "- <span class=\"spoiler\">What to know about pockets and other lewd topics</span>"
+    ],
+    "What rating would you give your panel?": [
+      "explicit - we're going to be showing clop images and/or reading actual clop fics"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 5,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-29 23:00:00",
+    "end-time": "2023-09-30 00:59:00",
+    "business-name": "Dattebayo",
+    "application-name": "Wetbrain!: Extra Spicy Edition",
+    "Panel description": [
+      "Welcome to the Extra Spicy Edition of Wetbrain, the only game where artists put themselves through physical pain and torment for your entertainment, <strong>AND</strong> to raise money for charity!",
+      "",
+      "The rules are simple; ",
+      "",
+      ">Selection of tags appear",
+      ">Artist take turns and remove a tag each that they do <em>NOT</em> want to draw",
+      ">Anons will vote the three tags that <em>HAVE</em> to be drawn from the selection",
+      ">Artists have 5 minutes to draw it",
+      ">Anons vote who drew the best picture, for whatever reason",
+      ">Losers must all ingest a tortilla chip containing one drop of unfathomably hot sauce",
+      ">Repeat",
+      "",
+      ">Anyone can drop out any time for any reason (like being on the verge of death)",
+      ">Total, collaborative donations per round will increase amount of drops of hot sauce per chip",
+      ">Two Digit Amount = DUBS = Twice",
+      ">Three Digit Amount = TRIPS = <strong>TRIPLE</strong> ",
+      "",
+      "(To protect our artist's intestinal tracts, drops per round cap out at three, plus the loser drop)",
+      "",
+      "",
+      "",
+      ">Anyone can drop out any time for any reason (like being on the verge of death)",
+      ">Donations per round will increase amount of drops of hot sauce per chip",
+      ">Two Digit Amount = DUBS = Twice",
+      ">Three Digit Amount = TRIPS = TRIPLE ",
+      "",
+      ">(To protect our artist's intestinal tracts, drops per round cap out at three, plus the loser drop)"
+    ],
+    "What rating would you give your panel?": [
+      "explicit - we're going to be showing clop images and/or reading actual clop fics"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 9,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-30 01:30:00",
+    "end-time": "2023-09-30 02:00:00",
+    "business-name": "Anonymous",
+    "application-name": "Watching Paint Dry",
+    "Panel description": [
+      "Do you have what it takes to pass Twilight Sparkle's infamous paint drying friendship test? Come prove it."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 46,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-30 11:00:00",
+    "end-time": "2023-09-30 11:59:00",
+    "business-name": "Clipper",
+    "application-name": "Free Hugs!",
+    "Panel description": [
+      "Pinkie receives some very disturbing news regarding the cost of hugs and takes drastic action to prevent the total collapse of Ponyville's hug economy!",
+      "",
+      "Premiering <q>Free Hugs!</q> - a fan episode made with pony voice AI and simple animations made from the show assets. A project similar in size and scope to <q><a href=\"https://www.youtube.com/watch?v=QLGlrY7cooY\">The Tax Breaks</a>,</q> for those who've seen it.",
+      "",
+      ""
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 3,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-30 12:29:00",
+    "end-time": "2023-09-30 13:59:00",
+    "business-name": "Ike",
+    "application-name": "How to Run a Pony Cocktail Bar",
+    "Panel description": [
+      "It's not a vice if it's art. Come learn how to combine various colors and flavors, design clever menu items, and the logistics behind setting up a pop-up bar from someone who has been doing them for many years. For those with experience looking to up their game we will also cover more advanced (but still easy) tricks like layering and flame shots."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 33,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-30 14:30:00",
+    "end-time": "2023-09-30 15:29:00",
+    "business-name": "JHaller",
+    "application-name": "Pony Video Nostalgia Hour",
+    "Panel description": [
+      "Why am I getting 2011 vibes? Come in to relax and watch some of the fandom's older and most notable pony videos from the ancient years of the early 2010s. Along the way, we'll explain some of the context or memories we have with these vintage MLP fandom gems!"
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 90,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-30 16:00:00",
+    "end-time": "2023-09-30 20:29:00",
+    "business-name": "Nopony",
+    "application-name": "Room Unavailable",
+    "Panel description": [
+      "Room is either being set-up for another event, torn down from an event, or is otherwise not available for use."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 89,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-09-30 20:30:00",
+    "end-time": "2023-10-01 02:59:00",
+    "business-name": "Mare Fair 2023",
+    "application-name": "Concert",
+    "Panel description": ["Pony music.  Guaranteed."],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 79,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-10-01 10:00:00",
+    "end-time": "2023-10-01 10:59:00",
+    "business-name": "Fallen Oak Equine Rescue and Rehabilitation",
+    "application-name": "Horse Rescue: The Good, the Bad, and the Blessing",
+    "Panel description": [
+      "Kim and her daughter will share how the rescue started, their mission, how many horses they have saved to date, the cost of rehabilitating a horse, and will have lots of before and after photos of the horses they've helped.  Their veterinarian will also be in attendance and will help answer any questions people may have about the medical care these horses require.  ",
+      "",
+      "They will be sharing stories of four very special horses each of which will have a photo on canvas available for sale from their booth in the Vendor Stalls.",
+      "",
+      "Finally, Kim will talk about the different problems that come up when you're rehabilitating a horse and the things which unfortunately cannot be fixed.",
+      "",
+      "<strong>Learn more about how you can help this wonderful group at <a href=\"https://www.facebook.com/FallenOakEquineRescue/\">https://www.facebook.com/FallenOakEquineRescue/</a></strong>",
+      "",
+      "<strong><em>And come to the charity auction afterwards.  All proceeds will go towards supporting Fallen Oak!</em></strong>"
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 4,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-10-01 12:00:00",
+    "end-time": "2023-10-01 14:29:00",
+    "business-name": "Mare Fair 2023",
+    "application-name": "Charity Auction",
+    "Panel description": [
+      "Come help us help horses!  The official charity auction of Mare Fair 2023 will be auctioning off items (You) donated and every single dollar raised will go directly to our chosen horse rescue charity, <a href=\"https://www.facebook.com/FallenOakEquineRescue/\">Fallen Oak Equine Rescue and Rehabilitation</a>.",
+      "",
+      "Do it for the horsies!",
+      "<em>Do it for the mares!!!</em>"
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 7,
+    "room-or-table-id": "Mare Stage",
+    "start-time": "2023-10-01 14:30:00",
+    "end-time": "2023-10-01 16:00:00",
+    "business-name": "Mare Fair 2023",
+    "application-name": "Closing Ceremonies",
+    "Panel description": [
+      "<em>See You Space Pony</em>",
+      "",
+      "It's been an awesome weekend, but now it's time to go.",
+      "Join us for a final celebration of autism and mares as we bid the fair farewell.",
+      "But I know we'll meet again some sunny day. /)",
+      "",
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/nK5KLazC42s?si=i1AB7HWZ6c98jEIe\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
+      "<a href=\"https://youtu.be/nK5KLazC42s\">https://youtu.be/nK5KLazC42s</a>"
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 27,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-29 12:00:00",
+    "end-time": "2023-09-29 12:59:00",
+    "business-name": "PurpPone",
+    "application-name": "Numget Panel",
+    "Panel description": [
+      "Have you or a loved one ever experienced a \"numget moment?\" Are you prone to enjoying forced memes of or pertaining to Lyra Heartstrings? Join us in celebrating the life and legacy of our beloved :numget: (Con Chair Note: skip this one)"
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 14,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-29 13:30:00",
+    "end-time": "2023-09-29 14:29:00",
+    "business-name": "Spec/Trixie Anons",
+    "application-name": "Trixie Appreciation Panel",
+    "Panel description": [
+      "Do you like Trixie?!?! Well so do we, so come to our panel!!! We will bask in the grrrrreat and powerful Trixie's glory and essence for an entire hour!"
+    ],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 32,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-29 15:00:00",
+    "end-time": "2023-09-29 15:59:00",
+    "business-name": "4wanderer",
+    "application-name": "Rarity Appreciation Lecture",
+    "Panel description": [
+      "Listen to the ramblings of a mad Rarity fan exploring one of the deepest characters ever created (Rarity)."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 49,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-29 16:30:00",
+    "end-time": "2023-09-29 17:29:00",
+    "business-name": "Mint",
+    "application-name": "Lyra Appreciation Panel",
+    "Panel description": [
+      "Lyra is an adorable goofball, and it is time she gets to shine in the spotlight! This is a place for us to talk about why she's so pretty, and why we love her mane. If you don't know about Lyra, then this is the place to learn about our minty fresh mare."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 58,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-29 18:00:00",
+    "end-time": "2023-09-29 18:59:00",
+    "business-name": "Wolvan and AnonTheAnon",
+    "application-name": "Reading AI Shitposts with the Bois",
+    "Panel description": [
+      "A new episode script, written by none other than the great C.GPT. Larson!",
+      "Listen to our brave actors and actresses re-enact some brand new My Little Pony content!",
+      "Do show writers still have a job a year from now? Let's find out!"
+    ],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 24,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-29 19:30:00",
+    "end-time": "2023-09-29 20:29:00",
+    "business-name": "Concert Cruizer & Pony Cordero",
+    "application-name": "Hoof Rock Live: MLP The Movie Soundtrack Review",
+    "Panel description": [
+      "The MLP Movie is certainly fun, but was the soundtrack any good? Join Concert Cruizer and Pony Cordero as they review the MLP Movie Soundtrack and determine if the songs are any good."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 54,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-29 21:00:00",
+    "end-time": "2023-09-29 21:59:00",
+    "business-name": "Naarkerotics",
+    "application-name": "Get Yer OC Edge On",
+    "Panel description": [
+      "Come and help design a new community OC. No good ideas accepted, only bad ones."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 83,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-29 22:29:00",
+    "end-time": "2023-09-30 00:29:00",
+    "business-name": "ACLP Films",
+    "application-name": "Ponyville Party Pack (18+)",
+    "Panel description": [
+      "This is a Jackbox panel where the 8 players will be playing Jackbox Party Packs. We will be playing games like Quiplash 3, Survive The Internet, and Job Job. This is an 18+ panel where there will be adult jokes in this panel.",
+      ""
+    ],
+    "What rating would you give your panel?": [
+      "explicit - we're going to be showing clop images and/or reading actual clop fics"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 55,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-30 01:00:00",
+    "end-time": "2023-09-30 01:59:00",
+    "business-name": "Naarkerotics",
+    "application-name": "Erotic Examinations",
+    "Panel description": [
+      "You've enjoyed them, you've seen them, but do you remember them? Name the artists of the pictures for prizes."
+    ],
+    "What rating would you give your panel?": [
+      "explicit - we're going to be showing clop images and/or reading actual clop fics"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 19,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-30 10:30:00",
+    "end-time": "2023-09-30 11:29:00",
+    "business-name": "Brawny Buck",
+    "application-name": "Harmony Through Health",
+    "Panel description": [
+      "The season 7 episode <q>A Health of Information</q> showed us the importance of being strong for ourselves in order to help our friends and family.  Come ready to move as fitness professional and analyst Brawny Buck shows you how even small and easy changes can snowball into a healthier and happier lifestyle."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 48,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-30 12:00:00",
+    "end-time": "2023-09-30 12:59:00",
+    "business-name": "Dattebayo",
+    "application-name": "Mare-Ly Feud!",
+    "Panel description": [
+      "Two teams compete to name the most popular answers to pony-themed survey questions in order to win the greatest prize of all...bragging rights."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 63,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-30 14:00:00",
+    "end-time": "2023-09-30 14:59:00",
+    "business-name": "Mezimos (and Voflaci)",
+    "application-name": "Rarity Appreciation Panel!",
+    "Panel description": [
+      "Are you a fan of our favorite purple maned fashionista? Well, come on over to discuss why she is the best, or possibly what you would change about her. There will be discussion and a trivia game that has in depth questions about her. A special prize will be given to the winner.",
+      ""
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 28,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-30 15:30:00",
+    "end-time": "2023-09-30 16:29:00",
+    "business-name": "PurpPone",
+    "application-name": "MLP and TF2: A History Lesson on Intertwined Subcultures",
+    "Panel description": [
+      "Regardless of what corner of which of the two fandoms you find yourself in, there's no denying that Team Fortress 2 and My Little Pony have some inexplicable bond. Well, we're gonna do our best to explain the past, present, and future of how pony and TF2 have intermingled and affected each other throughout the years. Did you start playing TF2 because of ponies? Or maybe you found ponies because of TF2? Join us and uncover why the crap these two franchises have such a huge overlap in fanbase."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 78,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-30 17:00:00",
+    "end-time": "2023-09-30 17:59:00",
+    "business-name": "Twifag",
+    "application-name": "Pulchritudinous Purple Pony Princess Praise Panel",
+    "Panel description": [
+      "Twilight Sparkle.",
+      "We all know her, but do you truly appreciate the wonders of this dorky purple princess?",
+      "Come join some based Twi chads and discuss this awesome pony.",
+      "Let's talk about why we all love her.",
+      "We'll probably also watch some videos inspired by fellow Twilight appreciators."
+    ],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 16,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-30 18:30:00",
+    "end-time": "2023-09-30 19:29:00",
+    "business-name": "Naarkerotics",
+    "application-name": "Beyond Fallout Equestria",
+    "Panel description": [
+      "Many have heard of the tales of Fallout Equestria: The door stopper, the cringefest, it's all an alicorn-agory. Listen and discuss with someone who read these fics so you can know how to write your own. "
+    ],
+    "What rating would you give your panel?": [
+      "explicit - we're going to be showing clop images and/or reading actual clop fics"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 13,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-30 20:00:00",
+    "end-time": "2023-09-30 20:59:00",
+    "business-name": "Tekkit Horse",
+    "application-name": "Amre Amar\u00e9: Pony Waifu Love",
+    "Panel description": [
+      "Do you have a pony waifu? This is your panel. Come to Amre Amar\u00e9 and confess your love for her or listen to others speak their innermost feelings for their special somepony. Non-mare waifuers not welcome."
+    ],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 64,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-09-30 22:30:00",
+    "end-time": "2023-10-01 00:29:00",
+    "business-name": "mezimos (and Voflaci)",
+    "application-name": "Pony Posterior Appreciation Society",
+    "Panel description": [
+      "We on the board of PPAS cordially invite you to this meeting. We will discuss the finer points of pony plots and have a few games to test your knowledge. Winner will get a special prize!"
+    ],
+    "What rating would you give your panel?": [
+      "explicit - we're going to be showing clop images and/or reading actual clop fics"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 38,
+    "room-or-table-id": "Numget Memorial Stadium",
+    "start-time": "2023-10-01 11:00:00",
+    "end-time": "2023-10-01 11:59:00",
+    "business-name": "Military Bronies",
+    "application-name": "Military Bronies - Celebrating 13 Years of Turbo \u2018Tisms",
+    "Panel description": [
+      "Are you a current or former servicemember? Wanna get together with other militaryfags and shoot the shit about mares and the good \u2018ol days and times of getting fucked by the Big Green Weenie? Stop on by and pal it up!"
+    ],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 39,
+    "room-or-table-id": "Outside",
+    "start-time": "2023-09-29 07:00:00",
+    "end-time": "2023-09-29 07:59:00",
+    "business-name": "Anon",
+    "application-name": "Many Anons/Autists/Attendees Running w/ Equines (MARE)",
+    "Panel description": [
+      "Plush equines that is. All skill levels are welcome and all you need is yourself and a plush. We\u2019ll meet in the lobby of the hotel, see you there. "
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 39,
+    "room-or-table-id": "Outside",
+    "start-time": "2023-09-30 07:00:00",
+    "end-time": "2023-09-30 07:59:00",
+    "business-name": "Anon",
+    "application-name": "Many Anons/Autists/Attendees Running w/ Equines (MARE)",
+    "Panel description": [
+      "Plush equines that is. All skill levels are welcome and all you need is yourself and a plush. We\u2019ll meet in the lobby of the hotel, see you there. "
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 39,
+    "room-or-table-id": "Outside",
+    "start-time": "2023-10-01 07:00:00",
+    "end-time": "2023-10-01 07:59:00",
+    "business-name": "Anon",
+    "application-name": "Many Anons/Autists/Attendees Running w/ Equines (MARE)",
+    "Panel description": [
+      "Plush equines that is. All skill levels are welcome and all you need is yourself and a plush. We\u2019ll meet in the lobby of the hotel, see you there. "
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 81,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-29 12:00:00",
+    "end-time": "2023-09-29 13:29:00",
+    "business-name": "ACLP Films",
+    "application-name": "SFM Ponies Nostalgia",
+    "Panel description": [
+      "Come relax and fine some comfort as we celebrate 10 years of SFM Ponies animation. We'll be watching some of the fandom's oldest and most notable SFM pony videos from the 2010s to the 2020s. We'll randomly select SFM pony videos like PMVs, memes, or one of the host's SFM videos. We'll review some of the history or recollections of these classic SFM Ponies along the road.",
+      ""
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 57,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-29 14:00:00",
+    "end-time": "2023-09-29 15:29:00",
+    "business-name": "Wolvan",
+    "application-name": "CYOA: Writing Collaborative (Shitpost) Stories",
+    "Panel description": [
+      "What do you get when you and a bunch of others control the main character of a story? A lot of chaos, laughs, and adventure! Welcome to the world of CYOAs; let's come and write some together! Shitposting included!"
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 90,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-29 16:00:00",
+    "end-time": "2023-09-29 18:59:00",
+    "business-name": "Nopony",
+    "application-name": "Room Unavailable",
+    "Panel description": [
+      "Room is either being set-up for another event, torn down from an event, or is otherwise not available for use."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 8,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-29 19:00:00",
+    "end-time": "2023-09-29 21:59:00",
+    "business-name": "Mare Fair 2023",
+    "application-name": "Spaghetti and Tendie Dinner",
+    "Panel description": [
+      "<b>You must purchase an add-on to attend this event.</b>",
+      "<b>All proceeds from this event go directly to our charity, <a href=\"https://www.facebook.com/FallenOakEquineRescue/\">Fallen Oak Equine Rescue and Rehabilitation</a>.</b>",
+      "",
+      "Nothing says <q>pony convention</q> more than spilling your spaghetti with the bros.  Let's get together and try to keep the spaghetti on our plates.  Also, there will be chicken tendies for the good boys.  Probably breadsticks/garlic bread, salad, maybe even a dessert, we'll see."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 90,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-29 22:00:00",
+    "end-time": "2023-09-30 03:59:00",
+    "business-name": "Nopony",
+    "application-name": "Room Unavailable",
+    "Panel description": [
+      "Room is either being set-up for another event, torn down from an event, or is otherwise not available for use."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 53,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-30 10:00:00",
+    "end-time": "2023-09-30 10:59:00",
+    "business-name": "Raptoir",
+    "application-name": "Esomareica",
+    "Panel description": [
+      "ESOMAREICA is an attempt to cultivate a love for ponies that penetrates all boundaries. This will be a non-denominational spiritual congregation led by a wise NEET covering a variety of practices to bring love into fruition, find peace in waifumancy, and perhaps discover the true meaning of snowpity."
+    ],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 73,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-30 11:30:00",
+    "end-time": "2023-09-30 12:29:00",
+    "business-name": "Skulli",
+    "application-name": "Learning Fighting Games - Them's Fightin' Herds",
+    "Panel description": [
+      "Ever been interested in fighting games but too intimidated to try? Well this is the panel for you. Hosted by someone who has had a hard time getting into them himself, Skulli will teach you the basics."
+    ],
+    "What rating would you give your panel?": ["safe - nothing sexual"]
+  },
+  {
+    "context": "E",
+    "context-id": 41,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-30 13:30:00",
+    "end-time": "2023-09-30 15:29:00",
+    "business-name": "Ebonyglow",
+    "application-name": "Stranger Than Fimfiction",
+    "Panel description": [
+      "Have you ever wanted to get into writing fanfics but found yourself hesitating? Be it SFW or some saucy clop, there's always the chance to step into the world of horse words. Join FimFiction writer <a href=\"https://www.fimfiction.net/user/235389/Ebonyglow\">Ebonyglow</a> for a panel going over the basics of getting started, getting over any nerves, and putting down those sweet, sweet horse words for you and others to enjoy!"
+    ],
+    "What rating would you give your panel?": [
+      "explicit - we're going to be showing clop images and/or reading actual clop fics"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 69,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-30 16:00:00",
+    "end-time": "2023-09-30 16:59:00",
+    "business-name": "Neighsayer",
+    "application-name": "The Russian Brony Documentary",
+    "Panel description": [
+      "Produced in 2016, \"It's hard to be brony in RUSSIA,\" sits at only 2.5k views on YouTube and gives us a glimpse into the brony community all the way over in Mother Russia. Translated just well enough for us to follow the stories of ponies, love, curious police, drunken brony campouts, and that classic out of touch psychoanalysis, the Russian brony documentary is a hidden gem to be remembered. This is the greatest way to kill 23 minutes of all time. "
+    ],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 31,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-30 17:30:00",
+    "end-time": "2023-09-30 18:29:00",
+    "business-name": "Pony for Hire",
+    "application-name": "Furries vs. Bronies Roast",
+    "Panel description": [
+      "There's some beef between the two and they both wanna turn up the heat. Pony for Hire will be defending the bros while Mark the Shark is backing their Fur-friends and the audience can take pot shots at both of them!"
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 42,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-30 19:00:00",
+    "end-time": "2023-09-30 20:29:00",
+    "business-name": "JHaller, AnontheAnon, Mkog",
+    "application-name": "Antithology - The Florida Mare Cometh",
+    "Panel description": [
+      "Antithology: The video project that many doubted would ever happen is now being shown at a full blown convention!  Bring your mare and share some laughs as we show the latest video and celebrate that when it comes down to it, our autism can accomplish anything!"
+    ],
+    "What rating would you give your panel?": [
+      "questionable - sexual discussion but nothing displayed on monitors"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 43,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-09-30 21:00:00",
+    "end-time": "2023-09-30 23:59:00",
+    "business-name": "AnontheAnon and OJ",
+    "application-name": "Animation 101 with AnonTheAnon and OJ: This Time with a Twist!",
+    "Panel description": [
+      "HEY YOU! <strong>YES YOU!</strong> Do you want to learn how to animate mares? Then come down to this panel! We'll take your animation requests and try to teach you how to do it! On our team we have: Cat enjoyer and professional mare storyboarder OJ (no relation) and low IQ Italian animator AnonTheAnon. So, come on down and get a free lecture!",
+      "",
+      "<em>Warning: Audience may not learn a thing</em>"
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 65,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-10-01 00:30:00",
+    "end-time": "2023-10-01 01:29:00",
+    "business-name": "Sunlit Sky",
+    "application-name": "Cult of Mare",
+    "Panel description": [
+      "The first official meeting of the Cult of Mare, praising the ponies that make the sun pass, the moon full, love vibrant, and friendship magic. Mare and stallion praises welcome before the holy television show."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 44,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-10-01 10:00:00",
+    "end-time": "2023-10-01 11:29:00",
+    "business-name": "MareQuest",
+    "application-name": "MareQuest - An Interactive Tail",
+    "Panel description": [
+      "MareQuest! Learn about the fascinating world of MareQuestria and interact with an audience led playthrough!"
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  },
+  {
+    "context": "E",
+    "context-id": 70,
+    "room-or-table-id": "The Tracy Cage",
+    "start-time": "2023-10-01 16:00:00",
+    "end-time": "2023-10-01 17:29:00",
+    "business-name": "Snowpity, Inc.",
+    "application-name": "Making of a Mare Fair",
+    "Panel description": [
+      "Ever wonder what goes into making a successful pony convention?",
+      "So did we!  Then we decided to try and find out if we could make one happen.",
+      "Find out the story behind Mare Fair as told by the Head Pony In Charge, the Background Pony In Charge, and some of the many others who helped make this convention happen.",
+      "They'll discuss the problems they faced and how they were overcome, how to build and maintain a team dedicated to the cause, and how they attempt to celebrate mares everyday.",
+      "You'll also be able to ask them questions or excoriate them for being complete faggots."
+    ],
+    "What rating would you give your panel?": [
+      "suggestive - slightly sexual topics and innuendo"
+    ]
+  }
+]

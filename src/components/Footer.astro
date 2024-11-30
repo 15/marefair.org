@@ -1,0 +1,107 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer
+  id="footer"
+  class="drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] text-sm xl:text-base mt-auto cursor-default px-0 sm:px-8 md:px-20 lg:px-32 w-full flex flex-col sm:flex-row justify-center sm:justify-between md:gap-x-0 gap-x-12 gap-y-2 md:justify-between items-center h-24 sm:h-12 bg-transparent text-white"
+>
+  <div class="flex items-center justify-center">
+    <div
+      class="flex items-center justify-center gap-x-4 sm:gap-x-4 md:gap-x-4 lg:gap-x-4 xl:gap-x-8"
+    >
+      <a
+        href="https://snowpity.org"
+        target="_blank"
+        class="hover:underline underline-offset-4 flex items-center relative font-medium tracking-wide"
+      >
+        © 2024 Snowpity, Inc.
+      </a>
+      <!-- <div class="border border-r-1 rounded-lg h-6"></div>
+      <a
+        href="/coc"
+        class="hover:underline underline-offset-4 flex items-center relative font-medium tracking-wide"
+      >
+        Code of Conduct
+      </a> -->
+    </div>
+  </div>
+  <div
+    class="text-lg xl:text-xl flex items-center justify-center gap-x-4 sm:gap-x-2 md:gap-x-2 lg:gap-x-3 xl:gap-x-4"
+  >
+    <!-- <div class="border border-r-1 rounded-lg h-6"></div> -->
+
+    <a
+      href="https://twitter.com/MareFairCon"
+      target="_blank"
+      class="hover:underline hover:scale-[1.3] hover:-rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+    >
+      <Icon
+        name="mdi:twitter"
+        style="animation-name: floating; animation-timing-function: var(--sine); animation-duration: 4s; animation-delay: 0s; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: forwards;"
+      />
+    </a>
+    <a
+      href="https://www.youtube.com/@MareFair"
+      target="_blank"
+      class="hover:underline hover:scale-[1.3] hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+    >
+      <Icon
+        name="mdi:youtube"
+        style="animation-name: floating; animation-timing-function: var(--sine); animation-duration: 4s; animation-delay: 0.8s; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: forwards;"
+      />
+    </a>
+    <a
+      href="https://pone.social/@MareFair/"
+      target="_blank"
+      class="hover:underline hover:scale-[1.3] hover:-rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+    >
+      <Icon
+        name="mdi:mastodon"
+        style="animation-name: floating; animation-timing-function: var(--sine); animation-duration: 4s; animation-delay: 1.6s; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: forwards;"
+      />
+    </a>
+    <a
+      href="https://github.com/snowpity/"
+      target="_blank"
+      class="hover:underline hover:scale-[1.3] hover:rotate-12 p-1 rounded duration-300 underline-offset-4 flex items-center relative font-medium tracking-wide justify-center"
+    >
+      <Icon
+        name="mdi:github"
+        style="animation-name: floating; animation-timing-function: var(--sine); animation-duration: 4s; animation-delay: 2.4s; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: forwards;"
+      />
+    </a>
+  </div>
+</footer>
+
+<style>
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0) rotate(2deg);
+    }
+    50% {
+      transform: translate(0, -3px) rotate(-2deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(2deg);
+    }
+  }
+
+  @keyframes fadeout {
+    0% {
+      opacity: 100%;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #footer {
+    animation-duration: 0.3s;
+    animation-delay: 3.3s;
+    animation-name: fadeout;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+</style>

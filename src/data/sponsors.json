@@ -1,0 +1,74 @@
+[{
+  "tier": "Mare schizo",
+  "sponsors": [],
+  "price": 666666,
+  "style": {
+    "tier": "text-2xl md:text-4xl",
+    "price": "text-base md:text-2xl",
+    "sponsors": "text-sm md:text-base"
+  }
+},{
+  "tier": "Mare fanatic",
+  "sponsors": [],
+  "price": 5555,
+  "style": {
+    "tier": "text-2xl md:text-4xl",
+    "price": "text-base md:text-2xl",
+    "sponsors": "text-sm md:text-base"
+  }
+},
+  {
+    "tier": "Mare aficionado",
+    "sponsors": [],
+    "price": 2500,
+    "style": {
+      "tier": "text-2xl md:text-4xl",
+      "price": "text-base md:text-2xl",
+      "sponsors": "text-sm md:text-base"
+    }
+  },
+  {
+    "tier": "Mare connoisseur",
+    "sponsors": [
+    ],
+    "price": 1000,
+    "style": {
+      "tier": "text-2xl md:text-4xl",
+      "price": "text-base md:text-2xl",
+      "sponsors": "text-sm md:text-base"
+    }
+  },
+  {
+    "tier": "Mare enthusiast",
+    "sponsors": [
+    ],
+    "price": 850,
+    "style": {
+      "tier": "text-2xl md:text-4xl",
+      "price": "text-base md:text-2xl",
+      "sponsors": "text-sm md:text-base"
+    }
+  },
+  {
+    "tier": "Mare enjoyer",
+    "sponsors": [
+    ],
+    "price": 285,
+    "style": {
+      "tier": "text-2xl md:text-4xl",
+      "price": "text-base md:text-2xl",
+      "sponsors": "text-sm md:text-base"
+    }
+  },
+  {
+    "tier": "Mare supporter",
+    "sponsors": [
+    ],
+    "price": 155,
+    "style": {
+      "tier": "text-2xl md:text-4xl",
+      "price": "text-base md:text-2xl",
+      "sponsors": "text-sm md:text-base"
+    }
+  }
+]

@@ -1,0 +1,650 @@
+---
+import { Image } from "astro:assets";
+import pc0 from "@assets/cards/mare_fair_postcard_1.png";
+import note1 from "@assets/notes/yellow_register.png";
+import note2 from "@assets/notes/orange_enter_contrast.png";
+import hoof1 from "@assets/hoof/fair_flyer.png";
+import hoof2 from "@assets/hoof/mimosa.png";
+import hoof3 from "@assets/hoof/matinee.png";
+import marefair from "@assets/splash/marefair2024.png";
+import scroll from "@assets/ornaments/DeskItemsMF24-Scroll.png";
+import quill from "@assets/ornaments/DeskItemsMF24-InkWell.png";
+
+import Photo from "@components/splash/Photo.astro";
+
+import photo1 from "@assets/splash/mare_fair_2024_conbook_large/mare_fair_2024_conbook_large-01.png";
+import photo2 from "@assets/splash/marefair_2-2.jpg";
+import photo3 from "@assets/splash/marefair_2-4.jpg";
+import photo4 from "@assets/splash/DSCF6046.jpg";
+
+
+import photo5 from "@assets/splash/marefair_2-5.jpg";
+import photo6 from "@assets/splash/20240929_101805.jpg";
+import photo7 from "@assets/splash/DSCF6023.jpeg";
+import photo8 from "@assets/splash/DSCF6084.jpeg";
+import photo9 from "@assets/splash/DSCF6046.jpg";
+
+import photo10 from "@assets/splash/DSCF6155.jpeg";
+import photo11 from "@assets/splash/DSCF6264.jpeg";
+import photo12 from "@assets/splash/DSCF6276.jpeg";
+
+
+import photo13 from "@assets/splash/DSCF6125.jpeg";
+import photo14 from "@assets/splash/DSCF6599.jpeg";
+import photo15 from "@assets/splash/DSCF6600.jpeg";
+import photo16 from "@assets/splash/DSCF6601.jpeg";
+import photo17 from "@assets/splash/DSCF6598.jpeg";
+import photo18 from "@assets/splash/DSCF6597.jpeg";
+import photo19 from "@assets/splash/DSCF7266.jpeg";
+
+import photo20 from "@assets/splash/20240929_100620.jpg";
+
+import photo21 from "@assets/splash/DSCF6602.jpeg";
+import photo22 from "@assets/splash/DSCF6570.jpeg";
+import photo23 from "@assets/splash/DSCF6629.jpeg";
+import photo24 from "@assets/splash/DSCF6626.jpeg";
+import photo25 from "@assets/splash/DSCF6612.jpeg";
+import photo26 from "@assets/splash/DSCF6663.jpeg";
+import photo27 from "@assets/splash/DSCF6665.jpeg";
+import photo28 from "@assets/splash/DSCF6638.jpeg";
+import photo29 from "@assets/splash/DSCF6640.jpeg";
+import photo30 from "@assets/splash/DSCF6642.jpeg";
+import photo31 from "@assets/splash/DSCF6655.jpeg";
+
+
+import photo32 from "@assets/splash/1727409776704334.jpg";
+import photo33 from "@assets/splash/DSCF6098.jpeg";
+import photo34 from "@assets/splash/DSCF6004.jpeg";
+
+import photo35 from "@assets/splash/DSCF6091.jpeg";
+import photo36 from "@assets/splash/DSCF6092.jpeg";
+import photo37 from "@assets/splash/DSCF6064.jpeg";
+
+
+import photo38 from "@assets/splash/DSCF6725.jpeg";
+import photo39 from "@assets/splash/DSCF6734.jpeg";
+import photo40 from "@assets/splash/DSCF6723.jpeg";
+
+
+import photo41 from "@assets/splash/DSCF6949.jpeg";
+import photo42 from "@assets/splash/DSCF6944.jpeg";
+import photo43 from "@assets/splash/DSCF6899.jpeg";
+
+import photo44 from "@assets/splash/DSCF7076.jpeg";
+import photo45 from "@assets/splash/DSCF7232.jpeg";
+import photo46 from "@assets/splash/DSCF7237.jpeg";
+
+import photo47 from "@assets/splash/DSCF7239.jpeg";
+import photo48 from "@assets/splash/DSCF7248.jpeg";
+import photo49 from "@assets/splash/DSCF7304.jpeg";
+
+import photo50 from "@assets/splash/DSCF7325.jpeg";
+import photo51 from "@assets/splash/DSCF7382.jpeg";
+import photo52 from "@assets/splash/DSCF7397.jpeg";
+
+import photo53 from "@assets/splash/DSCF7399.jpeg";
+import photo54 from "@assets/splash/DSCF7204.jpeg";
+import photo55 from "@assets/splash/DSCF7252.jpeg";
+import photo56 from "@assets/splash/DSCF6757.jpeg";
+import photo57 from "@assets/splash/DSCF6761.jpeg";
+import photo58 from "@assets/splash/DSCF6762.jpeg";
+
+import photo59 from "@assets/splash/DSCF6351.jpeg";
+
+import photofinal from "@assets/splash/Goodbye.png";
+import photofinalsee from "@assets/splash/Goodbye_SEE.png";
+import photofinalyou from "@assets/splash/Goodbye_YOU.png";
+import photofinalspace from "@assets/splash/Goodbye_SPACE.png";
+import photofinalcowboy from "@assets/splash/Goodbye_COWBOY.png";
+---
+
+<section class="flex flex-col items-center justify-center overflow-hidden">
+  <Image
+    alt="Fair Flyer hoof"
+    format="avif"
+    src={hoof1}
+    width={300}
+    class="hoof absolute idle-hoof slide-down-hoof w-2/3 h-auto md:w-auto md:h-1/3 top-[-50%] z-50"
+    id="hoof"
+  />
+
+  <Image
+    alt="Mare Fair 2024"
+    format="avif"
+    src={pc0}
+    height={600}
+    class="absolute rounded-lg postcard top-[6%] rotate-[-5deg] slide-down w-5/6 h-auto md:w-auto md:h-1/2"
+    id="postcard"
+    style="filter: drop-shadow(0 2px 2px #000);"
+  />
+
+  <Image
+    alt="Mare Fair"
+    format="avif"
+    src={marefair}
+    width={800}
+    class="top-[54%] lg:top-[61%] absolute"
+    id="text"
+  />
+
+  <Image
+    alt="Scroll"
+    id="scroll"
+    format="avif"
+    src={scroll}
+    width={400}
+    style="rotate: 75deg;"
+    class="hidden md:block z-50 animate zoomout delay-2 duration-500 absolute md:left-[3%] md:top-[40%] rounded-lg w-96 h-auto xl:w-120"
+  />
+
+  <Image
+    alt="Quill and ink"
+    id="quill"
+    format="avif"
+    src={quill}
+    width={400}
+    style="rotate: 75deg;"
+    class="hidden md:block z-50 animate zoomout delay-3 duration-500 absolute md:right-[3%] md:top-[40%] rounded-lg w-96 h-auto xl:w-120"
+  />
+
+  <div
+    class="absolute flex flex-row justify-center gap-x-[6vw] md:gap-x-[3vw] z-[200] top-[68%] sm:top-[77%] md:top-[77%] w-5/6 h-auto md:w-auto md:h-1/5"
+  >
+    <div class="flex items-center justify-end cursor-not-allowed">
+      <Image
+        alt="Register"
+        id="register"
+        format="avif"
+        src={note1}
+        width={400}
+        class="w-auto h-32 sm:h-40 md:h-40 max-h-[20vh] lg:w-auto lg:h-full"
+      />
+    </div>
+    <div class="flex items-center justify-start cursor-not-allowed">
+      <Image
+        alt="Enter"
+        id="enter"
+        format="avif"
+        src={note2}
+        width={400}
+        class="w-auto h-32 sm:h-40 md:h-40 max-h-[20vh] lg:w-auto lg:h-full"
+      />
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-y-8 lg:gap-y-24 z-[1000] items-center justify-center" id="scroller">
+    <div>
+      <Photo src={photo1} idx={0} caption="Mare Fair 2024!" />
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo6} idx={1} />
+        <Photo src={photo2} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo20} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo8} idx={1} />
+        <Photo src={photo9} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo21} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo14} idx={1} />
+        <Photo src={photo15} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo16} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo17} idx={1} />
+        <Photo src={photo18} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo19} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo3} idx={1} />
+        <Photo src={photo5} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo32} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo33} idx={1} />
+        <Photo src={photo34} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo10} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo11} idx={1} />
+        <Photo src={photo12} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo22} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo23} idx={1} />
+        <Photo src={photo24} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo25} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo26} idx={1} />
+        <Photo src={photo27} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo28} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo29} idx={1} />
+        <Photo src={photo30} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo31} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo35} idx={1} />
+        <Photo src={photo36} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo37} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo38} idx={1} />
+        <Photo src={photo39} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo40} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo41} idx={1} />
+        <Photo src={photo42} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo43} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo44} idx={1} />
+        <Photo src={photo45} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo46} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo47} idx={1} />
+        <Photo src={photo48} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo49} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo50} idx={1} />
+        <Photo src={photo51} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo52} idx={3}/>
+    </div>
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo53} idx={1} />
+        <Photo src={photo54} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo55} idx={3}/>
+    </div>
+
+          <div class="flex flex-col lg:flex-row lg:gap-y-0 gap-y-8 lg:gap-x-24 items-center justify-center">
+        <Photo src={photo56} idx={1} />
+        <Photo src={photo57} idx={2} />
+      </div>
+    <div>
+      <Photo src={photo58} idx={3}/>
+    </div>
+
+    <div>
+      <Photo src={photo59} idx={3}/>
+    </div>
+  </div>
+
+  <div id="final" style={`filter: drop-shadow(0 5px 5px #000);`} class="z-40 opacity-0 w-screen h-screen flex items-center justify-center">
+      <Image
+          alt="Page 1"
+          id="page1"
+          format="avif"
+          src={photofinal}
+          width={600}
+          class="p-4 rounded-sm w-288 max-h-288 w-auto h-auto "
+      />
+    </div>
+    <div id="final1" style={`filter: drop-shadow(0 5px 5px #000);`} class="z-[41] absolute opacity-0 w-screen h-screen flex items-center justify-center">
+      <Image
+          alt="Page 1"
+          id="page1"
+          format="avif"
+          src={photofinalsee}
+          width={600}
+          class="p-4 rounded-sm w-288 max-h-288 w-auto h-auto "
+      />
+    </div>
+    <div id="final2" style={`filter: drop-shadow(0 5px 5px #000);`} class="z-[42] absolute opacity-0 w-screen h-screen flex items-center justify-center">
+      <Image
+          alt="Page 1"
+          id="page1"
+          format="avif"
+          src={photofinalyou}
+          width={600}
+          class="p-4 rounded-sm w-288 max-h-288 w-auto h-auto "
+      />
+    </div>
+    <div id="final3" style={`filter: drop-shadow(0 5px 5px #000);`} class="z-[43] absolute opacity-0 w-screen h-screen flex items-center justify-center">
+      <Image
+          alt="Page 1"
+          id="page1"
+          format="avif"
+          src={photofinalspace}
+          width={600}
+          class="p-4 rounded-sm w-288 max-h-288 w-auto h-auto "
+      />
+    </div>
+    <div id="final4" style={`filter: drop-shadow(0 5px 5px #000);`} class="z-[44] absolute opacity-0 w-screen h-screen flex items-center justify-center">
+      <Image
+          alt="Page 1"
+          id="page1"
+          format="avif"
+          src={photofinalcowboy}
+          width={600}
+          class="p-4 rounded-sm w-288 max-h-288 w-auto h-auto "
+      />
+    </div>
+    <div class="w-screen h-screen bg-black  absolute z-30" id="black">
+
+    </div>
+</section>
+
+<style lang="scss">
+
+    :root {
+      --time: 180s;
+    }
+  @keyframes reach1 {
+    0% {
+    }
+    42% {
+      transform: translateY(0) rotate(-5deg);
+      box-shadow: 0 0 25px 15px #66b2b2;
+    }
+    58% {
+      transform: translateY(0) rotate(-5deg);
+      box-shadow: 0 0 25px 15px #66b2b2;
+    }
+    100% {
+      transform: translateY(-150%) rotate(-5deg);
+      box-shadow: 0 0 25px 15px #66b2b2;
+    }
+  }
+
+  @keyframes reach2 {
+    0% {
+      transform: translateY(0%);
+    }
+
+    42% {
+      transform: translateY(125%);
+    }
+
+    58% {
+      transform: translateY(125%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes reachout {
+    0% {
+      transform: translate(0, 0vh) rotate(15deg);
+    }
+    100% {
+      transform: translate(0, 40vh) rotate(15deg);
+    }
+  }
+
+  @keyframes reachin {
+    0% {
+      transform: translate(0, 0vh) rotate(15deg);
+    }
+    100% {
+      transform: translate(0, 40vh) rotate(15deg);
+    }
+  }
+
+  @keyframes swipe {
+    0% {
+      transform: translate(0, 40vh) rotate(15deg);
+    }
+    100% {
+      transform: translate(100vw, 40vh) rotate(-15deg);
+    }
+  }
+
+  @keyframes fadeout {
+    0% {
+      opacity: 100%;
+    }
+
+    100% {
+      opacity: 0%;
+    }
+  }
+
+  @keyframes fadein {
+    0% {
+      opacity: 0%;
+    }
+
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  @keyframes fadetoblack {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  @keyframes page1 {
+    0% {
+      opacity: 100%;
+      transform: scale(1) translate(2vw, -60vh) rotate(3deg);
+    }
+    100% {
+      opacity: 100%;
+      transform: scale(1) translate(0vw, 0vh) rotate(-3deg);
+    }
+  }
+  @media (max-width: 1024px) {
+    @keyframes scroll {
+      0% {
+
+      }
+      100% {
+        transform: translate(0, -19000px);
+      }
+    }
+
+    @keyframes scroll-bg {
+      0% {
+        
+      }
+      100% {
+        background-position: 0 -19000px;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    @keyframes scroll {
+      0% {
+
+      }
+      100% {
+        transform: translate(0, -21500px);
+      }
+    }
+
+    @keyframes scroll-bg {
+      0% {
+        
+      }
+      100% {
+        background-position: 0 -21500px;
+      }
+    }
+  }
+
+
+  #final {
+    animation-duration: 2s, 2s;
+    animation-delay: calc(var(--time) + 4s), calc(var(--time) + 12s);
+    animation-name: fadein, fadeout;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  #final1 {
+    animation-duration: 2s, 1s;
+    animation-delay: calc(var(--time) + 4s), calc(var(--time) + 14s);
+    animation-name: fadein, fadeout;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  #final2 {
+    animation-duration: 2s, 2s;
+    animation-delay: calc(var(--time) + 4s), calc(var(--time) + 19s);
+    animation-name: fadein, fadeout;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  #final3 {
+    animation-duration: 2s, 1s;
+    animation-delay: calc(var(--time) + 4s), calc(var(--time) + 16s);
+    animation-name: fadein, fadeout;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  #final4 {
+    animation-duration: 2s, 1s;
+    animation-delay: calc(var(--time) + 4s), calc(var(--time) + 16s);
+    animation-name: fadein, fadeout;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  #scroller {
+    animation-duration: var(--time), 1s;
+    animation-delay: 4.0s, calc(var(--time) + 3s);
+    animation-name: scroll, fadeout;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: 100vh;
+  }
+
+  #black {
+    animation-duration: 8s;
+    animation-delay: calc(var(--time) + 5s);
+    animation-name: fadetoblack;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  body {
+    animation-duration:  var(--time);
+    animation-delay: 4.0s;
+    animation-name: scroll-bg;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    background-repeat: repeat;
+  }
+
+  #postcard {
+    animation-duration: 2s;
+    animation-delay: 0.8s;
+    animation-name: reach1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  #hoof {
+    animation-duration: 2s, 0.3s;
+    animation-delay: 0.8s, 3s;
+    animation-name: reach2, fadeout;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  #text {
+    animation-duration: 0.3s;
+    animation-delay: 3.3s;
+    animation-name: fadeout;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  #scroll {
+    animation-duration: 0.3s;
+    animation-delay: 3.2s;
+    animation-name: fadeout;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  #quill {
+    animation-duration: 0.3s;
+    animation-delay: 3.4s;
+    animation-name: fadeout;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  #enter {
+    animation-duration: 0.3s;
+    animation-delay: 3.3s;
+    animation-name: fadeout;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  #register {
+    animation-duration: 0.3s;
+    animation-delay: 3.3s;
+    animation-name: fadeout;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+</style>
+
+<script>
+  // If user has animation effects turned off, remove view transition attribute from postcard.
+  // Due to the way Astro's ViewTransition component works, keeping the view transition attribute
+  // will prevent any animations from playing.
+
+  const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`);
+  if (isReduced.matches) {
+    document
+      .getElementById("postcard")
+      .removeAttribute("data-astro-transition-scope");
+  }
+
+  setTimeout(() => {
+    window.location.href = 'https://2024.marefair.org/'
+  }, 1000 * (180 + 21));
+</script>

@@ -1,0 +1,131 @@
+---
+import vinyl from "@assets/musicians/15.png";
+import vinyl2 from "@assets/musicians/vinyls/Red.png";
+import vinyl3 from "@assets/musicians/vinyls/Orange.png";
+import vinyl4 from "@assets/musicians/vinyls/Yellow.png";
+import vinyl5 from "@assets/musicians/vinyls/Green.png";
+import vinyl6 from "@assets/musicians/vinyls/Blue.png";
+import vinyl7 from "@assets/musicians/vinyls/Purple.png";
+import { Image, getImage } from "astro:assets";
+
+const vinyls = [vinyl2, vinyl3, vinyl4, vinyl5, vinyl6, vinyl7];
+
+const {
+  src,
+  idx = 0,
+  name = null,
+  start = null,
+  end = null,
+  color = "#000000",
+  textColor = "#ffffff",
+  delay = 0,
+  duration = 5,
+  href = undefined,
+} = Astro.props;
+---
+
+<div
+  id="container"
+  style={`animation-name: ${idx % 2 ? "turning" : "turning2"}; animation-timing-function: var(--sine); animation-duration: ${5 * duration}s; animation-delay: ${delay + 0.3}s; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: forwards;`}
+  class={`${idx % 2 ? "rotate-2" : "-rotate-2"} select-none z-50 w-[36rem] mx-auto relative sm:w-[32rem] md:w-[36rem] lg:w-[32rem] xl:w-[36rem] 2xl:w-[40rem] aspect-[2.0] cursor-grabbing`}
+>
+  <Image
+    src={src}
+    format="avif"
+    width={300}
+    style="filter: drop-shadow(0 5px 5px #000); "
+    alt="Musicians"
+    class="absolute z-50 w-1/2 sm:w-[16rem] md:w-[18rem] lg:w-[16rem] xl:w-[18rem] 2xl:w-[21rem] rounded-sm"
+    id="jacket"
+  />
+  <div
+    id="name"
+    style={`filter: drop-shadow(0 5px 5px #000); background-color: ${color}; color: ${textColor}`}
+    class="select-none flex flex-col items-center justify-center text-center absolute z-50 w-1/2 sm:w-[16rem] md:w-[18rem] lg:w-[16rem] xl:w-[18rem] 2xl:w-[21rem] aspect-square h-auto rounded-sm"
+  >
+    <div class="text-2xl xl:text-3xl 2xl:text-4xl font-bold uppercase">
+      {name}
+    </div>
+    <div class="text-lg xl:text-xl 2xl:text-2xl font-medium">
+      {start} &ndash; {end}
+    </div>
+  </div>
+  <a href={href} target="_blank" class="select-none">
+    <Image
+      src={vinyls[idx % 6]}
+      format="avif"
+      width={300}
+      style="filter: drop-shadow(0 5px 5px #000);"
+      alt={`Musician`}
+      class={`${["magic-ff", "magic-sm", "magic-mm", "magic-sm", "magic-you"][idx % 5]} absolute rounded-full w-1/2 sm:w-[15rem] md:w-[17rem] lg:w-[15rem] xl:w-[17rem] 2xl:w-[20rem] -mt-1 sm:mt-2`}
+      id="vinyl"
+    />
+  </a>
+</div>
+
+<style>
+  @keyframes turning {
+    0% {
+      transform: translate(0, 0) rotate(2deg);
+    }
+    50% {
+      transform: translate(0, -10px) rotate(-2deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(2deg);
+    }
+  }
+
+  @keyframes turning2 {
+    0% {
+      transform: translate(0, 0) rotate(-2deg);
+    }
+    50% {
+      transform: translate(0, 10px) rotate(2deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(-2deg);
+    }
+  }
+
+  #container #jacket {
+    transform: translate(0) rotate(0);
+    transition:
+      transform 0.2s,
+      opacity 0.2s;
+    z-index: 50;
+    opacity: 1;
+  }
+
+  #container:hover #jacket {
+    transform: translate(-75px, 5px) rotate(-3deg);
+    z-index: 50;
+    opacity: 0;
+  }
+
+  #container #name {
+    transform: translate(0) rotate(0);
+    transition:
+      transform 0.2s,
+      opacity 0.2s;
+    z-index: 50;
+    opacity: 0;
+  }
+
+  #container:hover #name {
+    transform: translate(-75px, 5px) rotate(-3deg);
+    z-index: 50;
+    opacity: 1;
+  }
+
+  #container #vinyl {
+    transform: translate(0) rotate(-90deg);
+    transition: transform 0.2s;
+    z-index: 0;
+  }
+
+  #container:hover #vinyl {
+    transform: translate(125px, 0px) rotate(0deg);
+    z-index: 0;
+  }
+</style>

@@ -10,6 +10,24 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.0.7"
+    "@astrojs/cloudflare": "^9.0.0",
+    "@astrojs/partytown": "^2.1.2",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.0",
+    "@iconify-json/mdi": "^1.1.68",
+    "astro": "^4.15.1",
+    "astro-icon": "^1.1.0",
+    "astro-seo": "^0.8.0",
+    "csvtojson": "^2.0.10",
+    "gsap": "^3.12.5",
+    "lightgallery": "^2.7.2",
+    "pagemap": "^1.4.0",
+    "tailwindcss": "^3.4.1",
+    "tippy.js": "^6.3.7"
+  },
+  "overrides": {
+    "astro": {
+      "sharp": "0.33.0"
+    }
   }
 }

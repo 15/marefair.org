@@ -1,0 +1,239 @@
+---
+import { Image } from "astro:assets";
+
+import explicit from "@assets/schedule/RatingsVectorsExplicit.png";
+import questionable from "@assets/schedule/RatingsVectorsQuestionable.png";
+import suggestive from "@assets/schedule/RatingsVectorsSuggestive.png";
+import safe from "@assets/schedule/RatingsVectorsSafe.png";
+
+const {
+  title,
+  start = "11:30 AM",
+  end = "12:00 AM",
+  host = "Anon",
+  description = "Lorem ipsum dolor sit amet",
+  rating = "safe",
+  colspan,
+  type = 0,
+  day = "Friday",
+  prerender = true,
+} = Astro.props;
+
+let image = null;
+switch (rating.toLowerCase()) {
+  case "safe":
+    image = prerender ? safe : "/images/schedule/ratingSafe.heif";
+    break;
+  case "suggestive":
+    image = prerender ? suggestive : "/images/schedule/ratingSuggestive.heif";
+    break;
+  case "explicit":
+    image = prerender ? explicit : "/images/schedule/ratingExplicit.heif";
+    break;
+  case "questionable":
+    image = prerender
+      ? questionable
+      : "/images/schedule/ratingQuestionable.heif";
+    break;
+  default:
+    image = prerender ? explicit : "/images/schedule/ratingExplicit.heif";
+    break;
+}
+
+const roomType = [
+  "room1",
+  "room2",
+  "room3",
+  "room4",
+  "room5",
+  "room6",
+  "concert",
+  "room7",
+];
+---
+
+<dialog class="p-0 cursor-default" id={title}>
+  <div
+    class={`p-8 relative justify-center rounded flex flex-col gap-y-1 w-full h-auto sm:w-96 md:w-128 lg:w-160 xl:w-192 lg:h-auto  ${roomType[type]}-dialog`}
+    style="font-family: 'Single Day'"
+  >
+    <div class="font-semibold text-4xl leading-none">{title}</div>
+    <div class="font-medium text-2xl leading-none">
+      {day} @ {start}-{end} ({colspan * 30} minutes)
+    </div>
+    <div class="font-medium text-xl leading-none">Host: {host}</div>
+    {
+      type !== 6 ? (
+        <div class="font-semibold text-base leading-none uppercase">
+          Rating: {rating}
+        </div>
+      ) : null
+    }
+    <div class="my-2 leading-5 text-lg" set:html={description} />
+    {
+      type !== 6 ? (
+        <div class="mx-auto mt-4 lg:mt-0 lg:absolute lg:top-8 lg:right-8">
+          <Image
+            format="avif"
+            src={image}
+            title={rating}
+            width={100}
+            height={100}
+            alt={`${rating.toLowerCase()} icon`}
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-24 h-24 lg:w-16 lg:h-16 rounded"
+          />
+        </div>
+      ) : null
+    }
+  </div>
+</dialog>
+<td
+  class={`${roomType[type]} border-2 border-black align-top duration-300 cursor-pointer`}
+  colspan={colspan}
+  id={`item-${title}`}
+>
+  <div
+    class="relative rounded p-1 md:p-2 h-16 md:h-24"
+    style="font-family: 'Single Day'"
+  >
+    {
+      type !== 6 ? (
+        <div class="float-right hidden lg:block">
+          <Image
+            format="avif"
+            title={rating}
+            src={image}
+            width={100}
+            height={100}
+            alt={`${rating.toLowerCase()} icon`}
+            style="filter: drop-shadow(0 1px 1px #000);"
+            class="rating icon w-6 h-6 md:w-10 md:h-10 rounded"
+          />
+        </div>
+      ) : null
+    }
+    <div
+      class="md:line-clamp-none line-clamp-3 font-semibold text-base md:text-lg lg:text-xl !leading-none"
+    >
+      {title}
+    </div>
+    <!-- <div class="text-lg">{start} &ndash; {end}</div> -->
+
+    <div
+      class="hidden md:block leading-5 text-sm md:text-lg"
+      set:html="Click for more info!"
+    />
+  </div>
+</td>
+
+<style>
+  .room1 {
+    @apply bg-pink-200 hover:bg-pink-300;
+  }
+  .room2 {
+    @apply bg-orange-200 hover:bg-orange-300;
+  }
+  .room3 {
+    @apply bg-blue-200 hover:bg-blue-300;
+  }
+  .room4 {
+    @apply bg-green-200 hover:bg-green-300;
+  }
+  .room5 {
+    @apply bg-red-200 hover:bg-red-300;
+  }
+  .room6 {
+    @apply bg-purple-200 hover:bg-purple-300;
+  }
+  .room7 {
+    @apply bg-neutral-300 hover:bg-neutral-400;
+  }
+  .concert {
+    @apply bg-neutral-50 hover:bg-black text-black hover:text-white;
+  }
+  .room1-dialog {
+    @apply bg-pink-200;
+  }
+  .room2-dialog {
+    @apply bg-orange-200;
+  }
+  .room3-dialog {
+    @apply bg-blue-200;
+  }
+  .room4-dialog {
+    @apply bg-green-200;
+  }
+  .room5-dialog {
+    @apply bg-red-200;
+  }
+  .room6-dialog {
+    @apply bg-purple-200;
+  }
+  .room7-dialog {
+    @apply bg-neutral-300;
+  }
+  .concert-dialog {
+    @apply bg-black text-white;
+  }
+
+  dialog {
+    @apply rounded;
+    filter: drop-shadow(0 50px 50px #000);
+    outline: none;
+  }
+
+  dialog[open] {
+    animation: fade 0.3s ease-in-out normal;
+  }
+
+  dialog::backdrop {
+    background-image: linear-gradient(45deg, #000, #000);
+    opacity: 0.5;
+  }
+
+  dialog:focus {
+    outline: none;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+
+<!-- <script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+  import "tippy.js/animations/shift-away-extreme.css";
+
+  tippy(document.querySelector(".rating-icon"), {
+    content: `<span class='font-medium'>After-dark vendor hall (18+)</span>`,
+    placement: "top",
+    animation: "shift-away-extreme",
+    allowHTML: true,
+  });
+</script> -->
+
+<script define:vars={{ title }}>
+  document.addEventListener("astro:page-load", () => {
+    const dialog = document.getElementById(title);
+    const el = document.getElementById(`item-${title}`);
+
+    if (dialog instanceof HTMLDialogElement) {
+      el.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      dialog.addEventListener("click", (e) => {
+        if (e.target === dialog) {
+          dialog.close();
+        }
+      });
+    }
+  });
+</script>

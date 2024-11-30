@@ -1,0 +1,196 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import Back from "@components/Back.astro";
+import ScheduleHeader from "@components/schedule/ScheduleHeader.astro";
+
+import { Image } from "astro:assets";
+
+const { day = "Friday", prerender = true, additionalevents = {} } = Astro.props;
+---
+
+<Layout prerender={prerender} title="Mare Fair 2024 | Schedule">
+  <Back prerender={prerender} />
+  <section
+    class="overflow-x-hidden mx-auto pl-2 pr-0 lg:pr-0 lg:pl-12 cursor-default flex flex-col pt-12 pb-0 lg:pt-12 lg:pb-0 items-center justify-center w-full"
+  >
+    <ScheduleHeader />
+    
+    <div
+      class="border-2 border-black rounded-sm md:mx-0 mx-4 mb-8 w-full bg-[#fcf1e0] overscroll-none overflow-y-hidden overflow-x-scroll text-black flex "
+      style="filter: drop-shadow(0 5px 5px #000);scrollbar-color: #789922 #151515; scrollbar-gutter: stable;"
+      id="table"
+    >
+      <table
+        style="font-family: 'Single Day';"
+        class="table-fixed border-2 border-black w-full relative"
+      >
+        <div id="with-vertical-line"></div>
+        <tbody>
+            <tr class="border-2 bg-black text-white border-black font-semibold text-sm md:text-2xl text-center">
+              <th class="w-20 md:w-32 lg:w-44 z-50 bg-black  border-black"></th>
+              {
+                day === "Sunday" ? 
+                (<td class="md:w-56 w-16 border-white border-l border-r ">9:00 AM</td>
+                <td class="md:w-56 w-16 border-white border-r">9:30 AM</td>) : null
+              }
+              <td class="md:w-56 w-16 border-white border-l border-r ">10:00 AM</td>
+              <td class="md:w-56 w-16 border-white border-r">10:30 AM</td>
+              <td class="md:w-56 w-16 border-white border-r ">11:00 AM</td>
+              <td class="md:w-56 w-16 border-white border-r">11:30 AM</td>
+              <td class="md:w-56 w-16 border-white border-r">12:00 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">12:30 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">1:00 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">1:30 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">2:00 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">2:30 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">3:00 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">3:30 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">4:00 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">4:30 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">5:00 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">5:30 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">6:00 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">6:30 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">7:00 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">7:30 PM</td>
+              <td class="md:w-56 w-16 border-white border-r">8:00 PM</td>
+              {
+                day === "Sunday" ? null :  (
+                  <td class="md:w-56 w-16 border-white border-r">8:30 PM</td>
+                  <td class="md:w-56 w-16 border-white border-r">9:00 PM</td>
+                  <td class="md:w-56 w-16 border-white border-r">9:30 PM</td>
+                  <td class="md:w-56 w-16 border-white border-r">10:00 PM</td>
+                  <td class="md:w-56 w-16 border-white border-r">10:30 PM</td>
+                  <td class="md:w-56 w-16 border-white border-r">11:00 PM</td>
+                  <td class="md:w-56 w-16 border-white border-r">11:30 PM</td>
+                  <td class="md:w-56 w-16 border-white border-r">12:00 AM</td>
+                  <td class="md:w-56 w-16 border-white border-r">12:30 AM</td>
+                  <td class="md:w-56 w-16 border-white border-r">1:00 AM</td>
+                  <td class="md:w-56 w-16 border-white border-r">1:30 AM</td>
+                  <td class="md:w-56 w-16 border-white border-r">2:00 AM</td>
+                  <td class="md:w-56 w-16 border-white border-r">2:30 AM</td>
+                  <td class="md:w-56 w-16 border-white border-r">3:00 AM</td>
+                  <td class="md:w-56 w-16 border-white border-r">3:30 AM</td>
+                )
+              }
+            </tr>
+          <slot />
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+table {
+  tr>th:first-child,
+  tr>td:first-child {
+    position: sticky;
+    left: 0;
+  }
+}
+#with-vertical-line {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0rem;
+  width: 4px;
+  @apply rounded z-0;
+  background-color: red;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+</style>
+
+<script define:vars={{day}}>
+  document.addEventListener("astro:page-load", () => {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes();
+    if (hours < 4) {
+      hours += 24;
+    }
+    const line = document.getElementById("with-vertical-line");
+    const t = 60 * hours + minutes;
+    const today = new Date();
+
+    // DAY 1: FRIDAY
+    const fridayDate = new Date(2024, 8, 27);
+    if (
+      today.getFullYear() === fridayDate.getFullYear() &&
+      today.getMonth() === fridayDate.getMonth() &&
+      today.getDate() === fridayDate.getDate() && day === "Friday"
+    ) {
+      if (hours >= 10 && hours < 28) {
+        const y =  window.innerWidth > 768 ? t * (14/30) - 269 : t * (4/30) - 75;
+        if (line) {
+          line.style.left = `${y}rem`;
+        }
+      } else {
+        line.style.left = '0rem';
+      }
+    } 
+
+    // DAY 2: SATURDAY
+    const saturdayDate =new Date(2024, 8, 28);
+    if (
+      today.getFullYear() === saturdayDate.getFullYear() &&
+      today.getMonth() === saturdayDate.getMonth() &&
+      today.getDate() === saturdayDate.getDate() && day === "Saturday"
+    ) {
+      if (hours >= 10 && hours < 28) {
+        const y =  window.innerWidth > 768 ? t * (14/30) - 269 : t * (4/30) - 75;
+        if (line) {
+          line.style.left = `${y}rem`;
+        }
+      } else {
+        line.style.left = '0rem';
+      }
+    } 
+
+    // DAY 3: SUNDAY
+    const sundayDate = new Date(2024, 8, 29);
+    if (
+      today.getFullYear() === sundayDate.getFullYear() &&
+      today.getMonth() === sundayDate.getMonth() &&
+      today.getDate() === sundayDate.getDate() && day === "Sunday"
+    ) {
+      if (hours >= 9 && hours < 20) {
+        const y =  window.innerWidth > 768 ? t * (14/30) - 237 : t * (4/30) - 67;
+        if (line) {
+          line.style.left = `${y}rem`;
+        }
+      } else {
+        line.style.left = '0rem';
+      }
+    } 
+  });
+</script>
+
+<script>
+import { gsap } from "gsap";
+
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
+
+document.addEventListener("astro:page-load", () => {
+  const table = document.getElementById('table');
+  if (table) {
+    table.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    gsap.to(table, {
+      scrollTo: {
+        x: table.scrollLeft + event.deltaY * 2, // Adjust multiplier for speed
+        autoKill: false
+      },
+      ease: "power2",
+      duration: 0.1
+    });
+  });
+  }
+});
+</script>
