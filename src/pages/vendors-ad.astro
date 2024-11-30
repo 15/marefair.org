@@ -1,0 +1,333 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image, getImage } from "astro:assets";
+import vendor from "@assets/vendors/cloppers cave/AD_VENDOR_HALL_combined.png";
+import Footer from "@components/Footer.astro";
+import Back from "@components/Back.astro";
+import { Icon } from "astro-icon/components";
+
+import card from "@assets/cards/vendors.png";
+
+import table1 from "@assets/vendors/cloppers cave/1.png";
+import table2 from "@assets/vendors/cloppers cave/2.png";
+import table3 from "@assets/vendors/cloppers cave/3.png";
+import table4 from "@assets/vendors/cloppers cave/4.png";
+import table5 from "@assets/vendors/cloppers cave/5.png";
+import table6 from "@assets/vendors/cloppers cave/6.png";
+import table7 from "@assets/vendors/cloppers cave/7.png";
+
+const tables = [
+  table1,
+  table2,
+  table3,
+  table4,
+  table5,
+  table6,
+  table7,
+]
+
+import pony1 from "@assets/pfp/15.png";
+import vendors from "@data/vendors-ad.js";
+
+const optimizedVendor = await getImage({
+  src: vendor,
+  format: "avif",
+  width: 1080,
+});
+
+import regular from "@assets/signages/Vendor Stalls - AnonTheAnon.png";
+---
+
+<Layout title="Mare Fair 2024 | Vendors">
+  <section
+    class="w-full mx-auto background-texture cursor-default flex flex-col items-center "
+  >
+    <Back />
+    <div
+      class="md:px-0 absolute hidden xl:block bottom-0 md:bottom-[5%] md:right-[-2%] rotate-6 z-50"
+    >
+      <Image
+        src={card}
+        format="avif"
+        height={400}
+        style="filter: drop-shadow(0 5px 5px #000); animation: idle 8s var(--sine) 0s infinite forwards;"
+        alt="Vendors"
+        transition:name="postcard-vendors"
+        class="bg-white rounded-lg w-84 z-50"
+      />
+    </div>
+    <a id="regular" style="filter: drop-shadow(0 5px 5px #000);"  class="cursor-pointer hover:rotate-1 duration-300 fixed z-50 bottom-auto lg:top-auto top-4 lg:bottom-4 left-auto right-4 lg:right-auto lg:left-8 text-center p-1 w-16 lg:w-24 xl:w-36 text-xs" href="/vendors">
+      <Image src={regular} alt="Vendor stalls" format="avif" width="200"/> 
+    </a>
+    <div
+      class="mt-12 bg-[#fcf1e0] flex flex-col lg:flex-row items-center rotate-0 lg:rotate-3 rounded w-[95%] md:w-[95%] lg:w-[95%] xl:w-[95%] 2xl:w-[80%] lg:aspect-[2.0] h-auto"
+      style={`filter: drop-shadow(0 5px 5px #000); background-image: url(${optimizedVendor.src}); background-size: contain; 
+      background-repeat: no-repeat;`}
+    >
+      <div class="w-full lg:w-2/3 aspect-[1.197] relative">
+        {
+          vendors.map(({ id, left, top, width, height }, i) => (
+            <Image id={`afterdark-table-${i+1}`} format="avif" src={tables[i]} width={800} alt={`Table #${i+1}`} class={`w-full absolute highlight-orange z-0 opacity-0 duration-300`}/> 
+            <div
+              id={`afterdark-${id}`}
+              style={`left: ${left}%; top: ${top}%; width: ${width}%; height: ${height}%;`}
+              class={`bg-transparent table z-10`}
+            >
+              
+            </div>
+          ))
+        }
+      </div>
+      <div class="relative w-[90%] lg:min-h-auto min-h-64 px-2 py-4 md:px-0 md:py-8 lg:px-0 lg:py-0 lg:w-1/3 bg-[#fcf1e0] border-t-2 lg:border-t-0 border-l-0 lg:border-l-2 border-black h-[90%] flex flex-col gap-y-2 md:gap-y-4 lg:gap-y-4" >
+        <div id="afterdark-vendor-pfp" style="background-image: url(/pfp/FairFlyerSnowpityPoseCloud.png);" class="bg-cover bg-center absolute top-6 lg:top-0 right-4 md:right-6 lg:right-8 aspect-square h-14 md:h-24 lg:h-14 xl:h-16 2xl:h-20 border border-black bg-transparent">
+
+        </div>
+        <div class="px-2 md:px-8 lg:px-4 2xl:px-8 text-3xl md:text-5xl lg:text-3xl 2xl:text-4xl font-bold w-5/6 uppercase tracking-wide" id="afterdark-vendor-name">
+          MARE FAIR Vendors
+        </div>
+        <div class="px-2 md:px-8 lg:px-4 2xl:px-8 text-3xl md:text-4xl lg:text-2xl 2xl:text-3xl flex gap-x-2" id="vendor-socials">
+          <a href="" class=" hover:text-blue-300 cursor-pointer">
+            <Icon name="mdi:twitter" />
+          </a>
+          <a href="" class=" hover:text-neutral-400 cursor-pointer">
+            <Icon name="mdi:home" />
+          </a>
+        </div>
+        <hr class="border-2 border-black mx-2 md:mx-8 lg:mx-4 2xl:mx-8 mb-0"/>
+        <div class="px-2 md:px-8 lg:px-4 2xl:px-8 text-xl my-4 leading-snug italic"  id="afterdark-vendor-desc">
+          Hover over a table to view vendor info!
+        </div>
+        <div class="lg:text-base xl:text-xl 2xl:text-2xl px-0 lg:px-2 2xl:px-4"  id="afterdark-vendor-selling">
+        
+        </div>
+        <div class="px-0 lg:px-2 2xl:px-4 underline">
+
+        </div>
+      </div>
+    </div>
+    <div class="my-8 lg:mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 justify-center w-full xl:px-0 px-2 xl:w-5/6 2xl:w-4/5 gap-8 ">
+      {
+        vendors.map(({id, name, src, desc, selling }) =>
+          <div id={`afterdark-card-${id}`} class="relative cursor-pointer group hover:bg-orange-500 hover:text-white duration-300 w-full bg-[#fcf1e0] rounded p-8 flex flex-col" style="filter: drop-shadow(0 10px 10px #000); ">
+            <div class="flex justify-between mb-4 items-center">
+              <div class="text-3xl md:text-3xl lg:text-4xl font-bold uppercase ">{name}</div>
+              <div id="afterdark-vendor-pfp" style={`background-image: url(/pfp/${src});`} class="bg-cover bg-center aspect-square h-14 md:h-14 lg:h-14 xl:h-16 2xl:h-20 border border-black bg-transparent">
+
+              </div>
+            </div>
+            
+            <hr class="border-2 border-black group-hover:border-white duration-300 mb-4"/>
+            
+            <div class="italic leading-snug text-sm md:text-sm lg:text-base mb-4" set:html={desc}> 
+            </div>
+
+            <div class="px-0 text-xs md:text-xs lg:text-sm italic mb-1">This vendor will be selling:</div>
+            <ul class='px-4 text-base mb-12'>
+              {
+                selling.map(item => <li class='my-0.5 text-xs md:text-xs lg:text-sm uppercase font-medium px-2 border-b-2 block border-black group-hover:border-white '>{item}</li>)
+              }
+            </ul>
+            <div class="font-semibold absolute bottom-0 text-center left-0 right-0 mx-auto w-full mb-8 lg:mb-4 text-sm">
+              Click this card see this vendor's location!
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  .table {
+    @apply text-center flex items-center  justify-center cursor-pointer  absolute;
+  }
+</style>
+
+<script>
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/animations/shift-away-extreme.css";
+
+const vendors = [
+  {
+    id: "1",
+    left: 43,
+    top: 59,
+    width: 16,
+    height: 14,
+    name: "Aer0 Zer0 + Welost: Plot Works",
+    src: "aero.png",
+    desc: "Do you like your favorite mares on the thicc'r end AND with a side of plump donuts? Then check out PlotWorks by Aer0 Zer0-Ri2k and Welost! Featuring touched up older, newer, and even pieces exclusive to Mare Fair!",
+    selling: ["Pinups", "Stickers"],
+  },
+  {
+    id: "2",
+    left: 35,
+    top: 52,
+    width: 8,
+    height: 12,
+    name: "StudioWhy",
+    src: "Why_Square.png",
+    desc: `The Philosophers amongst you will know that the question to ask upon seeing our merchandise is not "Why?" but rather "Why Not"?`,
+    selling: ["Button pins", "Art Prints", "Lenticular Prints", "Plushies"],
+  },
+  {
+    id: "3",
+    left: 29,
+    top: 44,
+    width: 8,
+    height: 12,
+    name: "gothicgalaxies + glacierclear",
+    src: "FairFlyerSnowpityPoseCloud.png",
+    desc: "We got milfs and mare accessories.",
+    selling: ["Stickers", "Prints", "Body pillows"],
+  },
+  {
+    id: "4",
+    left: 24,
+    top: 35,
+    width: 9,
+    height: 12,
+    name: "Cora's Mommy Milkers",
+    src: "cora.png",
+    desc: "Cora's handmade goods keep you in awe, and gushing about how cute your horse or your favorite horse is! Maker of B-ner Blocking Badges and so much more, our table is sure to leave you smiling with your purchases for years to come!",
+    selling: ["Button pins", "Badges", "Clay magnets"],
+  },
+  {
+    id: "5",
+    left: 35,
+    top: 28,
+    width: 10,
+    height: 12,
+    name: "Floral's Lewd Garden",
+    src: "floral.png",
+    desc: "Pssst. Hello there, tall, green and questionable. Are you interested in mares of the lewd kind? Does seeing a tail dock drive you wild? Do you watch the show for the plot? At Floral's Lewd Garden, we have all your naughty mare and stallion needs. Feel free to peruse our selections of dakis, prints and other items that will make you blush. Stick around and I promise you will find just what you're looking for <;)",
+    selling: [
+      "Pillowcases",
+      "Stickers",
+      "Buttons",
+      "Charms",
+      "Art Prints",
+      "Wall Scrolls",
+    ],
+    small: true,
+  },
+  {
+    id: "6",
+    left: 45,
+    top: 23,
+    width: 8,
+    height: 12,
+    name: "TwoShoesMcGee",
+    src: "noctus.png",
+    desc: "At our stable we look to entice you with a myriad of mares, studs and everything in between! we've got princess pinups, sultry folktown dakis, depraved keychains and so much more waiting to draw you in!",
+    selling: [
+      "Art Prints/Posters",
+      "Art Commissions",
+      "Buttons",
+      "Pillowcases",
+      "Pins",
+      "Charms",
+      "Keychains",
+    ],
+  },
+  {
+    id: "7",
+    left: 54,
+    top: 35,
+    width: 10,
+    height: 12,
+    name: "ChristoMancer Comics AD",
+    src: "christomancer.gif",
+    desc: "Welcome to ChristoMancer Comics! Home of the original Out of Work Derpy Comic and all kinds of other Art!",
+    selling: [
+      "Prints",
+      "Stickers",
+      "Cards",
+      "Keychains",
+      "Comics",
+      "Illustration booklets",
+    ],
+  },
+];
+
+
+document.addEventListener("astro:page-load", () => {
+  const regular = document.getElementById("regular");
+  if (window.innerWidth <= 1280 && regular) {
+    window.addEventListener('scroll', () => {
+      const appear = 20;
+      if (window.pageYOffset <= appear) {
+        // If more show the element
+        regular.style.opacity = '1'
+        regular.style.pointerEvents = 'all'
+      } else {
+        // Else hide it
+        regular.style.opacity = '0'
+        regular.style.pointerEvents = 'none'
+      }
+    });
+  }
+  if (regular) {
+    tippy(regular, {
+      content: `<span class='font-medium'>Vendor stalls</span>`,
+      placement: "top",
+      animation: "shift-away-extreme",
+      allowHTML: true,
+    });
+  }
+
+  let activeID;
+  vendors.forEach(({id, left, top, width, height, name, src, desc, selling, small=false}) => {
+    if (document.getElementById(`afterdark-${id}`)) {
+      const tooltip = tippy(document.getElementById(`afterdark-${id}`), {
+        content: `<span class='font-medium uppercase tracking-wide text-lg'>${name}</span>`,
+        placement: "top",
+        animation: "shift-away-extreme",
+        allowHTML: true,
+      });
+
+      const highlight = () => {
+        if (activeID) {
+          document.getElementById(`afterdark-table-${activeID}`).style.opacity = 0;
+        }
+        document.getElementById(`afterdark-table-${id}`).style.opacity = 1;
+        document.getElementById("afterdark-vendor-name").innerHTML = name;
+        if (desc) {
+          document.getElementById("afterdark-vendor-desc").innerHTML = '"' + desc + '"';
+          if (small) {
+            document.getElementById("afterdark-vendor-desc").classList.add("desc-small")
+            document.getElementById("afterdark-vendor-desc").classList.remove("desc")
+          } else {
+            document.getElementById("afterdark-vendor-desc").classList.add("desc")
+            document.getElementById("afterdark-vendor-desc").classList.remove("desc-small")
+          }
+        }
+        document.getElementById("afterdark-vendor-pfp").style.backgroundImage = `url(/pfp/${src})`;
+
+        
+        if (selling) {
+          const ulContent = selling.map(item => `<li class='my-0.5 uppercase lg:text-xs xl:text-sm 2xl:text-base text-xs font-medium lg:px-2 border-b-2 block border-black'>${item}</li>`).join('');
+          const ul = `
+            <div class="px-2 xl:px-4 text-sm xl:text-base italic mb-2 lg:mb-2">This vendor will be selling:</div><ul class='px-6 text-base'>${ulContent}</ul>
+          `;
+          document.getElementById("afterdark-vendor-selling").innerHTML = ul;
+        } else {
+          document.getElementById("afterdark-vendor-selling").innerHTML = "";
+        }
+        activeID = id;
+      };
+      
+      document.getElementById(`afterdark-${id}`).addEventListener("mouseenter", () => {
+        highlight();
+      });
+      document.getElementById(`afterdark-card-${id}`).addEventListener("click", () => {
+        highlight();
+        window.scrollTo({ top: 0, behavior: 'smooth'});
+        tooltip.show();
+      });
+    }
+  });
+  });
+  </script>

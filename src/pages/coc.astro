@@ -1,0 +1,1012 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import sign from "@assets/signatures/Fair_Flyer.png";
+import sign2 from "@assets/signatures/Morning_Mimosa.png";
+import sign3 from "@assets/signatures/Matinee.png";
+import sign4 from "@assets/signatures/Soiree.png";
+import coc from "@assets/cards/coc.png";
+import Footer from "@components/Footer.astro";
+import quill from "@assets/ornaments/DeskItemsMF24-InkWell.png";
+import drink from "@assets/ornaments/DeskItemsMF24-MixerDrink.png";
+import portfolio from "@assets/ornaments/DeskItemsMF24-ExecutivePortfolio.png";
+
+import Back from "@components/Back.astro";
+---
+
+<Layout title="Mare Fair 2024 | Code of Conduct">
+  <canvas
+    id="map"
+    class="hidden xl:block fixed bottom-[25px] left-[25px] w-[100px] h-full z-50 rounded-none"
+  ></canvas>
+  <Back />
+  <div
+    id="contract"
+    class="overflow-x-hidden relative w-full mx-auto cursor-default flex pt-4 pb-4 md:pt-20 md:pb-4 items-center justify-center"
+  >
+    <Image
+      alt="Quill and ink"
+      format="avif"
+      src={quill}
+      width={400}
+      class="hidden 2xl:block z-50 rotate-[75deg] duration-500 absolute md:right-0 md:bottom-[12rem] rounded-lg w-96 h-auto md:w-128"
+    />
+    <Image
+      alt="Drink"
+      format="avif"
+      src={drink}
+      width={400}
+      class="hidden 2xl:block z-10 rotate-[20deg] duration-500 absolute md:left-[3rem] md:bottom-[8rem] rounded-lg w-96 h-auto md:w-80"
+    />
+    <div class="hidden lg:block absolute top-80 rotate-[0deg] -left-32 z-0">
+      <Image
+        alt="Manila folder"
+        format="avif"
+        src={portfolio}
+        width={600}
+        class="hidden 2xl:block z-[-10] w-96 h-auto md:w-120"
+      />
+    </div>
+    <div
+      class="relative p-4 md:p-16 rounded-sm md:mx-0 mx-4 w-full md:w-11/12 lg:w-11/12 xl:w-288 bg-white text-black flex flex-col items-center"
+      style="filter: drop-shadow(0 5px 5px #000);"
+    >
+      <div
+        class="hidden md:block absolute -top-16 -right-16 xl:-top-28 xl:-right-48 rotate-12"
+        style="filter: drop-shadow(0 2px 2px #000);"
+      >
+        <Image
+          src={coc}
+          format="avif"
+          height={600}
+          transition:name="postcard-coc"
+          alt="Code of Conduct"
+          style=" animation: idle 8s var(--sine) 0s infinite forwards;"
+          class="rounded-lg w-40 md:w-56 xl:w-72"
+        />
+      </div>
+      <!-- <h6
+        class="text-xl md:text-4xl pb-4 md:pb-4 uppercase tracking-wide font-normal text-left md:text-left"
+      >
+        <span>Last Updated: January 7, 2024</span>
+      </h6> -->
+      <h1
+        id="illustrated-section-1"
+        class="text-3xl sm:text-5xl md:text-5xl lg:text-7xl font-semibold text-center md:text-left uppercase tracking-wide md:tracking-widest my-6 md:mb-12"
+      >
+        <span>Convention policies</span>
+      </h1>
+      <div class="flex flex-col gap-4 md:gap-8">
+        <div class="flex flex-col gap-2">
+          <h6
+            class="text-xl md:text-4xl uppercase tracking-wide font-medium text-left md:text-left"
+            id="code-of-conduct"
+          >
+            <span>Code of conduct</span>
+          </h6>
+          <h5
+            class="-my-1 text-xs md:text-base uppercase tracking-wide font-medium text-left md:text-left"
+            id="code-of-conduct"
+          >
+            <span>Last updated: January 29, 2024</span>
+          </h5>
+          <ul>
+            <li>
+              Mare Fair is an event being held by <a
+                href="https://snowpity.org"
+                target="_blank">Snowpity Inc.</a
+              > for the purposes of raising money for equine charities and allowing
+              artists within the My Little Pony fandom the opportunity to exhibit
+              their work.
+            </li>
+            <li>
+              All hotel policies, Orange County ordinances, and Florida laws
+              must be followed at all times.
+            </li>
+            <li>
+              Any action or behavior that causes significant interference with
+              convention operations or adversely affects the relationship of
+              Snowpity Inc. with its guests, its venues, or the public is
+              strictly forbidden and may result in permanent suspension of
+              ability to attend future events held by Snowpity Inc.
+            </li>
+            <li>Smoking and vaping are not allowed on hotel property.</li>
+            <li>
+              Consumption of alcoholic beverages is not allowed outside of
+              designated areas while on hotel property.
+            </li>
+            <li>
+              Do not display or show any adult themed matter in public areas of
+              the hotel.
+            </li>
+            <li>
+              Appropriate clothing must be worn while in public areas.
+              <ul>
+                <li>Adequate footwear must be worn.</li>
+                <li>
+                  Clothing which publicly exposes or provides the illusion of
+                  genitalia, buttocks, or breasts is not allowed.
+                </li>
+                <li>
+                  Clothing shall not depict any of the following:
+                  <ul>
+                    <li>Any form of sexual intercourse</li>
+                    <li>Genitalia</li>
+                    <li>Sexual bodily fluids</li>
+                    <li>
+                      Overtly grotesque images (gore, extreme filth, bodily
+                      waste, etc.)
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              The following forms of harassment are not tolerated:
+              Non-consensual physical contact, stalking, deliberate disruption
+              of any convention space or other events, threats (verbal or
+              written), loud profanity or slurs in public areas.
+            </li>
+            <li>
+              Photography or recording for commercial purposes is not allowed
+              unless you receive express written consent from Snowpity Inc.
+            </li>
+            <li>
+              Taking actions which pose a hazard to oneself, others, or the
+              orderly operation of the convention are not allowed.
+            </li>
+            <li>
+              The following items are prohibited:
+              <ul>
+                <li>Functional firearms</li>
+                <li>
+                  Realistic replica firearms that may be confused for functional
+                  firearms
+                </li>
+                <li>
+                  Functional projectile weapons (blowguns, crossbows, longbows,
+                  slingshots, etc.)
+                </li>
+                <li>Sharpened metal-bladed weapons</li>
+                <li>Explosives</li>
+                <li>Blunt weapons (brass knuckles, clubs, nunchaku, etc.)</li>
+                <li>Drones</li>
+                <li>Any other items that may be prohibited by hotel policy.</li>
+              </ul>
+            </li>
+            <li>
+              The playing of music at excessive volume within public areas of
+              the hotel is not allowed.
+            </li>
+            <li>
+              Badges are assigned to the individual listed on them; at no time
+              may you share your badge with another person.
+            </li>
+            <li>
+              A valid badge is required for entry to the vendor hall, concert,
+              all panel rooms, and any other event held at Mare Fair even if a
+              separate admission charge or reservation is required.
+            </li>
+            <li>
+              Badges must be clearly visible while in the convention area and
+              must be shown to Mare Fair or hotel staff upon request.
+            </li>
+            <li>
+              Any badges found to be modified, tampered, or reproduced will
+              thereby automatically be revoked.
+            </li>
+            <li>
+              Badge holders consent to allow Snowpity Inc. and any approved
+              affiliates the right to take photographs and recordings of
+              attendees, events, panels, and public areas for private and
+              commercial use by any means in all media now known or hereafter
+              devised worldwide in perpetuity.
+            </li>
+            <li>
+              Badge backers hang behind your attendee badge and allow off-hours
+              access to the vendor hall, AD vendor hall, or other areas of the
+              con as defined on the badge backer
+              <ul>
+                <li>
+                  Badge backers act as part of your badge and do not grant any
+                  access without a valid badge
+                </li>
+                <li>
+                  Badge backers remain the property of Snowpity, Inc., until the
+                  completion of the event
+                </li>
+              </ul>
+            </li>
+            <li>
+              Snowpity Inc. makes no warranties or guarantees concerning goods
+              or services provided to attendees by individual vendors; such
+              transactions are between the individual vendors and attendees only
+              and do not involve Mare Fair or Snowpity Inc.
+            </li>
+            <li>
+              Snowpity Inc. is not responsible for lost, stolen, or damaged
+              property.
+            </li>
+            <li>
+              Snowpity Inc. is not responsible for any injuries sustained during
+              the course of Mare Fair.
+            </li>
+            <li>
+              Snowpity Inc. is not responsible for what occurs within the
+              confines of private hotel rooms. Incidents that occur in these
+              rooms are the sole responsibility of the individual to whom the
+              room is rented, including payment of any and all damages.
+            </li>
+            <li>
+              Any advertisements for get-togethers, meetups, or other gatherings
+              that occur during the convention are welcome as long as they are
+              tasteful and posted in an area and in such a manner that will
+              cause no damage to the hotel.
+            </li>
+            <li>
+              The possibility for last minute changes exists. Panels, events,
+              activities, and vendor hall access may be canceled, rescheduled,
+              relocated, or restricted in the number of attendees allowed to be
+              present and other modifications may be made to the event without
+              prior notification or compensation. Every effort will be made to
+              announce any changes via e-mail, Mare Fair's website, and social
+              media channels.
+            </li>
+            <li>
+              This <a href="#code-of-conduct">Code of Conduct</a> may change at any
+              time; if any changes are made before the event, all attendees will
+              be notified via e-mail. If any changes are made during the event, in
+              addition to e-mail notification we will do our best to ensure word
+              of the changes is distributed to all attendees.
+            </li>
+            <li>
+              Failure to abide by this <a href="#code-of-conduct"
+                >Code of Conduct</a
+              > may result in the offender's badge and/or badge backer being revoked
+              and confiscated, security/police action, and/or the offender being
+              permanently banned from all future events held by Snowpity Inc.
+            </li>
+            <li>
+              Any area within the convention space must be vacated immediately
+              upon request of event or hotel staff.
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h6
+            class="text-xl md:text-4xl uppercase tracking-wide font-medium text-left md:text-left"
+            id="terms-of-sale"
+          >
+            <span>Terms of sale</span>
+          </h6>
+          <h5
+            class="-my-1 text-xs md:text-base uppercase tracking-wide font-medium text-left md:text-left"
+            id="code-of-conduct"
+          >
+            <span>Last updated: January 25, 2024</span>
+          </h5>
+          <ul>
+            <li>
+              All holders of badges agree to abide by the Mare Fair <a
+                href="#code-of-conduct">Code of Conduct</a
+              >.
+            </li>
+            <li>
+              All badges remain the property of Snowpity Inc. until the
+              completion of the event.
+            </li>
+            <li>
+              All sales are final and refunds will only be issued in exceptional
+              circumstances.
+            </li>
+            <li>
+              Badge transfers are allowed and we will work with you to transfer
+              your badge. Please contact <a
+                href="mailto:registration@marefair.org"
+                >registration@marefair.org</a
+              > with these requests.
+            </li>
+            <li>
+              Under no circumstances are you to re-sell your badge unless
+              express permission has been granted by Snowpity, Inc.
+            </li>
+            <li>
+              Please monitor your e-mail for any changes to the event (including
+              scheduling or <a href="#code-of-conduct">Code of Conduct</a>
+              modifications). Any material changes may come with an opportunity for
+              a refund if such changes prevent your ability to attend the event.
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h6
+            class="text-xl md:text-4xl uppercase tracking-wide font-medium text-left md:text-left"
+            id="press-policies"
+          >
+            <span>Press policies</span>
+          </h6>
+          <h5
+            class="-my-1 text-xs md:text-base uppercase tracking-wide font-medium text-left md:text-left"
+            id="code-of-conduct"
+          >
+            <span>Last updated: January 13, 2024</span>
+          </h5>
+          <ul>
+            <li>
+              All press badge holders must abide by the Mare Fair <a
+                href="#code-of-conduct">Code of Conduct</a
+              >.
+            </li>
+            <li>
+              Press badges may be issued by Snowpity Inc. at our discretion.
+            </li>
+            <li>A press badge grants you early access to programming.</li>
+            <li>
+              A press badge does not give preferred or early access to any
+              sponsor only events or any event/panel that requires an additional
+              fee.
+            </li>
+            <li>
+              Recording of panels by members of the press is allowed only if no
+              panelist objects. Please obtain the permission of the panelists
+              prior to the panel starting.
+            </li>
+            <li>
+              Recording is allowed within all common areas of the convention at
+              all times.
+            </li>
+            <li>
+              Contact the Public Relations team if you need a press badge at <a
+                href="mailto:pr@marefair.org">pr@marefair.org</a
+              >.
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h6
+            class="text-xl md:text-4xl uppercase tracking-wide font-medium text-left md:text-left"
+            id="staff-policies"
+          >
+            <span>Staff policies</span>
+          </h6>
+          <h5
+            class="-my-1 text-xs md:text-base uppercase tracking-wide font-medium text-left md:text-left"
+            id="code-of-conduct"
+          >
+            <span>Last updated: September 29, 2023</span>
+          </h5>
+          <ul>
+            <li>
+              All staff must abide by the Mare Fair <a href="#code-of-conduct"
+                >Code of Conduct</a
+              >.
+            </li>
+            <li>
+              Failure to abide by these policies may result in disciplinary
+              action up to and including the confiscation of your staff badge or
+              even being permanently banned from all future events held by
+              Snowpity Inc.
+            </li>
+            <li>
+              All staff are at-will volunteers.
+              <ul>
+                <li>
+                  No staff member will receive any monetary compensation for
+                  their work (except for reasonable reimbursement of expenses
+                  incurred in the performance of their duties with prior
+                  authorization).
+                </li>
+                <li>
+                  Snowpity Inc. may release volunteer staff from their positions
+                  for any cause.
+                </li>
+                <li>
+                  All volunteer staff may resign from their positions at any
+                  time with any reason.
+                </li>
+                <li>
+                  If you are released from or resign your position and have not
+                  yet completed the minimum service time, your staff badge may
+                  be revoked.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Handling of confidential information
+              <ul>
+                <li>
+                  During your time as a volunteer, you may be exposed to
+                  confidential information that is not intended for public
+                  release.
+                </li>
+                <li>
+                  Though we strive to be very transparent about inner workings
+                  of the convention, some information may be kept temporarily
+                  secret for marketing purposes.
+                </li>
+                <li>
+                  Other information may include personally identifiable
+                  information about staff or attendees that should never be
+                  disclosed (names, addresses, etc.).
+                </li>
+                <li>
+                  If you are privy to such information, you have an obligation
+                  to maintain its confidentiality.
+                </li>
+                <li>
+                  If you expose confidential information in violation of this
+                  agreement, you may subject yourself to possible legal fees and
+                  damages in addition to the other disciplinary measures.
+                </li>
+              </ul>
+            </li>
+            <li>
+              All staff who voluntarily create artwork or designs for use by
+              Snowpity Inc. or Mare Fair agree to grant Snowpity Inc. a
+              non-exclusive perpetual license to such works. Said license will
+              be irrevocable and may be used in any way, including in the sale
+              of merchandise for current or future events.
+            </li>
+            <li>
+              All staff who are tasked with recording audio, photographs, or
+              video during the convention grant Snowpity Inc. a non-exclusive
+              perpetual license to all audio, images, or video captured during
+              their shift. Upon request, such media must be shared with the
+              convention immediately.
+            </li>
+            <li>
+              Please inform us when you apply if you have any physical, medical,
+              or movement restrictions that need to be accommodated.
+              <ul>
+                <li>
+                  We will make every reasonable effort to accommodate everyone,
+                  but be aware that all staff are expected to manage their own
+                  wellbeing while volunteering.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Staff represent the convention at all times, and as such are asked
+              to comport themselves in an appropriate manner.
+            </li>
+            <li>
+              Staff should strive to maintain a professional and helpful
+              attitude, even when under stress.
+            </li>
+            <li>
+              Staff should be knowledgeable about the convention.
+              <ul>
+                <li>
+                  Instead of trying to memorize everything, try to familiarize
+                  yourself with the website and how you can use it to find
+                  answers to common questions.
+                </li>
+                <li>
+                  If you don’t know the answer to a question, try to contact
+                  another staff member to help you.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Show up a few minutes early for your shifts/duties whenever
+              possible.
+            </li>
+            <li>
+              Dress appropriately.
+              <ul>
+                <li>
+                  Your department may have its own dress code; please abide by
+                  it if so.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Remember that whenever you are wearing any staff clothing or are
+              displaying a staff badge, you are representing the convention.
+              <ul>
+                <li>
+                  If approached by someone asking for help while you are not
+                  currently on duty, please take the time to politely respond to
+                  them and direct them to the nearest staff member who can be of
+                  assistance.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Be sober: While you are on duty, please do not consume alcoholic
+              beverages or any type of controlled substance that may impair your
+              ability to perform your duties.
+            </li>
+            <li>
+              Treat any equipment owned by Snowpity Inc. as if it were your own.
+
+              <ul>
+                <li>
+                  You should sign any equipment that you are using (such as
+                  radios, laptops, etc.) in and out.
+                </li>
+                <li>
+                  You may be responsible for any loss or damages to equipment.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Practice good radio etiquette: Do not use inappropriate language,
+              don't spam, and act professionally.
+            </li>
+            <li>
+              While not on duty, you have the same privileges as any other
+              convention attendee.
+              <ul>
+                <li>
+                  You do not get priority access to anything while not on duty.
+                </li>
+                <li>
+                  If you've purchased a sponsor badge as well as being a staff
+                  member, you obviously will retain any privileges that come
+                  with whatever badge you've purchased.
+                </li>
+              </ul>
+            </li>
+            <li>
+              All convention staff, regardless of their position, must comply
+              with badge checks at all times (except in cases of emergency).
+              <ul>
+                <li>
+                  Do not assume the person checking badges knows who you are.
+                </li>
+              </ul>
+            </li>
+            <li>
+              You are responsible for providing your own food, transportation,
+              and lodging.
+            </li>
+            <li>
+              In the event of any accident or injury sustained while
+              volunteering, you authorized Snowpity Inc. to seek and obtain
+              medical treatment.
+            </li>
+            <li>
+              You agree to indemnify, defend, and hold harmless Snowpity Inc.
+              from any and all damages, losses, claims, liabilities, charges,
+              suits, penalties, costs, and/or expenses, including but not
+              limited to court costs, attorney fees, and expenses, resulting
+              from any act (whether intentional or not), omission, or negligence
+              of any injury to yourself.
+            </li>
+            <li>
+              If any part of this document becomes void or unenforceable, the
+              rest of this document shall remain in full force.
+            </li>
+            <li>
+              Stay healthy: Make sure to eat regular meals and get enough sleep
+              so you aren't dozing off at your post.
+            </li>
+            <li>Stay clean: Nobody wants to smell you. 👃</li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h6
+            class="text-xl md:text-4xl uppercase tracking-wide font-medium text-left md:text-left"
+            id="vendor-policies"
+          >
+            <span>Vendor policies</span>
+          </h6>
+          <span
+            class="text-xs md:text-base uppercase tracking-wide font-medium text-left md:text-left"
+          >
+            Last updated: September 29, 2023
+          </span>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">General Policies:</span> While in the Mare Fair
+            Vendor Hall all convention rules, local, state, and federal laws must
+            be observed. Vendors are required to adhere to the attendee <a
+              href="#code-of-conduct">Code of Conduct</a
+            > in addition to the vendor policies in this document. Vendors and artists
+            agree to follow any reasonable instructions given by Mare Fair staff.
+            All vendors and artists must have a government-issued photo ID to check
+            into the vendor hall or artist alley and conduct sales. <span
+              class="heading"
+              >You must be 18 years or older to vend at the convention.</span
+            >
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Taxes:</span> All Vendors are expected to be familiar
+            with, and legally compliant to, any federal, state, and local tax laws
+            that may apply to them as a vendor. This includes the collecting and
+            remitting of all applicable taxes for Florida State and Orange County.
+            Snowpity Inc. will not be held legally or financially responsible for
+            any unpaid taxes or tax violations that the vendor may incur while vending
+            at Mare Fair. Please refer to Florida Department of Revenue found at
+            <a href="https://floridarevenue.com" target="_blank"
+              >floridarevenue.com</a
+            > for more information, or to <a
+              href="https://floridarevenue.com/Forms_library/current/gt800040.pdf"
+              target="_blank"
+              >Florida Department of Revenue Publication GT-800040</a
+            >.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Sold Content:</span> Mare Fair employs what is
+            known as a "black book" policy when it comes to the sale of mature or
+            adult art or content. Mature or adult art or content may be sold if these
+            items are not on public display, and kept entirely separate from all
+            non mature or adult art or content. In addition, all adult art must have
+            genitalia (defined as female nipples or any detailing/definition of male
+            and female groin areas) covered with stickers, post-it's, opaque tape,
+            etc. Any vendor who chooses to sell mature or adult art or content must
+            understand that it is a legal requirement to keep the content from being
+            viewed, sold, or otherwise exposed to anybody under the age of 18. Any
+            instance of mature or adult art or content being viewed or sold to anybody
+            under the age of 18, or any other violation of this policy, is cause
+            for immediate ejection from the vendor hall and all vending privileges
+            revoked without refund. What counts as mature or adult content is completely
+            at the discretion of Mare Fair staff, no questions asked.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Please note:</span> Selling unlicensed, pirated,
+            or bootleg/fake products of any nature will not be tolerated. This includes
+            unlicensed plush from China and other products of similar nature. In
+            addition to this, selling any item that includes work by another person
+            from which full permission has not been obtained is strictly prohibited.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            The sale of food or drink that is sold in a 'ready to eat' state in
+            the vendor hall (such as bread, candy, cookies, etc.) is prohibited
+            by our venue. This does not include prepackaged foods that are sold
+            in a state 'not ready to eat' (such as coffee grounds, seasoning,
+            cake mixes, etc.).
+          </p><p class="text-sm md:text-lg text-left">
+            Failure to comply with any and all takedown requests from Mare Fair
+            staff may result in eviction from the vendor hall with or without
+            refund. If you have any questions as to what content is considered
+            mature or adult, please email <a href="mailto:vendor@marefair.org"
+              >vendor@marefair.org</a
+            >.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Auction, Contents, or Raffles:</span> Any auction,
+            contest, or raffle must follow the laws and regulations of Orange County
+            and the State of Florida. It is the vendor's responsibility to ensure
+            that they are following the laws and regulations set forth by the governing
+            body and also to provide evidence of this if requested by Mare Fair staff.
+            If no evidence can be provided, or Mare Fair staff deems this behavior
+            to be too disruptive or problematic, the vendor will be asked to discontinue
+            all such activities. Snowpity Inc. does not authorize or condone any
+            such activities and any violations of such can result in immediate ejection
+            from the vendor hall, with all vendor hall privileges revoked.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Early Access:</span> Vendors and artists will be
+            given early access to the vendor hall space. You must have checked in
+            and received your badge before you can begin setting up your table. All
+            vendors and assistants will be provided with tags (custom badge, badge
+            ribbon, sticker, or badge backer) that signify your status as a vendor
+            or assistant. You must display your badge and tag at all times, especially
+            during vendor only set-up hours. No badge sharing of any kind is permitted.
+            Each vendor and vendor assistant is required to have their own badge
+            and tag as a means of entry.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Cost of Tables:</span> All full vendor hall tables
+            cost $35 and DO NOT include convention registrations. All vendors and
+            assistants will be required to purchase a registration in order to be
+            able to enter the vendor hall space. Tables are standard 6 x 2-foot tables.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Cancellations:</span> Each table is registered
+            to a single vendor or artist at purchase. No purchased table may be transferred
+            to another vendor or artist. If the owning vendor or artist needs to
+            cancel, or back out, please email <a
+              href="mailto:vendor@marefair.org">vendor@marefair.org</a
+            > immediately. Refunds will be observed on a case by case basis.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Table Sharing:</span> Table sharing is not allowed
+            outside of those who are approved to vend. If you wish to share your
+            table with another artist or vendor, you must either submit a joint application
+            or email <a href="mailto:vendor@marefair.org">vendor@marefair.org</a
+            > with a request and a description of who you will be sharing your table
+            with. Approvals of any other artist or vendor whom you wish to share
+            a table with will be observed on a case by case basis.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            Any vendors who are sharing their table with unapproved vendors in
+            the vendor hall are subject to immediate ejection from the vendor
+            hall, with or without notice, and all vending privileges revoked.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">No-Shows:</span> If a vendor or artist fails to
+            check in for their table by closing of the vendor hall on Friday night,
+            they will be considered a no-show and their tables will be forfeit. No-Show
+            tables cannot be reclaimed, and neither credit nor refund will be given
+            for No-Show tables.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Signage:</span> All business names on table signage
+            should match the information that was used when registering for the table.
+            For example, if “Hold Me Closer” was put down as the table name on the
+            application but all the signs say “Tiny Dancer,” the signage must be
+            removed. Complimentary table signage will be provided for use at the
+            table. This signage may be kept or removed at the vendor's prerogative.
+            Vendors and artists are requested not to move or tamper with any other
+            Mare Fair signage.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Structures:</span> Mare Fair does not impose a
+            specific height restriction on table displays, though it must be lower
+            than touching the ceiling. Any structure brought to display artwork or
+            merchandise must be of sound construction. If any structure falls down,
+            appears unstable, blocks too much light, or impedes the space of another
+            vendor, the vendor to whom it belongs will be asked to remove it by Mare
+            Fair staff. Displays may neither impede upon other vendor's areas nor
+            disrupt traffic flow in case of emergency.
+          </p><p class="text-sm md:text-lg text-left">
+            If you have any plans to bring additional tables or any other large
+            structures, please email <a href="mailto:vendor@marefair.org"
+              >vendor@marefair.org</a
+            >.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Conduct:</span> Vendors are required to adhere
+            to all convention conduct policies in addition to the vendor policies
+            in this document. Behavior that is deemed to be dangerous to any persons
+            or property is strictly prohibited.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Noise:</span> Overly loud music, videos, etc. will
+            not be tolerated in the vendor hall. If the amount of sound coming from
+            a table is found to be disruptive to other vendors or attendees as determined
+            by Mare Fair staff, the vendor will be asked to lower the volume or turn
+            it off. Further noise violations may result in the vendor being removed
+            from the vendor hall and all vending privileges revoked.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Theft and Damages:</span> Snowpity Inc. is not
+            liable for any loss of or damage to any vendor's property or person.
+            Snowpity Inc. will make every effort to ensure that theft does not occur,
+            but ultimately are not liable. Neither Snowpity Inc. nor the venue can
+            be held legally or financially responsible for any personal injury or
+            damage caused by the inappropriate use of hotel or convention equipment.
+          </p><p class="text-sm md:text-lg text-left">
+            The vendor agrees to allow Snowpity Inc. and its staff to act as
+            their agents to investigate on their behalf on suspected shoplifting
+            incidents, but no guarantee is made as to compensation or return of
+            any lost or damaged property. We strongly advise that cash and any
+            small, highly valuable items be removed from the hall when it is not
+            occupied and stored in the vendor's room or other secure space.
+          </p><p class="text-sm md:text-lg text-left">
+            Hotel spaces or property may not be damaged or modified in any way.
+            Any vendor that causes damage to hotel space or property may be held
+            legally and financially responsible for any damages.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading"
+              >Use of Snowpity Inc. Logos and Other Branding:</span
+            > Before using or selling logos or branding (including mascots) that
+            belong to Snowpity Inc. explicit permission must be received from the
+            Snowpity Inc. Board of Directors.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Final Judgment of Rules and Policies:</span>
+            The Vendor Hall Lead and Head Pony In Charge have the final say on any
+            ruling or interpretation of the policies contained in this document,
+            without question.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Changes:</span> Snowpity Inc. reserves the right
+            to change or amend any portion of these policies, with or without notice
+            to the vendor, at any time. Every effort to notify vendors of such changes
+            will be made, but cannot guarantee such notifications.
+          </p>
+          <p class="text-sm md:text-lg text-left">
+            <span class="heading">Agreement and Acceptance:</span> By accepting and
+            paying for this exhibitor space, you are agreeing to abide by these policies
+            and codes of conduct. This document shall act as a vending contract between
+            yourself as a vending attendee and the convention. Any failure to follow
+            these terms is cause for ejection from the vendor hall, convention, and
+            all vending privileges revoked without refund.
+          </p>
+        </div>
+      </div>
+      <div
+        class="mt-20 text-sm md:text-3xl mx-auto mb-5 w-full lg:w-3/4 h-auto bg-white grid grid-cols-2 gap-y-4 md:gap-y-16 gap-x-8 lg:gap-x-24"
+      >
+        <div class="flex flex-col justify-end">
+          <div class="w-full flex items-end justify-between">
+            <span>✘</span>
+            <Image
+              alt="Fair Flyer signature"
+              format="avif"
+              src={sign}
+              width={450}
+              class="pr-4 md:pr-8"
+            />
+          </div>
+          <hr />
+          <span class="text-right">Fair Flyer</span>
+        </div>
+        <div class="flex flex-col justify-end">
+          <div class="w-full flex items-end justify-between">
+            <span>✘</span>
+            <Image
+              alt="Morning Mimosa signature"
+              format="avif"
+              src={sign2}
+              width={450}
+              class="pr-4 md:pr-8"
+            />
+          </div>
+          <hr />
+          <span class="text-right">Morning Mimosa</span>
+        </div>
+        <div class="flex flex-col justify-end">
+          <div class="w-full flex items-end justify-between">
+            <span>✘</span>
+            <Image
+              alt="Matinée signature"
+              format="avif"
+              src={sign3}
+              width={450}
+              class="pr-4 md:pr-8"
+            />
+          </div>
+          <hr />
+          <span class="text-right">Matinée</span>
+        </div>
+        <div class="flex flex-col justify-end">
+          <div class="w-full flex items-end justify-between">
+            <span>✘</span>
+            <Image
+              alt="Soirée signature"
+              format="avif"
+              src={sign4}
+              width={450}
+              class="pr-4 md:pr-8"
+            />
+          </div>
+          <hr />
+          <span class="text-right">Soirée</span>
+        </div>
+      </div>
+      <div
+        class="text-sm md:text-3xl mx-auto w-64 md:w-80 mt-8 sm:mt-8 md:mt-16 lg:mt-16"
+      >
+        <div class="flex flex-col justify-end">
+          <div class="w-full flex items-end justify-between">
+            <span
+              id="clearCanvas"
+              class="cursor-pointer hover:bg-red-200 rounded hover:text-black"
+              >✘</span
+            >
+            <canvas
+              id="myCanvas"
+              height="96"
+              width="300"
+              style="cursor: url(/cursors/16-16-anon.png), auto;"
+              class="h-16 md:h-24 bg-white border-black border"></canvas>
+          </div>
+          <hr />
+          <span class="text-right text-emerald-500">(YOU)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  #contract {
+    font-family: "Saveur Sans Regular", sans-serif !important;
+  }
+
+  hr {
+    border-color: black;
+  }
+  a {
+    @apply text-blue-600 hover:underline underline-offset-4;
+  }
+
+  ul {
+    list-style-position: inside;
+    list-style-type: "— ";
+  }
+
+  ul ul {
+    list-style-position: inside;
+    list-style-type: "— ";
+    margin-left: 2rem;
+  }
+
+  ul ul ul {
+    list-style-position: inside;
+    list-style-type: "— ";
+    margin-left: 2rem;
+  }
+
+  li,
+  p {
+    @apply text-sm md:text-lg text-left;
+    /* font-family: "Saveur Sans Regular"; */
+    font-family: Poppins, Arial, sans-serif;
+  }
+
+  .heading {
+    /* font-family: "Saveur Sans Semibold"; */
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  import pagemap from "pagemap";
+  document.addEventListener("astro:page-load", () => {
+    const pm = document.getElementById("map");
+    if (pm) {
+      pagemap(pm, {
+        viewport: null,
+        styles: {
+          // "header,footer,section,article": "rgba(0,0,0,0.1)",
+          footer: "rgba(0,0,0,0.5)",
+          // "a,span": "rgba(0,0,0,0.35)",
+          span: "rgba(0,0,0,0.3)",
+          "h2,h3,h4,p,li": "rgba(0,0,0,0.15)",
+        },
+        back: "rgba(255, 255, 255,0.5)",
+        view: "rgba(0,0,0,0.3)",
+        drag: "rgba(0,0,0,0.5)",
+        interval: null,
+      });
+    }
+
+    const setLastCoords = (e) => {
+      const { x, y } = c.getBoundingClientRect();
+      lastX = e.clientX - x;
+      lastY = e.clientY - y;
+    };
+
+    const freeForm = (e) => {
+      if (e.buttons !== 1) return; // left button is not pushed yet
+      penTool(e);
+    };
+
+    const c = document.getElementById("myCanvas");
+    if (!(c instanceof HTMLCanvasElement)) {
+      return;
+    }
+
+    // c.addEventListener("click", penTool); // fires after mouse left btn is released
+    c.addEventListener("mousedown", setLastCoords); // fires before mouse left btn is released
+    c.addEventListener("mousemove", freeForm);
+
+    const ctx = c.getContext("2d");
+
+    const clearCanvas = (e) => {
+      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    };
+
+    document
+      .getElementById("clearCanvas")
+      .addEventListener("mousedown", clearCanvas);
+    const penTool = (e) => {
+      const { x, y } = c.getBoundingClientRect();
+      const newX = e.clientX - x;
+      const newY = e.clientY - y;
+
+      ctx.beginPath();
+      ctx.lineWidth = 3;
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(newX, newY);
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+      ctx.closePath();
+
+      lastX = newX;
+      lastY = newY;
+
+      // triggerAchievement("achievement-signer");
+    };
+
+    let lastX = 0;
+    let lastY = 0;
+  });
+</script>

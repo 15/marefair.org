@@ -1,51 +1,372 @@
 ---
+import PreloadLinks from "../components/PreloadLinks.astro";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+
+import { ViewTransitions } from "astro:transitions";
+
+import { getImage } from "astro:assets";
+import bgImage from "@assets/backgrounds/bg-4000lighter.png";
+
+const backgroundImageUrl = await (async function (image) {
+  return (
+    await getImage({
+      src: image,
+      format: "avif",
+      width: 1080,
+    })
+  ).src;
+})(bgImage);
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MJQMMEGZ3F"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-MJQMMEGZ3F");
+    </script>
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="Mare Fair 2024" />
+    <meta
+      property="og:description"
+      content="Happening in Orlando, FL, from September 27th through 29th, Mare Fair is a pony convention dedicated to celebrating our love of ponies and all the very special people who continue to make the ride what it is - that means (You)!
+
+We're aiming to deliver a second event that's even bigger and better than our first!"
+    />
+    <meta property="og:image" content="/logo/2024.png" />
+    <meta property="og:image:width" content="2244" />
+    <meta property="og:image:height" content="1634" />
+    <meta property="og:url" content="https://marefair.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mare Fair 2024" />
+    <meta property="og:image:alt" content="Mare Fair logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mare Fair 2024" />
+    <meta
+      name="twitter:description"
+      content="Happening in Orlando, FL, from September 27th through 29th, Mare Fair is a pony convention dedicated to celebrating our love of ponies and all the very special people who continue to make the ride what it is - that means (You)!
+
+We're aiming to deliver a second event that's even bigger and better than our first!"
+    />
+    <meta name="twitter:image" content="/logo/2024.png" />
+    <meta
+      name="description"
+      content="Happening in Orlando, FL, from September 27th through 29th, Mare Fair is a pony convention dedicated to celebrating our love of ponies and all the very special people who continue to make the ride what it is - that means (You)!
+
+We're aiming to deliver a second event that's even bigger and better than our first!"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/logo/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Single Day:wght@400;500;600;700"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="/fonts/saveursans-bold-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/saveursans-light-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/saveursans-regular-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/saveursans-semi-bold-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <PreloadLinks />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant Garamond:wght@400;500;600;700"
+      rel="preload"
+      as="font"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni Moda:wght@400;500;600;700"
+      rel="preload"
+      as="font"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balthazar:wght@400;500;600;700"
+      rel="preload"
+      as="font"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic Neue:wght@400;500;600;700"
+      rel="preload"
+      as="font"
+    />
+  </head>
+  <body
+    style={`background-image: url('${backgroundImageUrl}');`}
+    class="bg-50% bg-top min-h-svh overflow-x-hidden"
+  >
+    <slot />
+    <style is:global>
+      :root {
+        --sine: linear(
+          0,
+          0.007 5.35%,
+          0.0282 10.75%,
+          0.0638 16.26%,
+          0.1144 21.96%,
+          0.1833 28.16%,
+          0.2717 34.9%,
+          0.6868 62.19%,
+          0.775 68.54%,
+          0.8457 74.3%,
+          0.9141 81.07%,
+          0.9621 87.52%,
+          0.9905 93.8%,
+          1
+        );
+      }
+
+      @keyframes idle {
+        0% {
+          transform: translate(0, 0) rotate(2deg);
+        }
+        50% {
+          transform: translate(0, -3px) rotate(-2deg);
+        }
+        100% {
+          transform: translate(0, 0) rotate(2deg);
+        }
+      }
+
+      @font-face {
+        font-family: "Saveur Sans Regular";
+        src: local("/fonts/saveursans-regular-webfont.woff2"),
+          url("/fonts/saveursans-regular-webfont.woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Saveur Sans Bold";
+        src: local("/fonts/saveursans-bold-webfont.woff2"),
+          url("/fonts/saveursans-bold-webfont.woff2");
+        /*  font-weight: bold;*/
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Saveur Sans Light";
+        src: local("/fonts/saveursans-light-webfont.woff2"),
+          url("/fonts/saveursans-light-webfont.woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Saveur Sans Semibold";
+        src: local("/fonts/saveursans-semi-bold-webfont.woff2"),
+          url("/fonts/saveursans-semi-bold-webfont.woff2");
+      }
+
+      .tippy-box {
+        font-family: Poppins, Arial, sans-serif;
+      }
+
+      html,
+      body {
+        overscroll-behavior-x: none;
+        overscroll-behavior-y: none;
+      }
+
+      html {
+        background-color: #77502e;
+      }
+
+      body {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .note:hover {
+        box-shadow: 0 0 15px 5px #ea428b;
+        background-color: #ea428b;
+        transition-duration: 500ms;
+      }
+
+      .background-texture {
+        box-sizing: border-box;
+      }
+
+      footer {
+        background: #13151a;
+        background-size: 224px;
+      }
+
+      .magic {
+        transition-duration: 500ms;
+      }
+
+      .magic:hover {
+        box-shadow: 0 0 25px 15px #66b2b2;
+      }
+
+      .magic-ff {
+        transition-duration: 500ms;
+      }
+
+      .magic-ff:hover {
+        box-shadow: 0 0 25px 15px #66b2b2;
+      }
+
+      .magic-mm {
+        transition-duration: 500ms;
+      }
+
+      .magic-mm:hover {
+        box-shadow: 0 0 25px 15px #fdba74;
+      }
+
+      .magic-sm {
+        transition-duration: 500ms;
+      }
+
+      .magic-sm:hover {
+        box-shadow: 0 0 25px 15px #fef3c7;
+      }
+
+      .magic-you {
+        transition-duration: 500ms;
+      }
+
+      .magic-you:hover {
+        box-shadow: 0 0 25px 15px #10b981;
+      }
+
+      .popup {
+        animation: moveUp 5s ease 0s forwards;
+      }
+
+      @keyframes moveUp {
+        0% {
+          transform: translateY(0rem);
+        }
+        10% {
+          transform: translateY(-6rem);
+        }
+        90% {
+          transform: translateY(-6rem);
+        }
+        100% {
+          transform: translateY(0rem);
+        }
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .grayscale {
+        filter: brightness(60%) grayscale(100) hue-rotate(0deg);
+      }
+
+      .highlight-orange {
+        filter: invert(21%) sepia(13%) saturate(4615%) hue-rotate(335deg)
+          brightness(97%) contrast(89%) drop-shadow(0 3px 3px #000);
+      }
+
+      .highlight-green {
+        filter: invert(47%) sepia(56%) saturate(559%) hue-rotate(36deg)
+          brightness(103%) contrast(87%) drop-shadow(0 3px 3px #000);
+      }
+    </style>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      document.addEventListener("astro:page-load", () => {
+        if (!window.location.pathname.includes("/main")) {
+          window.scrollTo(0, 0);
+        }
+      });
+
+      // Konami code achievement
+      const konamiPattern = [
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "b",
+        "a",
+      ];
+      let currentKonami = 0;
+
+      const konamiHandler = async (e) => {
+        if (
+          konamiPattern.indexOf(e.key) < 0 ||
+          e.key !== konamiPattern[currentKonami]
+        ) {
+          currentKonami = 0;
+          return;
+        }
+        currentKonami += 1;
+        if (konamiPattern.length === currentKonami) {
+          currentKonami = 0;
+          // do something with Konami code here.
+        }
+      };
+      document.addEventListener("keydown", konamiHandler);
+    </script>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>

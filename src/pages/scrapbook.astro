@@ -1,0 +1,719 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Footer from "@components/Footer.astro";
+
+import Back from "@components/Back.astro";
+import folder from "@assets/ornaments/DeskItemsMF24-NormalFolder.png";
+import coffee from "@assets/ornaments/DeskItemsMF24-CoffeeCup.png";
+
+// const photos = import.meta.glob("../assets/photos/*.jpg");
+
+// Lightgallery requires the src of the full image, but import.meta.glob
+// returns a promise that cannot be resolved within the component. Sadly,
+// this will have to be hard-coded because the search for an iterative
+// solution has been futile.
+
+import photo1 from "@assets/photos/DSCF8115.jpg";
+import photo2 from "@assets/photos/DSCF8120.jpg";
+import photo3 from "@assets/photos/DSCF8071_Processed.jpg";
+import photo4 from "@assets/photos/DSCF8100_Processed.jpg";
+import photo5 from "@assets/photos/DSCF8139.jpg";
+import photo6 from "@assets/photos/DSCF8144.jpg";
+import photo7 from "@assets/photos/DSCF8145_Processed.jpg";
+import photo8 from "@assets/photos/DSCF8183.jpg";
+import photo9 from "@assets/photos/DSCF8196_Processed.jpg";
+import photo10 from "@assets/photos/DSCF8209_Processed.jpg";
+import photo11 from "@assets/photos/DSCF8251_Processed.jpg";
+import photo12 from "@assets/photos/DSCF8259_Processed.jpg";
+import photo13 from "@assets/photos/DSCF8341_Processed.jpg";
+import photo14 from "@assets/photos/DSCF8370_Processed.jpg";
+import photo15 from "@assets/photos/DSCF8394_Processed.jpg";
+import photo16 from "@assets/photos/DSCF8417.jpg";
+import photo17 from "@assets/photos/DSCF8449.jpg";
+import photo18 from "@assets/photos/DSCF8479_Processed.jpg";
+import photo19 from "@assets/photos/DSCF8692_Processed.jpg";
+import photo20 from "@assets/photos/DSCF8702.jpg";
+import photo21 from "@assets/photos/DSCF8801.jpg";
+import photo22 from "@assets/photos/DSCF8807.jpg";
+import photo23 from "@assets/photos/DSCF8820.jpg";
+import photo24 from "@assets/photos/DSCF8833_Processed.jpg";
+import photo25 from "@assets/photos/DSCF8960_Processed.jpg";
+// import photo26 from "@assets/photos/DSCF8966.jpg";
+import photo27 from "@assets/photos/DSCF8966_Processed.jpg";
+import photo28 from "@assets/photos/DSCF8977_Processed.jpg";
+import photo29 from "@assets/photos/DSCF9028.jpg";
+import photo30 from "@assets/photos/IMG_1320.jpg";
+import photo31 from "@assets/photos/IMG_1374.jpg";
+import photo32 from "@assets/photos/IMG_9374.jpg";
+import photo33 from "@assets/photos/20230926_112930.jpg";
+import photo34 from "@assets/photos/20230929_112559.jpg";
+import photo35 from "@assets/photos/20231001_154242.jpg";
+import photo36 from "@assets/photos/20231001_154458.jpg";
+import photo37 from "@assets/photos/20231005_125851.jpg";
+import photo38 from "@assets/photos/20231005_125924.jpg";
+import photo39 from "@assets/photos/20231005_125931.jpg";
+import photo40 from "@assets/photos/DSCF7070.jpg";
+import photo41 from "@assets/photos/DSCF7091.jpg";
+import photo42 from "@assets/photos/DSCF7145.jpg";
+import photo43 from "@assets/photos/DSCF7215.jpg";
+import photo44 from "@assets/photos/DSCF7237.jpg";
+import photo45 from "@assets/photos/DSCF7243.jpg";
+import photo46 from "@assets/photos/DSCF7249.jpg";
+import photo47 from "@assets/photos/DSCF7522.jpg";
+import photo48 from "@assets/photos/DSCF7681.jpg";
+import photo49 from "@assets/photos/DSCF7741.jpg";
+import photo50 from "@assets/photos/DSCF7755.jpg";
+import photo51 from "@assets/photos/DSCF7765.jpg";
+import photo52 from "@assets/photos/DSCF8013.jpg";
+import photo53 from "@assets/photos/DSCF8024.jpg";
+import photo54 from "@assets/photos/DSCF8041.jpg";
+import photo55 from "@assets/photos/venue8.jpg";
+import photo56 from "@assets/photos/venue2.jpg";
+import photo57 from "@assets/photos/venue3.jpg";
+import photo58 from "@assets/photos/venue5.jpg";
+import photo59 from "@assets/photos/3210899.jpg";
+import photo60 from "@assets/photos/2955051.jpg";
+
+const photos = [
+  { img: photo34, photographer: "Fimphiliacs" },
+  { img: photo52, photographer: "Estonia" },
+  { img: photo42, photographer: "Dashie" },
+  { img: photo55, photographer: "Fimphiliacs" },
+  { img: photo57, photographer: "Estonia" },
+  { img: photo44, photographer: "Dashie" },
+  { img: photo45, photographer: "Dashie" },
+  { img: photo46, photographer: "Dashie" },
+  { img: photo5, photographer: "Estonia" },
+  { img: photo58, photographer: "Estonia" },
+  { img: photo19, photographer: "Estonia" },
+  { img: photo43, photographer: "Dashie" },
+  { img: photo35, photographer: "Tane Foxfur" },
+  { img: photo36, photographer: "L M" },
+  { img: photo32, photographer: "Light Solver" },
+  { img: photo30, photographer: "Light Solver" },
+  { img: photo11, photographer: "Estonia" },
+  { img: photo13, photographer: "Estonia" },
+  { img: photo18, photographer: "Estonia" },
+  { img: photo53, photographer: "Estonia" },
+  { img: photo1, photographer: "Estonia" },
+  { img: photo49, photographer: "Dashie" },
+  { img: photo2, photographer: "Estonia" },
+  { img: photo33, photographer: "Purp" },
+  { img: photo41, photographer: "Dashie" },
+  { img: photo54, photographer: "Estonia" },
+  { img: photo3, photographer: "Estonia" },
+  { img: photo4, photographer: "Estonia" },
+  { img: photo6, photographer: "Estonia" },
+  { img: photo7, photographer: "Estonia" },
+  { img: photo8, photographer: "Estonia" },
+  { img: photo9, photographer: "Estonia" },
+  { img: photo10, photographer: "Estonia" },
+  { img: photo12, photographer: "Estonia" },
+  { img: photo14, photographer: "Estonia" },
+  { img: photo15, photographer: "Estonia" },
+  { img: photo16, photographer: "Dashie" },
+  { img: photo17, photographer: "Estonia" },
+  { img: photo20, photographer: "Estonia" },
+  { img: photo60, photographer: "??" },
+  { img: photo21, photographer: "Estonia" },
+  { img: photo22, photographer: "Estonia" },
+  { img: photo23, photographer: "Estonia" },
+  { img: photo24, photographer: "Estonia" },
+  { img: photo25, photographer: "Estonia" },
+  // { img: photo26, photographer: "Estonia" },
+  { img: photo27, photographer: "Estonia" },
+  { img: photo28, photographer: "Estonia" },
+  { img: photo29, photographer: "Dashie" },
+  { img: photo59, photographer: "??" },
+  { img: photo31, photographer: "Light Solver" },
+  { img: photo56, photographer: "General Mittler" },
+  { img: photo37, photographer: "Purp" },
+  { img: photo38, photographer: "Purp" },
+  { img: photo39, photographer: "Purp" },
+  { img: photo40, photographer: "Dashie" },
+  { img: photo47, photographer: "Dashie" },
+  { img: photo48, photographer: "Dashie" },
+  { img: photo50, photographer: "Dashie" },
+  { img: photo51, photographer: "Dashie" },
+];
+
+import img0 from "@assets/cards/scrapbook.png";
+import img1 from "@assets/cards/mare_fair_postcard_1.png";
+import img2 from "@assets/cards/apply.png";
+import img3 from "@assets/cards/coc.png";
+import img4 from "@assets/cards/contact.png";
+import img5 from "@assets/cards/credits.png";
+import img6 from "@assets/cards/mascots.png";
+import img7 from "@assets/cards/register.png";
+import img8 from "@assets/cards/sponsors.png";
+import img9 from "@assets/cards/venue.png";
+import img102 from "@assets/cards/map.png";
+import img103 from "@assets/cards/schedule.png";
+import img104 from "@assets/cards/musicians.png";
+import img105 from "@assets/cards/vendors.png";
+import img10 from "@assets/gallery/marefair_pamphlet_cover_art_the_final_the_true_final_one.png";
+import img11 from "@assets/gallery/map_page_new.png";
+import img12 from "@assets/gallery/1703802038566803.png";
+import img13 from "@assets/gallery/BannedFromEquestriaDaily3TextResized.png";
+// import img14 from "@assets/badges/MusicianSite.png";
+// import img15 from "@assets/badges/PanelistSite.png";
+// import img16 from "@assets/badges/VendorSite.png";
+// import img17 from "@assets/badges/VolunteersSite.png";
+import img18 from "@assets/gallery/MimosaSunset.png";
+import img19 from "@assets/credits/Mare_Fair_Passport_en_Negro-1.png";
+import img20 from "@assets/credits/Mare_Fair_Passport-1.png";
+import img21 from "@assets/mascots/fair_flyer_postcard.png";
+import img22 from "@assets/mascots/morning_mimosa_postcard.png";
+import img23 from "@assets/mascots/matinee_card.png";
+import img24 from "@assets/mascots/soiree_card.png";
+// import img25 from "@assets/mascots/matinee_and_soiree_postcards.png";
+import img26 from "@assets/mascots/MareFair_LanyardDesign_transparent_large.png";
+import img27 from "@assets/mascots/FairFlyer_batsy.png";
+import img28 from "@assets/mascots/MS-Batsy.png";
+import img29 from "@assets/badges/!MUSICIAN-mimosa-ashtoneer.png";
+import img30 from "@assets/badges/!VENDOR-MS-LegendOfLink.png";
+import img31 from "@assets/badges/!STAFF-FF-t72b.png";
+import img32 from "@assets/gallery/Soiree_Time2.png";
+import img33 from "@assets/gallery/FF-Optimus.png";
+import img34 from "@assets/gallery/FF-Plunger.png";
+import img35 from "@assets/gallery/MS-EKfren.png";
+import img36 from "@assets/gallery/c2027a226c75b229.png";
+import img37 from "@assets/gallery/fda2102ec49ce2ef.png";
+import img38 from "@assets/gallery/7c1d1c7f7a9c5cd7.png";
+import img39 from "@assets/gallery/maremare.png";
+import img40 from "@assets/gallery/FairFlyerSnowpityPoseCloud.png";
+import img41 from "@assets/gallery/c31ac0_ba2047fa8dda4a8587a1671294cf713c~mv2.png";
+import img42 from "@assets/gallery/Fixd.png";
+import img43 from "@assets/ornaments/Mare_Fair_2_Badge.png";
+import img44 from "@assets/404/404-1.png";
+import img45 from "@assets/404/404-2.png";
+import img46 from "@assets/404/404-3.png";
+import img47 from "@assets/gallery/IMG_2076.png";
+// import img48 from "@assets/gallery/3132312.jpg";
+import img49 from "@assets/gallery/3211943.gif";
+import img50 from "@assets/gallery/3211945.gif";
+import img51 from "@assets/gallery/3223983.png";
+import img52 from "@assets/gallery/3212595.png";
+import img53 from "@assets/gallery/3082040.jpg";
+import img54 from "@assets/gallery/3071115.png";
+import img55 from "@assets/gallery/3063435.png";
+import img57 from "@assets/gallery/3089254.png";
+import img58 from "@assets/gallery/3053303.jpg";
+import img59 from "@assets/gallery/3228751.png";
+import img60 from "@assets/gallery/3207642.png";
+// import img61 from "@assets/gallery/3069526.png";
+import img62 from "@assets/gallery/3066501.gif";
+import img63 from "@assets/gallery/3053911.png";
+import img64 from "@assets/gallery/3064707.png";
+import img65 from "@assets/gallery/soirmat_card_front.png";
+import img66 from "@assets/gallery/soirmat_card_back.png";
+import img67 from "@assets/gallery/Mimo_n_Fair_this_crop.png";
+// import img68 from "@assets/gallery/Mare_Fair_2_Charity_Announcement.png";
+import img69 from "@assets/gallery/Galacon_Mare_Fair_Postcard_Back_Final.png";
+import img70 from "@assets/gallery/Galacon_Mare_Fair_Card_Front.png";
+import img71 from "@assets/gallery/galacon_mare_fair_final.png";
+import img711 from "@assets/gallery/HarmonyCon Banner.png";
+import img712 from "@assets/gallery/BABSCon Banner.png";
+import img721 from "@assets/schedule/RatingsVectorsSafe.png";
+import img722 from "@assets/schedule/RatingsVectorsSuggestive.png";
+import img723 from "@assets/schedule/RatingsVectorsQuestionable.png";
+import img724 from "@assets/schedule/RatingsVectorsExplicit.png";
+import img73 from "@assets/gallery/info.png";
+import img74 from "@assets/gallery/AD Hall Application Ad.png";
+import img75 from "@assets/gallery/tendie.png";
+import img76 from "@assets/gallery/S1XQez0.jpg";
+// import img74 from "@assets/gallery/amres_transparent_2.png";
+// import img75 from "@assets/gallery/coom_face_fair_flyer.png";
+// import img76 from "@assets/gallery/ff_ahegao.png";
+// import img77 from "@assets/gallery/matiNativeRes.png";
+// import img78 from "@assets/gallery/Matinee_ahegao.png";
+// import img79 from "@assets/gallery/Mimosa_Ahegao_Render_-_tears_mkiii (1).png";
+// import img80 from "@assets/gallery/mimosahegao.png";
+// import img81 from "@assets/gallery/MoaningMimosa.png";
+// import img82 from "@assets/gallery/morningmimosaslutmodeahegaoextravaganza.png";
+// import img83 from "@assets/gallery/SoireeAhegao.png";
+import img84 from "@assets/signages/Mare Stage - Rocket-LawnChair.png";
+import img85 from "@assets/signages/Vendor Stalls - AnonTheAnon.png";
+import img86 from "@assets/signages/Mare Square - Optimus.png";
+import img87 from "@assets/signages/Registeration - Pabbles.png";
+import img88 from "@assets/signages/Marechandise - Sigil.png";
+import img89 from "@assets/signages/Wheely Bopper Speedway Signage - Jargon Scott.png";
+import img90 from "@assets/signages/The Plone Hangar - PJ.png";
+import img91 from "@assets/signages/Janny Closet - Welost.png";
+import img92 from "@assets/signages/Thursday Theater - floralshitpost.png";
+import img93 from "@assets/signages/Floor Bored's Battle Station - lockheart.png";
+import img94 from "@assets/signages/Terri Softmare Studio - Batsy.png";
+import img95 from "@assets/signages/Fair Flyer's Charity Room - Seafood Dinner.png";
+import img96 from "@assets/signages/Clopper's Cave - JayArr.png";
+import img97 from "@assets/signages/Room for (You) - TruthOrMare.png";
+import signage2 from "@assets/signages/Mare_Gallery_Banner_24b_Smol.png";
+
+import img98 from "@assets/vendors/Con_Space_-_Vendor_Hall.png";
+import img99 from "@assets/vendors/cloppers cave/AD_VENDOR_HALL_combined.png";
+import img100 from "@assets/map/marriot merged map/second configuration/marriot merged map.png";
+import img101 from "@assets/gallery/UZReSAk.png";
+
+import jacket1 from "@assets/musicians/covers/Cantersoft_Vinyl.png";
+import jacket2 from "@assets/musicians/covers/Kaplosion_Vinyl.png";
+import jacket3 from "@assets/musicians/covers/Wiener_Schnitzel.png";
+import jacket4 from "@assets/musicians/covers/Shuffle_Cover.png";
+import jacket5 from "@assets/musicians/covers/Vale_Cover.png";
+import jacket6 from "@assets/musicians/covers/Mosspad_Vinyl.png";
+import jacket7 from "@assets/musicians/covers/HorseSexHaver_B.png";
+import jacket8 from "@assets/musicians/covers/Plony_Cover_v2.png";
+import jacket9 from "@assets/musicians/covers/MCP_Vinyl.png";
+import jacket10 from "@assets/musicians/covers/Radiarc_Vinyl.png";
+import jacket11 from "@assets/musicians/covers/Sound_Bandit_02.png";
+import jacket12 from "@assets/musicians/covers/MCMIAG_Vinyl.png";
+import jacket13 from "@assets/musicians/covers/Romance_Cover.png";
+
+import img106 from "@assets/gallery/admit.png";
+import img107 from "@assets/gallery/music_enjoyer_mares_final.png";
+import img108 from "@assets/gallery/Qn6HrYR.jpg";
+import img109 from "@assets/gallery/TzTWEkN.png";
+
+const images = [
+  { img: img0, artist: "Batsy", description: "Scrapbook postcard" },
+  { img: img1, artist: "AnontheAnon", description: "Mare Fair 2024 postcard" },
+  { img: img2, artist: "Rhorse", description: "Apply postcard" },
+  { img: img3, artist: "JayArr", description: "Code of Conduct postcard" },
+  { img: img4, artist: "Dattebayo", description: "Contact us postcard" },
+  { img: img5, artist: "Jargon Scott", description: "Credits passport" },
+  { img: img6, artist: "SigilPonies", description: "Mascots postcard" },
+  { img: img7, artist: "Jargon Scott", description: "Registrations postcard" },
+  { img: img8, artist: "Pony Quarantine", description: "Sponsors postcard" },
+  { img: img9, artist: "OJ", description: "Venue postcard" },
+  { img: img102, artist: "floralshitpost", description: "Map postcard" },
+  { img: img103, artist: "TJPones", description: "Schedule postcard" },
+  { img: img104, artist: "HorsePen", description: "Musicians postcard" },
+  { img: img105, artist: "MKogWheel", description: "Vendors postcard" },
+  {
+    img: img12,
+    artist: "Welost",
+    description: "Mare Fair 2024 date announcement",
+  },
+  {
+    img: img13,
+    artist: "JayArr",
+    description: "Banned from Equestria (Daily) promo",
+  },
+  {
+    img: img42,
+    artist: "Jargon Scott, JayArr",
+    description: "Mare Fair 2 reveal promo art",
+  },
+  // {
+  //   img: img14,
+  //   artist: "Ashtoneer",
+  //   description: "Musician application asset",
+  // },
+  // { img: img15, artist: "Batsy", description: "Panelist application asset" },
+  // {
+  //   img: img16,
+  //   artist: "LegendOfLink",
+  //   description: "Vendor application asset",
+  // },
+  // { img: img17, artist: "t72b", description: "Volunteer application asset" },
+  {
+    img: img18,
+    artist: "Batsy",
+    description: "Morning Mimosa drinking a mimosa",
+  },
+  {
+    img: img19,
+    artist: "Jargon Scott",
+    description: "Amareican diplomatic passport asset",
+  },
+  {
+    img: img20,
+    artist: "Jargon Scott",
+    description: "Amareican passport asset",
+  },
+  { img: img21, artist: "AnontheAnon", description: "Fair Flyer postcard" },
+  { img: img22, artist: "AnontheAnon", description: "Morning Mimosa postcard" },
+  { img: img23, artist: "AnontheAnon", description: "Matinée postcard" },
+  { img: img24, artist: "AnontheAnon", description: "Soirée postcard" },
+  // {
+  //   img: img25,
+  //   artist: "AnontheAnon",
+  //   description: "Matinée & Soirée postcard",
+  // },
+  { img: img43, artist: "Seafood Dinner", description: "Mare Fair 2 badge" },
+  { img: img44, artist: "ja0822ck", description: "404 version 1" },
+  { img: img45, artist: "ja0822ck", description: "404 version 2" },
+  { img: img46, artist: "ja0822ck", description: "404 version 3" },
+  {
+    img: img47,
+    artist: "floralshitpost",
+    description: "Mare Fair and BABSCon mascots hoof hold",
+  },
+  // { img: img48, artist: "poxy_boxy", description: "Tank!" },
+  { img: img65, artist: "LockHeart", description: "Soirée on a bed" },
+  { img: img66, artist: "LockHeart", description: "Matinée on a bed" },
+  { img: img26, artist: "Batsy", description: "Mare Fair mascots" },
+  { img: img27, artist: "Batsy", description: "Fair Flyer posing" },
+  { img: img28, artist: "Batsy", description: "Matinée & Soirée talking" },
+  {
+    img: img29,
+    artist: "Ashtoneer",
+    description: "Morning Mimosa rocking out",
+  },
+  {
+    img: img30,
+    artist: "LegendOfLink",
+    description: "Matinée & Soirée shopping",
+  },
+  {
+    img: img31,
+    artist: "t72b",
+    description: "Fair Flyer checking her clipboard",
+  },
+  {
+    img: img32,
+    artist: "SigilPonies",
+    description: "Soirée pointing out the time",
+  },
+  { img: img10, artist: "AnontheAnon", description: "Mare Fair 2023 poster" },
+  {
+    img: img11,
+    artist: "AnontheAnon",
+    description: "Mare Fair 2023 con grounds map",
+  },
+  {
+    img: img33,
+    artist: "Optimus",
+    description: "Fair Flyer flying toward you at mach speed",
+  },
+  { img: img34, artist: "Plunger", description: "Fair Flyer holding a camera" },
+  { img: img35, artist: "EKfren", description: "Matinée & Soirée posing" },
+  { img: img36, artist: "Algoatall", description: "Morning Mimosa 1" },
+  { img: img37, artist: "Algoatall", description: "Morning Mimosa 2" },
+  { img: img38, artist: "Algoatall", description: "Morning Mimosa 3" },
+  { img: img39, artist: "yidwags", description: "Mare Fair 2023 banner" },
+  {
+    img: img40,
+    artist: "JayArr",
+    description: "Fair Flyer sunbeam pose (Mare Fair 2023)",
+  },
+  {
+    img: img41,
+    artist: "JayArr",
+    description: "Mascots posing (Mare Fair 2023)",
+  },
+  { img: img49, artist: "Batsy", description: "Soirée dancing" },
+  { img: img50, artist: "Batsy", description: "Matinée dancing" },
+  { img: img62, artist: "Seafood Dinner", description: "Fair Flyer dancing" },
+  {
+    img: img51,
+    artist: "Seafood Dinner",
+    description: "End of Mare Fair 2023 comic",
+  },
+  { img: img52, artist: "vultraz", description: "The mascots at Wawa" },
+  {
+    img: img53,
+    artist: "to_fat_to_fly",
+    description: "Morning Mimosa singing",
+  },
+  { img: img54, artist: "SigilPonies", description: "The mascots" },
+  { img: img55, artist: "?", description: "The mascots" },
+  { img: img57, artist: "Buttercup Saiyan", description: "Matinée and Soirée" },
+  { img: img58, artist: "ja0822ck", description: "Morning Mimosa" },
+  {
+    img: img59,
+    artist: "SigilPonies",
+    description: "Morning Mimosa mareschizo",
+  },
+  {
+    img: img60,
+    artist: "Seafood Dinner",
+    description: "Matinée and Soirée getting Wawa",
+  },
+  // { img: img61, artist: "fannytastical", description: "Matinée with Marina" },
+  { img: img63, artist: "Seafood Dinner", description: "Fair Flyer" },
+  { img: img64, artist: "dumbwoofer", description: "Fair Flyer and Anonfilly" },
+  {
+    img: img67,
+    artist: "Pabbles",
+    description: "Fair Flyer and Morning Mimosa",
+  },
+  // { img: img68, artist: "?", description: "?" },
+  { img: img69, artist: "Jargon Scott", description: "GalaCon postcard back" },
+  { img: img70, artist: "Jargon Scott", description: "GalaCon postcard front" },
+  { img: img71, artist: "MKogWheel", description: "GalaCon Signage" },
+  { img: img711, artist: "Optimus", description: "HarmonyCon Signage" },
+  { img: img712, artist: "JayArr", description: "BABSCon Signage" },
+  { img: img721, artist: "JayArr", description: "Content rating: Safe" },
+  { img: img722, artist: "JayArr", description: "Content rating: Suggestive" },
+  {
+    img: img723,
+    artist: "JayArr",
+    description: "Content rating: Questionable",
+  },
+  { img: img724, artist: "JayArr", description: "Content rating: Explicit" },
+  { img: img73, artist: "Gsuus", description: "Information Desk" },
+  { img: img74, artist: "Sigil", description: "AD hall application promo art" },
+  { img: img75, artist: "Sigil", description: "Staff application promo art" },
+  { img: img76, artist: "Jargon Scott", description: "Anon Checks In" },
+  // { img: img77, artist: "?", description: "?" },
+  // { img: img78, artist: "?", description: "?" },
+  // { img: img79, artist: "?", description: "?" },
+  // { img: img80, artist: "?", description: "?" },
+  // { img: img81, artist: "?", description: "?" },
+  // { img: img82, artist: "?", description: "?" },
+  // { img: img83, artist: "?", description: "?" },
+  { img: img84, artist: "Rocket-Lawnchair", description: "Mare Stage" },
+  { img: img85, artist: "AnonTheAnon", description: "Vendor Stalls" },
+  { img: img86, artist: "Optimus", description: "Mare Square" },
+  { img: img87, artist: "Pabbles", description: "Registration" },
+  { img: img88, artist: "Sigil", description: "Marechandise" },
+  {
+    img: img89,
+    artist: "Jargon Scott",
+    description: "Wheely Bopper International Speedway",
+  },
+  { img: img90, artist: "PJ", description: "The Plone Hangar" },
+  { img: img91, artist: "Welost", description: "Janny Closet" },
+  { img: img92, artist: "floralshitpost", description: "Thursday Theater" },
+  {
+    img: img93,
+    artist: "lockheart",
+    description: "Floor Bored's Battle Station",
+  },
+  { img: img94, artist: "Batsy", description: "Terri Softmare's Studio" },
+  {
+    img: img95,
+    artist: "Seafood Dinner",
+    description: "Fair Flyer's Charity Room",
+  },
+  { img: signage2, artist: "Lunar Harmony", description: "Mare Gallery" },
+  { img: img96, artist: "JayArr", description: "Clopper's Cave" },
+  { img: img97, artist: "TruthOrMare", description: "Room for (You)" },
+  { img: img98, artist: "AnonTheAnon", description: "Vendor Stalls" },
+  { img: img99, artist: "AnonTheAnon", description: "Clopper's Cave" },
+  {
+    img: img100,
+    artist: "AnonTheAnon",
+    description: "Mare Fair hotel floorplan",
+  },
+  { img: img101, artist: "AnonTheAnon", description: "Mare Fair hotel card" },
+  {
+    img: jacket1,
+    artist: "Velgarn",
+    description: "Cantersoft vinyl album cover",
+  },
+  {
+    img: jacket2,
+    artist: "Velgarn",
+    description: "ElectroKaplosion vinyl album cover",
+  },
+  {
+    img: jacket3,
+    artist: "Velgarn",
+    description: "DJ Wiener Schnitzel vinyl album cover",
+  },
+  {
+    img: jacket4,
+    artist: "Velgarn",
+    description: "Shuffle vinyl album cover",
+  },
+  {
+    img: jacket5,
+    artist: "Velgarn",
+    description: "Vale & FL0 vinyl album cover",
+  },
+  {
+    img: jacket6,
+    artist: "Velgarn",
+    description: "Mosspad vinyl album cover",
+  },
+  {
+    img: jacket7,
+    artist: "Velgarn",
+    description: "HorseSexHaver vinyl album cover",
+  },
+  {
+    img: jacket8,
+    artist: "Velgarn",
+    description: "PlonyTones vinyl album cover",
+  },
+  {
+    img: jacket9,
+    artist: "Velgarn",
+    description: "MetalCorePony vinyl album cover",
+  },
+  {
+    img: jacket10,
+    artist: "Velgarn",
+    description: "Radiarc vinyl album cover",
+  },
+  {
+    img: jacket11,
+    artist: "Velgarn",
+    description: "Sound Bandit vinyl album cover",
+  },
+  {
+    img: jacket12,
+    artist: "Velgarn",
+    description: "MCMIAG vinyl album cover",
+  },
+  {
+    img: jacket13,
+    artist: "Velgarn",
+    description: "My Little Romance vinyl album cover",
+  },
+  {
+    img: img106,
+    artist: "Batsy",
+    description: "Fair Flyer with ticket",
+  },
+  {
+    img: img107,
+    artist: "MKogWheel",
+    description: "Mascots enjoying music",
+  },
+  {
+    img: img108,
+    artist: "Hattsy",
+    description: "Registration promo art",
+  },
+  {
+    img: img109,
+    artist: "yidwags",
+    description: "Pixel art",
+  },
+];
+---
+
+<link
+  type="text/css"
+  rel="stylesheet"
+  href="/css/lightgallery-bundle.min.css"
+/>
+<Layout title="Mare Fair 2024 | Scrapbook">
+  <section
+    id="scrapbook"
+    class="overflow-x-hidden w-full mx-auto background-texture flex flex-col items-center justify-center cursor-default h-full"
+  >
+    <Back />
+    <div
+      id="lightgallery"
+      class="text-center mt-8 mb-8 sm:mt-8 sm:mb-12 block gap-y-8 w-full px-4 sm:px-8 sm:mx-auto"
+    >
+      {
+        images.map(({ img, artist, description }, idx) =>
+          idx === 0 ? (
+            <div
+              class="max-w-64 sm:max-w-96 mx-auto"
+              data-src={img.src}
+              data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
+            >
+              <a
+                class={`relative z-50 inline-block m-2 sm:m-2 xl:m-4 duration-500 ${
+                  idx % 2
+                    ? "rotate-3 hover:rotate-6"
+                    : "-rotate-3 hover:-rotate-6"
+                }`}
+              >
+                <Image
+                  alt="Scrapbook"
+                  src={img}
+                  height={600}
+                  style="filter: drop-shadow(0 2px 2px #000); animation: idle 8s var(--sine) 0s infinite forwards;"
+                  transition:name="postcard-scrapbook"
+                  format="avif"
+                  class="h-64 sm:h-80 md:h-104 xl:h-120 w-auto md:w-auto bg-white cursor-pointer rounded-lg magic hover:scale-[1.1] "
+                />
+              </a>
+              <br />
+            </div>
+          ) : (
+            <a
+              class={`inline-block m-2 sm:m-2 xl:m-4 duration-500 ${
+                idx % 2
+                  ? "rotate-3 hover:rotate-6"
+                  : "-rotate-3 hover:-rotate-6"
+              }`}
+              data-src={img.src}
+              data-sub-html={`<h4>Artist: ${artist}</h4>${description}`}
+            >
+              <Image
+                alt={`Art asset #${idx + 1}`}
+                src={img}
+                height={300}
+                style="filter: drop-shadow(0 2px 2px #000);"
+                format="avif"
+                class="h-24 sm:h-32 xl:h-48 w-auto md:w-auto glass cursor-pointer rounded-lg sm:rounded-lg magic hover:scale-[1.1] "
+              />
+            </a>
+          )
+        )
+      }
+      {
+        photos.map(({ img, photographer }, jdx) => (
+          <a
+            class={`inline-block m-2 sm:m-2 xl:m-4 duration-500 ${
+              jdx % 2 ? "rotate-3 hover:rotate-6" : "-rotate-3 hover:-rotate-6"
+            }`}
+            data-src={img.src}
+            data-sub-html={`<h4>Photographer: ${photographer}</h4>Mare Fair 2023 photo #${
+              jdx + 1
+            }`}
+          >
+            <Image
+              alt={`Photo #${jdx}`}
+              src={img}
+              height={300}
+              format="avif"
+              style="filter: drop-shadow(0 2px 2px #000);"
+              class="h-24 sm:h-32 xl:h-48 w-auto md:w-auto bg-white cursor-pointer rounded-lg sm:rounded-lg magic hover:scale-[1.1] "
+            />
+          </a>
+        ))
+      }
+    </div>
+    <Image
+      alt="Manila folder"
+      format="avif"
+      src={folder}
+      width={600}
+      style="filter: drop-shadow(0 5px 5px #000);"
+      class="hidden -rotate-12 xl:block z-0 duration-500 absolute md:right-[3%] md:top-[-3%] w-64 h-auto md:w-144"
+    />
+    <Image
+      alt="Cup of coffee"
+      format="avif"
+      src={coffee}
+      width={600}
+      style="filter: drop-shadow(0 5px 5px #000);"
+      class="hidden rotate-[45deg] xl:block z-0 duration-500 absolute md:left-[15%] md:top-[10%] w-64 h-auto md:w-64"
+    />
+  </section>
+  <Footer />
+</Layout>
+<style>
+  #gallery {
+    font-family: "Saveur Sans Regular", sans-serif !important;
+  }
+</style>
+<script>
+  import lightGallery from "lightgallery";
+  import lgThumbnail from "lightgallery/plugins/thumbnail";
+  import lgZoom from "lightgallery/plugins/zoom";
+
+  document.addEventListener("astro:page-load", () => {
+    const gallery = document.getElementById("lightgallery");
+    if (gallery) {
+      lightGallery(gallery, {
+        plugins: [lgZoom, lgThumbnail],
+        speed: 500,
+        licenseKey: import.meta.env.PUBLIC_KEY,
+        mobileSettings: {
+          controls: false,
+          showCloseIcon: true,
+          download: true,
+        },
+      });
+    }
+  });
+</script>

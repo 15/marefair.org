@@ -1,0 +1,1117 @@
+---
+// noinspection ES6UnusedImports
+import { Image } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import Back from "@components/Back.astro";
+
+const isLocal = ["localhost"].includes(Astro.url.hostname);
+const HOST_NAME = isLocal
+  ? "https://reg-test.marefair.org"
+  : "https://reg.marefair.org";
+
+interface Sponsors {
+  badge_name: string;
+  badge_id: string;
+  answer: string;
+}
+
+import remoteSponsors from "@data/sponsors.json";
+
+const mareSupporterAndFriends = [
+  "Mare Supporter",
+  "Mare Latecoomer",
+  "Spirit Supporter",
+  "Spirit Latecoomer",
+];
+const sponsors = {
+  "Mare Supporter": remoteSponsors
+    .filter((a) => mareSupporterAndFriends.includes(a.badge_name))
+    .map((a) => a.answer),
+  "Mare Enjoyer": remoteSponsors
+    .filter((a) => a.badge_name == "Mare Enjoyer")
+    .map((a) => a.answer),
+  "Mare Enthusiast": remoteSponsors
+    .filter((a) => a.badge_name == "Mare Enthusiast")
+    .map((a) => a.answer),
+  "Mare Connoisseur": remoteSponsors
+    .filter((a) => a.badge_name == "Mare Connoisseur")
+    .map((a) => a.answer),
+  "Mare Aficionado": remoteSponsors
+    .filter((a) => a.badge_name == "Mare Aficionado")
+    .map((a) => a.answer),
+  "Mare Fanatic": remoteSponsors
+    .filter((a) => a.badge_name == "Mare Fanatic")
+    .map((a) => a.answer),
+  "Mare Schizo": remoteSponsors
+    .filter((a) => a.badge_name == "Mare Schizo")
+    .map((a) => a.answer),
+};
+---
+
+<Layout title="Mare Fair 2024 | Register">
+  <section
+    class="lg:p-5 p-2 background-texture flex flex-col min-h-screen overflow-x-hidden cursor-default"
+  >
+    <Back />
+    <Image
+      alt="Drink"
+      format="avif"
+      src="/images/DeskItemsMF24-MixerDrink.static.webp"
+      width={400}
+      height={442}
+      class="hidden 2xl:block z-50 duration-500 absolute md:left-[0%] md:bottom-[0%] rounded-lg w-96 h-auto md:w-80"
+    />
+    <div
+      class="relative mb-2 lg:mb-4 w-full lg:w-11/12 xl:w-5/6 2xl:w-2/3 flex flex-col mx-auto rounded-lg h-auto p-2 lg:p-16 menu-front text-yellow-200"
+      style="filter: drop-shadow(0 5px 5px #000);"
+    >
+      <div
+        class="w-64 md:w-72 hidden lg:block absolute top-0 rotate-12 -right-32"
+        style="filter: drop-shadow(0 2px 2px #000);"
+      >
+        <Image
+          src="/images/register.static.webp"
+          format="avif"
+          width={450}
+          height={600}
+          transition:name="postcard-register"
+          style=" animation: idle 8s var(--sine) 0s infinite forwards;"
+          alt="Register"
+          class="rounded-lg"
+        />
+      </div>
+      <div
+        class="w-full h-full border-2 md:border-8 p-1 md:p-2"
+        style="  border-image: linear-gradient(#fef08a, #eab308, #fef08a, #eab308, #fef08a, #eab308) 1;"
+      >
+        <div
+          class="w-full h-full border-2 md:border-8 p-4 md:p-4 flex flex-col items-center"
+          style="border-image: linear-gradient(#fef08a, #eab308, #fef08a, #eab308, #fef08a, #eab308) 1;"
+        >
+          <div
+            class="text-center flex items-center justify-center text-6xl sm:text-9xl md:text-9xl lg:text-10xl xl:text-12xl tracking-wider"
+          >
+            Mare Fair
+          </div>
+          <div
+            style="font-family: 'Saveur Sans Regular';"
+            class="mt-4 md:mt-4 w-full flex items-center justify-center text-lg md:text-2xl tracking-wider text-center"
+          >
+            A convention for adult fans of My Little Pony
+          </div>
+          <hr
+            class="my-4 md:my-8 border-yellow-200 border-4 w-full sm:w-1/2 mx-auto"
+          />
+          <div
+            class="flex items-center justify-center text-4xl md:text-8xl tracking-wider"
+          >
+            Entrées
+          </div>
+
+          <hr
+            class="my-4 md:my-8 border-yellow-200 border-4 w-full sm:w-1/2 mx-auto"
+          />
+
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-2 md:px-4 py-2 rounded-lg decoration-yellow-200 underline-offset-4"
+            id="fairgoer"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-4xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">Fairgoer</div>
+              <div class="flex items-center justify-end">
+                <div
+                  class="text-base md:text-2xl flex items-center justify-center"
+                >
+                  $70
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-default register hover:bg-white hover:text-black duration-300 hidden md:block mt-20 absolute border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+                >
+                  Register
+                </a>
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li>Fairgoer badge</li>
+                <li>Simple colored lanyard</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-default register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-2 md:px-4 py-2 rounded-lg decoration-yellow-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-4xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">
+                Mare latecoomer
+              </div>
+              <div class="flex items-center justify-end">
+                <div
+                  class="text-base md:text-2xl flex items-center justify-center"
+                >
+                  $120
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-default register hover:bg-white hover:text-black duration-300 hidden md:block mt-20 absolute border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+                >
+                  Register
+                </a>
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li>Mare Supporter badge</li>
+                <li>Sponsor lanyard</li>
+                <li>Thanks on website (optional)</li>
+                <li>$20 in con store coupons</li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-default register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-2 md:px-4 py-2 rounded-lg decoration-yellow-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-4xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">Mare supporter</div>
+              <div class="flex items-center justify-end">
+                <div
+                  class="text-base md:text-2xl flex items-center justify-center"
+                >
+                  $155
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 hidden md:block mt-20 absolute border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+                >
+                  Register
+                </a>
+                <span
+                  style="font-family: 'Saveur Sans Bold';"
+                  class="whitespace-nowrap absolute top-[5.75rem] text-red-600 text-sm tracking-widest hidden md:block"
+                  >Sold out!</span
+                >
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li>Mare Supporter badge</li>
+                <li>Sponsor lanyard</li>
+                <li>Thanks on website (optional)</li>
+                <li>
+                  Commemorative sponsor gifts, including T-shirt, water bottle,
+                  patch, and soap
+                </li>
+                <li>Coupon for a free hoagie from Wawa</li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+              <span
+                style="font-family: 'Saveur Sans Bold';"
+                class="whitespace-nowrap mt-1 text-red-600 text-sm tracking-widest block md:hidden"
+                >Sold out!</span
+              >
+            </div>
+          </div>
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-2 md:px-4 py-2 rounded-lg decoration-yellow-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-4xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">Mare enjoyer</div>
+              <div class="flex items-center justify-end">
+                <div
+                  class="text-base md:text-2xl flex items-center justify-center"
+                >
+                  $285
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 hidden md:block top-12 absolute border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+                >
+                  Register
+                </a>
+                <span
+                  style="font-family: 'Saveur Sans Bold';"
+                  class="whitespace-nowrap absolute top-[5.75rem] text-red-600 text-sm tracking-widest hidden md:block"
+                  >Sold out!</span
+                >
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  All Mare supporter perks (except badge)
+                </li>
+                <li>Mare Enjoyer badge</li>
+                <li>Early access to Vendor Stalls</li>
+                <li>Front-of-line privilege to all lines</li>
+                <li>Priority badge pickup</li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+              <span
+                style="font-family: 'Saveur Sans Bold';"
+                class="whitespace-nowrap mt-1 text-red-600 text-sm tracking-widest block md:hidden"
+                >Sold out!</span
+              >
+            </div>
+          </div>
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-2 md:px-4 py-2 rounded-lg decoration-yellow-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-4xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">
+                Mare enthusiast
+              </div>
+              <div class="flex items-center justify-end">
+                <div
+                  class="text-base md:text-2xl flex items-center justify-center"
+                >
+                  $850
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 hidden md:block top-12 absolute border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+                >
+                  Register
+                </a>
+                <span
+                  style="font-family: 'Saveur Sans Bold';"
+                  class="whitespace-nowrap absolute top-[5.75rem] text-red-600 text-sm tracking-widest hidden md:block"
+                  >Sold out!</span
+                >
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  All Mare enjoyer perks (except badge)
+                </li>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  Limited to 50 spots
+                </li>
+                <li>Mare Enthusiast badge</li>
+                <li>Thanks at the opening and closing ceremonies (optional)</li>
+                <li>
+                  Your choice of a single or double standard hotel room for 4
+                  nights (check-in on Thursday, check-out on Monday); nights can
+                  be added at con rate ($140 plus taxes and fees, contact
+                  attendees@marefair.org)
+                </li>
+                <li>Commemorative sponsor tote bag</li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+              <span
+                style="font-family: 'Saveur Sans Bold';"
+                class="whitespace-nowrap mt-1 text-red-600 text-sm tracking-widest block md:hidden"
+                >Sold out!</span
+              >
+            </div>
+          </div>
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-4 md:px-4 py-2 rounded-lg decoration-yellow-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-5xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">
+                Mare connoisseur
+              </div>
+              <div class="flex items-center justify-end">
+                <div
+                  class="text-xl md:text-3xl flex items-center justify-center"
+                >
+                  $1,000
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 hidden md:block mt-20 absolute border-white border-2 bg-transparent rounded text-white px-3 py-1 tracking-wider text-xl"
+                >
+                  Register
+                </a>
+                <span
+                  style="font-family: 'Saveur Sans Bold';"
+                  class="whitespace-nowrap absolute top-[6.5rem] text-red-600 text-sm tracking-widest hidden md:block"
+                  >Sold out!</span
+                >
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  All Mare enthusiast perks (except badge)
+                </li>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  Limited to 5 spots
+                </li>
+                <li>Mare Connoisseur badge</li>
+                <li>
+                  Phone number for the Head Pony In Charge (call him when you
+                  have any issues or if you're feeling lonely)
+                </li>
+                <li>Free digital pony art commission (colored)</li>
+                <li>Free ticket to the Spaghetti and Tendie charity dinner</li>
+                <li>
+                  Invitation to come on stage to speak briefly during the
+                  opening and closing ceremonies (optional)
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+              <span
+                style="font-family: 'Saveur Sans Bold';"
+                class="whitespace-nowrap mt-1 text-red-600 text-sm tracking-widest block md:hidden"
+                >Sold out!</span
+              >
+            </div>
+          </div>
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-4 md:px-4 py-2 rounded-lg decoration-yellow-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-6xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">
+                Mare aficionado
+              </div>
+              <div class="flex items-center justify-end">
+                <div
+                  class="text-2xl md:text-4xl flex items-center justify-center"
+                >
+                  $2,500
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 hidden md:block mt-24 absolute border-white border-2 bg-transparent rounded text-white px-4 py-1 tracking-wider text-2xl"
+                >
+                  Register
+                </a>
+                <span
+                  style="font-family: 'Saveur Sans Bold';"
+                  class="whitespace-nowrap absolute top-[7.5rem] text-red-600 text-base tracking-widest hidden md:block"
+                  >Sold out!</span
+                >
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  All Mare connoisseur perks (except badge and hotel room)
+                </li>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  Limited to 2 spots
+                </li>
+                <li>Custom Mare Aficionado badge with custom art</li>
+                <li>Coupon for two free hoagies from Wawa (total of three)</li>
+                <li>Wawa concierge to get your free hoagies for you</li>
+                <li>Free digital pony art commission (full)</li>
+                <li>
+                  Custom exclusive Discord server only for you (we will create
+                  it, invite you, then leave, making it super exclusive)
+                </li>
+                <li>Commemorative sponsor backpack</li>
+                <li>
+                  Jr. Executive Suite (one bed plus foldout couch) for 4 nights
+                  (check-in on Thursday, check-out on Monday); nights can be
+                  added at con rate ($140 plus taxes and fees, contact
+                  attendees@marefair.org)
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+              <span
+                style="font-family: 'Saveur Sans Semibold';"
+                class="whitespace-nowrap mt-1 text-red-600 text-sm tracking-widest block md:hidden"
+                >Sold out!</span
+              >
+            </div>
+          </div>
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-4 md:px-4 py-2 rounded-lg decoration-yellow-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-6xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">Mare Fanatic</div>
+              <div class="flex items-center justify-end">
+                <div
+                  class="text-3xl md:text-5xl flex items-center justify-center"
+                >
+                  $5,555
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 hidden md:block mt-28 absolute border-white border-2 bg-transparent rounded-md text-white px-5 py-2 tracking-wider text-3xl"
+                >
+                  Register
+                </a>
+                <span
+                  style="font-family: 'Saveur Sans Bold';"
+                  class="whitespace-nowrap absolute top-[8.25rem] text-red-600 text-lg tracking-widest hidden md:block"
+                  >Sold out!</span
+                >
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-base md:text-lg tracking-wider"
+            >
+              <ul>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  All Mare aficionado perks (except badge)
+                </li>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  Limited to 1 spot
+                </li>
+                <li>Custom Mare Fanatic badge with custom art</li>
+                <li>
+                  Limo ride to/from airport or other location within reasonable
+                  distance
+                </li>
+                <li>Amusement park trip (we choose the park)</li>
+                <li>Two free Fairgoer badges for friends</li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+              <span
+                style="font-family: 'Saveur Sans Semibold';"
+                class="whitespace-nowrap mt-1 text-red-600 text-sm tracking-widest block md:hidden"
+                >Sold out!</span
+              >
+            </div>
+          </div>
+          <div
+            class="relative group w-full duration-500 2xl:w-11/12 2xl:px-8 2xl:py-4 md:px-4 py-2 rounded-lg decoration-white rainbow underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-7xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">Mare schizo</div>
+              <div class="flex items-center justify-end">
+                <div
+                  class="text-4xl md:text-6xl flex items-center justify-center"
+                >
+                  $22,222
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 hidden md:block mt-32 absolute border-white border-2 bg-transparent rounded-lg text-white px-6 py-2 tracking-wider text-4xl"
+                >
+                  Register
+                </a>
+                <span
+                  style="font-family: 'Saveur Sans Bold';"
+                  class="whitespace-nowrap absolute top-[9.25rem] text-red-600 text-lg tracking-widest hidden md:block"
+                  >Sold out!</span
+                >
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-base md:text-lg tracking-wider"
+            >
+              <ul>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  All Mare fanatic perks (except badge and suite)
+                </li>
+                <li style="font-family: 'Saveur Sans Semibold';">
+                  Limited to 1 spot
+                </li>
+                <li>Custom Mare Schizo badge with custom art</li>
+                <li>
+                  Backstage pass (may require a staff escort when in areas
+                  restricted to convention staff)
+                </li>
+                <li>
+                  Access to vendor stalls on Thursday evening (vendors may not
+                  be set up yet and may not be able to sell anything, no
+                  guarantees on anything)
+                </li>
+                <li>
+                  Special Thursday night dinner with the Head Pony In Charge,
+                  Background Pony In Charge, and up to five guests of your
+                  choice to a restaurant of your choice
+                </li>
+                <li>
+                  Up to $10,000 in travel expenses for you and/or your friends
+                  (ask for details)
+                </li>
+                <li>Up to five Mare Enjoyer badges for your friends</li>
+                <li>
+                  Up to six tickets for up to three days at Disney World,
+                  Universal, and/or SeaWorld/Busch Gardens theme parks (ask for
+                  details)
+                </li>
+                <li>
+                  Jr. Executive Suite (one bed plus foldout couch) for 7 nights
+                  (check-in after 9/22, check-out before 10/3); nights can be
+                  added at con rate ($140 plus taxes and fees, contact
+                  attendees@marefair.org)
+                </li>
+                <li>
+                  Your choice of a single or double standard hotel room for 7
+                  nights (check-in after 9/22, check-out before 10/3) for your
+                  friends; nights can be added at con rate ($140 plus taxes and
+                  fees, contact attendees@marefair.org)
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a><span
+                style="font-family: 'Saveur Sans Bold';"
+                class="whitespace-nowrap mt-1 text-red-600 text-sm tracking-widest block md:hidden"
+                >Sold out!</span
+              >
+            </div>
+          </div>
+          <hr
+            class="my-4 md:my-8 border-blue-200 border-4 w-full sm:w-1/2 mx-auto"
+          />
+          <div
+            class="flex items-center justify-center text-4xl md:text-8xl tracking-wider text-blue-200"
+          >
+            Spirits
+          </div>
+          <hr
+            class="my-4 md:my-8 border-blue-200 border-4 w-full sm:w-1/2 mx-auto"
+          />
+          <div
+            class="group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-2 md:px-4 py-2 rounded-lg decoration-blue-200 text-blue-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-4xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">
+                Spirit Fairgoer
+              </div>
+              <div class="text-base md:text-2xl flex items-center justify-end">
+                <div
+                  class="text-base md:text-2xl flex items-center justify-center"
+                >
+                  $45
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-default register hover:bg-white hover:text-black duration-300 hidden md:block mt-20 absolute border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+                >
+                  Register
+                </a>
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li>Fairgoer badge</li>
+                <li>Simple colored lanyard</li>
+              </ul>
+            </div>
+            <div class="flex items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-default register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-2 md:px-4 py-2 rounded-lg decoration-blue-200 text-blue-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-4xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">
+                Spirit Latecoomer
+              </div>
+              <div class="text-base md:text-2xl flex items-center justify-end">
+                <div
+                  class="text-base md:text-2xl flex items-center justify-center"
+                >
+                  $125
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-default register hover:bg-white hover:text-black duration-300 hidden md:block mt-20 absolute border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+                >
+                  Register
+                </a>
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li>Mare Supporter badge</li>
+                <li>Sponsor lanyard</li>
+                <li>Thanks on website (optional)</li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-default register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+          <div
+            class="relative group my-1 hover:bg-[#282828] duration-300 w-full 2xl:w-11/12 2xl:px-8 2xl:py-2 md:px-4 py-2 rounded-lg decoration-blue-200 text-blue-200 underline-offset-4"
+          >
+            <div
+              class="flex justify-between w-full items-center text-2xl md:text-4xl tracking-wider"
+            >
+              <div class="flex items-center justify-center">
+                Spirit Supporter
+              </div>
+              <div class="text-base md:text-2xl flex items-center justify-end">
+                <div
+                  class="text-base md:text-2xl flex items-center justify-center"
+                >
+                  $125
+                </div>
+                <a
+                  target="_blank"
+                  style="font-family: 'Saveur Sans Regular';"
+                  class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 hidden md:block mt-20 absolute border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+                >
+                  Register
+                </a>
+                <span
+                  style="font-family: 'Saveur Sans Bold';"
+                  class="whitespace-nowrap absolute top-[5.75rem] text-red-600 text-sm tracking-widest hidden md:block"
+                  >Sold out!</span
+                >
+              </div>
+            </div>
+            <div
+              style="font-family: 'Saveur Sans Regular';"
+              class="py-2 flex justify-between w-full items-center text-sm md:text-base tracking-wider"
+            >
+              <ul>
+                <li>Mare Supporter badge</li>
+                <li>Sponsor lanyard</li>
+                <li>Thanks on website (optional)</li>
+                <li>
+                  Commemorative sponsor gifts, including T-shirt, water bottle,
+                  patch, and soap
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <a
+                target="_blank"
+                style="font-family: 'Saveur Sans Regular';"
+                class="grayscale disabled cursor-not-allowed register hover:bg-white hover:text-black duration-300 md:hidden block border-white border-2 bg-transparent rounded text-white px-2 py-1 tracking-wider text-lg"
+              >
+                Register
+              </a>
+              <span
+                style="font-family: 'Saveur Sans Bold';"
+                class="whitespace-nowrap mt-1 text-red-600 text-sm tracking-widest block md:hidden"
+                >Sold out!</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="relative mt-2 lg:mt-4 w-full lg:w-11/12 xl:w-5/6 2xl:w-2/3 flex flex-col mx-auto rounded-lg h-auto p-2 lg:p-16 menu-back text-black"
+      style="filter: drop-shadow(0 5px 5px #000);"
+    >
+      <div
+        class="w-120 hidden lg:block absolute -top-24 -rotate-12 -left-60"
+        style="filter: drop-shadow(0 2px 2px #000);"
+      >
+        <Image
+          src="/images/sponsors.static.webp"
+          format="avif"
+          width="450"
+          height="300"
+          alt="Sponsors"
+          class="rounded-lg"
+        />
+      </div>
+
+      <Image
+        alt="Silverware"
+        format="avif"
+        src="/images/DeskItemsMF24-SilverWare.static.webp"
+        width={400}
+        height={600}
+        class="hidden 2xl:block z-50 duration-500 rotate-[20deg] absolute md:right-[-20%] md:bottom-[5%] rounded-lg w-96 h-auto md:w-84"
+      />
+      <div
+        class="w-full h-full border-4 md:border-8 p-2"
+        style="  border-image: linear-gradient(#242424, #121212, #242424, #121212, #242424, #121212) 1;"
+      >
+        <div
+          class="w-full h-full border-4 md:border-8 p-4 flex flex-col items-center"
+          style="  border-image: linear-gradient(#242424, #121212, #242424, #121212, #242424, #121212) 1;"
+        >
+          <div
+            class="flex items-center justify-center text-6xl sm:text-9xl md:text-9xl lg:text-10xl xl:text-12xl tracking-wider"
+            id="sponsors"
+          >
+            Sponsors
+          </div>
+          <hr
+            class="my-4 md:my-8 border-black border-4 w-full sm:w-1/2 mx-auto"
+          />
+          <div
+            class="flex items-center justify-center text-4xl md:text-8xl tracking-wider"
+          >
+            Mare Fair 2024
+          </div>
+          <hr
+            class="my-4 md:my-8 border-black border-4 w-full sm:w-1/2 mx-auto"
+          />
+          <div class="w-full md:w-5/6 py-6 decoration-black">
+            <div
+              class={`flex justify-center w-full items-center text-4xl md:text-7xl tracking-wider`}
+            >
+              <div class="flex items-center justify-center">Mare Schizo</div>
+            </div>
+            <div
+              class={`py-2 w-full text-xl md:text-3xl tracking-wider text-center`}
+              style="font-family: 'Saveur Sans Regular';"
+            >
+              {
+                sponsors["Mare Schizo"]?.length
+                  ? sponsors["Mare Schizo"].join(", ")
+                  : "No one yet!"
+              }
+            </div>
+          </div>
+
+          <div class="w-full md:w-5/6 py-4 decoration-black">
+            <div
+              class={`flex justify-center w-full items-center text-3xl md:text-6xl tracking-wider`}
+            >
+              <div class="flex items-center justify-center">Mare Fanatic</div>
+            </div>
+            <div
+              class={`py-2 flex justify-center w-full items-center text-base md:text-xl tracking-wider text-center`}
+              style="font-family: 'Saveur Sans Regular';"
+            >
+              {
+                sponsors["Mare Fanatic"]?.length
+                  ? sponsors["Mare Fanatic"].join(", ")
+                  : "No one yet!"
+              }
+            </div>
+          </div>
+
+          <div class="w-full md:w-5/6 py-4 decoration-black">
+            <div
+              class={`flex justify-center w-full items-center text-2xl md:text-5xl tracking-wider`}
+            >
+              <div class="flex items-center justify-center">
+                Mare Aficionado
+              </div>
+            </div>
+            <div
+              class={`py-2 flex justify-center w-full items-center text-sm md:text-base tracking-wider text-center`}
+              style="font-family: 'Saveur Sans Regular';"
+            >
+              {
+                sponsors["Mare Aficionado"]?.length
+                  ? sponsors["Mare Aficionado"].join(", ")
+                  : "No one yet!"
+              }
+            </div>
+          </div>
+
+          <div class="w-full md:w-5/6 py-2 decoration-black">
+            <div
+              class={`flex justify-center w-full items-center text-xl md:text-4xl tracking-wider`}
+            >
+              <div class="flex items-center justify-center">
+                Mare Connoisseur
+              </div>
+            </div>
+            <div
+              class={`py-2 flex justify-center w-full items-center text-sm md:text-base tracking-wider text-center`}
+              style="font-family: 'Saveur Sans Regular';"
+            >
+              {
+                sponsors["Mare Connoisseur"]?.length
+                  ? sponsors["Mare Connoisseur"].join(", ")
+                  : "No one yet!"
+              }
+            </div>
+          </div>
+
+          <div class="w-full md:w-5/6 py-2 decoration-black">
+            <div
+              class={`flex justify-center w-full items-center text-lg md:text-3xl tracking-wider`}
+            >
+              <div class="flex items-center justify-center">
+                Mare Enthusiast
+              </div>
+            </div>
+            <div
+              class={`py-2 flex justify-center w-full items-center text-sm md:text-base tracking-wider text-center`}
+              style="font-family: 'Saveur Sans Regular';"
+            >
+              {
+                sponsors["Mare Enthusiast"]?.length
+                  ? sponsors["Mare Enthusiast"].join(", ")
+                  : "No one yet!"
+              }
+            </div>
+          </div>
+
+          <div class="w-full md:w-5/6 py-2 decoration-black">
+            <div
+              class={`flex justify-center w-full items-center text-lg md:text-2xl tracking-wider`}
+            >
+              <div class="flex items-center justify-center">Mare Enjoyer</div>
+            </div>
+            <div
+              class={`py-2 flex justify-center w-full items-center text-sm md:text-base tracking-wider text-center`}
+              style="font-family: 'Saveur Sans Regular';"
+            >
+              {
+                sponsors["Mare Enjoyer"]?.length
+                  ? sponsors["Mare Enjoyer"].join(", ")
+                  : "No one yet!"
+              }
+            </div>
+          </div>
+
+          <div class="w-full md:w-5/6 py-2 decoration-black">
+            <div
+              class={`flex justify-center w-full items-center text-lg md:text-xl tracking-wider`}
+            >
+              <div class="flex items-center justify-center">Mare Supporter</div>
+            </div>
+            <div
+              class={`py-2 flex justify-center w-full items-center text-sm md:text-base tracking-wider text-center`}
+              style="font-family: 'Saveur Sans Regular';"
+            >
+              {
+                sponsors["Mare Supporter"]?.length
+                  ? sponsors["Mare Supporter"].join(", ")
+                  : "No one yet!"
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  .starburst-9 {
+    text-align: center;
+    aspect-ratio: 1;
+    clip-path: polygon(
+      100% 50%,
+      78.19% 60.26%,
+      88.3% 82.14%,
+      65% 75.98%,
+      58.68% 99.24%,
+      44.79% 79.54%,
+      25% 93.3%,
+      27.02% 69.28%,
+      3.02% 67.1%,
+      20% 50%,
+      3.02% 32.9%,
+      27.02% 30.72%,
+      25% 6.7%,
+      44.79% 20.46%,
+      58.68% 0.76%,
+      65% 24.02%,
+      88.3% 17.86%,
+      78.19% 39.74%
+    );
+  }
+  #fairgoer-discount {
+    font-family: "Saveur Sans Semibold";
+    @apply absolute mr-6 md:mr-10 w-12 text-xs md:text-2xl md:w-20 z-50 bg-yellow-200  text-black border border-white rotate-[-3deg] group-hover:rotate-[-10deg] duration-500;
+  }
+
+  .strikethrough {
+    position: relative;
+  }
+  .strikethrough:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 40%;
+    right: 0;
+    @apply z-50 rotate-[-10deg] border-red-600 border-t-4;
+  }
+
+  path {
+    fill: transparent;
+  }
+  text {
+    fill: #fef08a;
+  }
+
+  section {
+    font-family: "Saveur Sans Light";
+  }
+
+  .menu-front {
+    background: radial-gradient(#242424, #121212);
+  }
+
+  .menu-back {
+    background: radial-gradient(#fef08a, #facc15);
+  }
+
+  ul {
+    list-style-position: inside;
+    list-style-type: "— ";
+  }
+
+  .rainbow {
+    background: linear-gradient(
+      to right,
+      #6666ff,
+      #0099ff,
+      #00ff00,
+      #ff3399,
+      #6666ff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 5s linear infinite;
+    background-size: 2000% 2000%;
+  }
+
+  @keyframes rainbow_animation {
+    0%,
+    100% {
+      background-position: 0 0;
+    }
+
+    50% {
+      background-position: 100% 0;
+    }
+  }
+</style>

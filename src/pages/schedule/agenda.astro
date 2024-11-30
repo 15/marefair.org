@@ -1,0 +1,320 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import Back from "@components/Back.astro";
+
+import { Image } from "astro:assets";
+import safe from "@assets/schedule/RatingsVectorsSafe.png";
+import suggestive from "@assets/schedule/RatingsVectorsSuggestive.png";
+import questionable from "@assets/schedule/RatingsVectorsQuestionable.png";
+import explicit from "@assets/schedule/RatingsVectorsExplicit.png";
+import unrated from "@assets/schedule/RatingsUnrated.png";
+
+import ScheduleHeader from "@components/schedule/ScheduleHeader.astro";
+
+
+const getRatingImage = (rating) => {
+  switch (rating.toLowerCase()) {
+    case "safe":
+      return safe
+    case "suggestive":
+      return suggestive
+    case "questionable":
+      return questionable
+    case "unrated":
+      return unrated
+    case "explicit":
+    default:
+      return explicit
+  }
+};
+
+type DayOfTheWeek =
+  | "Monday"
+  | "Tuesday"
+  | "Wednesday"
+  | "Thursday"
+  | "Friday"
+  | "Saturday"
+  | "Sunday";
+
+export enum RATING {
+  Safe = "safe",
+  Suggestive = "suggestive",
+  Questionable = "questionable",
+  Explicit = "explicit",
+  Unrated = "unrated",
+}
+
+export enum ROOM {
+  Mare_Stage = 0,
+  Plone_Hangar = 1,
+  Thursday_Theater = 2,
+  Wheely_Bopper_Intl_Speedway = 3,
+  Room_uuuu = 4,
+  Terri_Softmare_Studio = 5,
+  Concert = 6,
+  UNKNOWN = 7,
+}
+
+type Event = {
+  placeholder?: false;
+  title: string;
+  host: string;
+  description: string;
+  startDate: Date;
+  start: string;
+  endDate: Date;
+  end: string;
+  day: DayOfTheWeek;
+  timeslots: number;
+  rating: RATING;
+  room: ROOM;
+  isConcert: boolean;
+};
+
+export type PlaceholderEvent = {
+  placeholder: true;
+  timeslots: number;
+  startDate: Date;
+};
+
+const convertTime = (d: Date) => {
+  const hours = d.getHours();
+  let hString = hours.toString().padStart(2, "0");
+  let suffix = "";
+  const mString = d.getMinutes().toString().padStart(2, "0");
+  if (hours === 0) {
+    hString = "12";
+    suffix = "AM";
+  } else if (hours < 12) {
+    suffix = "AM";
+  } else if (hours === 12) {
+    suffix = "PM";
+  } else {
+    hString = (hours - 12).toString().padStart(2, "0");
+    suffix = "PM";
+  }
+
+  return `${hString}:${mString} ${suffix}`;
+};
+
+import rawEventsE from '@data/schedule-e.json';
+import rawEventsG from '@data/schedule-g.json';
+
+function fetchEvents() {
+  interface RawEvent {
+    "application-name": string;
+    "start-time": string;
+    "end-time": string;
+    "business-name": string;
+    "Panel description"?: string[];
+    "Set description"?: string[];
+    "Rate your panel"?: string[];
+    "room-or-table-id": string;
+  }
+
+  const events = [rawEventsG,rawEventsE].map((rawEvents : RawEvent[]) => {
+    try {
+      return rawEvents.map(ev => {
+          const start = new Date(ev["start-time"]);
+          const end = new Date(ev["end-time"]);
+          return {
+            title: ev["application-name"],
+            host: ev["business-name"],
+            description: (
+              ev["Panel description"] || ev["Set description"]
+            ).join("\n"),
+            startDate: start,
+            start: convertTime(start),
+            endDate: end,
+            end: convertTime(end),
+            timeslots: Math.round(
+              (end.getTime() - start.getTime()) / (30 * 60 * 1000)
+            ),
+            day: (() => {
+              const dClone = new Date(start.getTime());
+              dClone.setHours(dClone.getHours() - 6); // Offset by 6 hours to make sure events past 12AM are still counted on this day
+              return [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+              ][dClone.getDay()] as DayOfTheWeek;
+            })(),
+            rating: (() => {
+              switch ((ev["Rate your panel"] || [])[0]) {
+                case "safe - nothing sexual":
+                  return RATING.Safe;
+                case "suggestive - slightly sexual topics and innuendo":
+                  return RATING.Suggestive;
+                case "questionable - sexual discussion but nothing displayed on monitors":
+                  return RATING.Questionable;
+                case "explicit - we're going to be showing clop images and/or reading actual clop fics":
+                default:
+                  return RATING.Explicit;
+              }
+            })(),
+            room: (() => {
+              switch (ev["room-or-table-id"]) {
+                case "Mare Events":
+                case "Mare Stage":
+                case "Concert":
+                  return ROOM.Mare_Stage;
+                case "Plone Hangar":
+                  return ROOM.Plone_Hangar;
+                case "Room For (You)":
+                  return ROOM.Room_uuuu;
+                case "Terri Softmare Studio":
+                  return ROOM.Terri_Softmare_Studio;
+                case "Thursday Theater":
+                  return ROOM.Thursday_Theater;
+                case "Wheely Bopper International Speedway":
+                  return ROOM.Wheely_Bopper_Intl_Speedway;
+                default:
+                  return ROOM.UNKNOWN;
+              }
+            })(),
+            isConcert: ev["room-or-table-id"] === "Concert",
+          };
+        });
+      } catch (error) {
+        console.warn(error);
+        return [];
+      }
+    }
+  );
+  return events.flat();
+};
+const remoteEvents = fetchEvents()
+remoteEvents.sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
+const rooms = [
+  "Mare Stage",
+  "Plone Hangar",
+  "Thursday Theater",
+  "Wheely Bopper International Speedway",
+  "Room for (You)",
+  "Terri Softmare Studio",
+  "Vendor Hall",
+  "Vendor Hall",
+];
+
+const roomType = [
+  "room1",
+  "room2",
+  "room3",
+  "room4",
+  "room5",
+  "room6",
+  "room7",
+  "room8",
+  "concert",
+];
+---
+
+<Layout title="Mare Fair 2024 | Schedule">
+  <Back />
+  <section
+    class="mx-auto pl-2 pr-2 lg:pr-0 lg:pl-12 cursor-default flex flex-col pt-12 pb-0 lg:pt-12 lg:pb-0 items-center justify-center w-full"
+  >
+    <ScheduleHeader />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-8">
+      {
+        remoteEvents.map(
+          ({
+            title,
+            day,
+            start,
+            end,
+            timeslots,
+            room,
+            host,
+            rating,
+            description,
+            isConcert,
+          }) => (
+            <div
+              class={`${isConcert ? "concert" : roomType[room]} w-full md:w-96 2xl:w-120 relative rounded p-4 border border-black gap-y-0.5 h-full`}
+              style="font-family: 'Single Day'; filter: drop-shadow(0 2px 2px #000);"
+            >
+              {!isConcert ? (
+                <div class="float-right">
+                  <Image
+                    format="avif"
+                    src={getRatingImage(rating)}
+                    width={100}
+                    height={100}
+                    alt={`${rating.toLowerCase()} icon`}
+                    style="filter: drop-shadow(0 2px 2px #000);"
+                    class="mt-4 lg:mt-0 w-24 h-24 lg:w-16 lg:h-16 rounded"
+                  />
+                </div>
+              ) : (
+                <div class="float-right">
+                  <Image
+                    format="avif"
+                    src={getRatingImage(RATING.Unrated)}
+                    width={100}
+                    height={100}
+                    alt={`unrated icon`}
+                    style="filter: drop-shadow(0 2px 2px #000);"
+                    class="mt-4 lg:mt-0 w-24 h-24 lg:w-16 lg:h-16 rounded"
+                  />
+                </div>
+              )}
+              <div class="flex flex-col gap-y-1">
+                <div class="font-semibold text-2xl leading-none">{title}</div>
+                <div class="font-medium text-xl leading-none">
+                  {day} @ {start}-{end} ({timeslots * 30} minutes)
+                </div>
+                <div class="font-semibold text-lg leading-none">
+                  Location: {rooms[room]}
+                </div>
+                <div class="font-medium text-lg leading-none">Host: {host}</div>
+                {!isConcert ? (
+                  <div class="font-medium text-lg leading-none uppercase">
+                    Rating: {rating}
+                  </div>
+                ) : null}
+                <div class="leading-5 text-lg mt-2" set:html={description} />
+              </div>
+            </div>
+          )
+        )
+      }
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .room1 {
+    @apply bg-pink-200;
+  }
+  .room2 {
+    @apply bg-orange-200;
+  }
+  .room3 {
+    @apply bg-blue-200;
+  }
+  .room4 {
+    @apply bg-green-200;
+  }
+  .room5 {
+    @apply bg-red-200;
+  }
+  .room6 {
+    @apply bg-purple-200;
+  }
+  .room8 {
+    @apply bg-indigo-200;
+  }
+  .concert {
+    @apply bg-black text-white;
+  }
+</style>

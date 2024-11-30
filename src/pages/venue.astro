@@ -1,0 +1,489 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image, getImage } from "astro:assets";
+import Footer from "@components/Footer.astro";
+import postcard from "@assets/cards/venue.png";
+import note2 from "@assets/notes/blue.png";
+import Back from "@components/Back.astro";
+
+import drink from "@assets/ornaments/DeskItemsMF24-MixerDrink.png";
+
+import venue1 from "@assets/venue/venue1.jpg";
+import venue2 from "@assets/venue/venue2.jpg";
+import venue3 from "@assets/venue/venue3.jpg";
+import venue4 from "@assets/venue/venue4.jpg";
+import venue6 from "@assets/venue/venue6.jpg";
+import venue7 from "@assets/venue/venue7.jpg";
+import venue8 from "@assets/venue/venue8.jpg";
+import venue9 from "@assets/venue/venue9.jpg";
+import photo59 from "@assets/photos/3210899.jpg";
+
+const [
+  optimizedVenue1,
+  optimizedVenue2,
+  optimizedVenue3,
+  optimizedVenue4,
+  optimizedVenue5,
+  optimizedVenue6,
+  optimizedVenue7,
+  optimizedVenue8,
+  optimizedVenue9,
+] = await Promise.all(
+  [venue1, venue2, venue3, venue4, photo59, venue6, venue7, venue8, venue9].map(
+    async (v) =>
+      getImage({
+        src: v,
+        format: "avif",
+        width: 600,
+      })
+  )
+);
+---
+
+<Layout title="Mare Fair 2024 | Venue">
+  <section
+    id="venue"
+    class="overflow-x-hidden w-full mx-auto background-texture flex flex-col items-center h-full"
+  >
+    <Back />
+    <div class="hidden xl:flex flex-col items-center justify-center">
+      <div class="md:px-0 absolute top-16 md:top-0 md:right-[15%] rotate-12">
+        <Image
+          src={postcard}
+          height={600}
+          style="filter: drop-shadow(0 5px 5px #000);  animation: idle 8s var(--sine) 0s infinite forwards;"
+          alt="Venue"
+          format="avif"
+          transition:name="postcard-venue"
+          class="bg-white rounded-lg w-72 md:w-120"
+        />
+      </div>
+      <div class="fold fold-1" id="fold-1"></div>
+      <div class="fold fold-2" id="fold-2"></div>
+      <div class="fold fold-3" id="fold-3"></div>
+      <div
+        class="z-50 absolute top-[67%] flex flex-col items-center justify-center"
+      >
+        <div class="mt-12 flex flex-col gap-y-1 cursor-default">
+          <div
+            class="tracking-wider drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] flex items-center justify-center text-center w-full md:text-5xl text-2xl text-white"
+          >
+            Marriott Orlando<br />Airport Lakeside
+          </div>
+          <div
+            class="-mb-1 tracking-wider drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] flex items-center justify-center text-center w-full md:text-xl text-base text-white"
+          >
+            7499 Augusta National Dr.
+          </div>
+          <div
+            class="-mt-1 tracking-wider drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] flex items-center justify-center text-center w-full md:text-xl text-base text-white"
+          >
+            Orlando, FL 32822
+          </div>
+        </div>
+        <a
+          class="mt-2 md:mt-2"
+          href="https://www.marriott.com/events/start.mi?id=1716473258666&key=GRP"
+          target="_blank"
+        >
+          <button
+            style="font-family: 'Saveur Sans Regular';"
+            class="hover:scale-110 z-50 duration-300 border-green-600 border bg-emerald-400 hover:bg-emerald-600 rounded text-black px-2 py-1 tracking-wider text-xl"
+            id="book-now"
+          >
+            Book Now
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="flex flex-col items-center xl:hidden">
+      <div
+        class="mt-24 z-40 px-4 md:px-0 flex flex-col items-center justify-center w-full rotate-12"
+      >
+        <Image
+          src={postcard}
+          height="600"
+          style="filter: drop-shadow(0 5px 5px #000);"
+          alt="Venue"
+          format="avif"
+          transition:name="postcard-venue"
+          class="bg-white rounded-lg w-72 md:w-96"
+        />
+      </div>
+      <div
+        class="z-50 relative w-96 sm:w-120 lg:w-160 xl:w-208 -mt-32 xl:-mt-12 px-4 md:px-0 flex flex-col items-center justify-center"
+      >
+        <Image
+          src={venue7}
+          height="600"
+          style="filter: drop-shadow(0 5px 5px #000);"
+          alt="Mare Fair 2023"
+          format="avif"
+          class="-mb-24 sm:-mb-24 md:-mb-12 bg-white rounded-lg -rotate-3 h-48 xl:h-64 z-50 bg-auto object-cover"
+        />
+        <Image
+          src={venue8}
+          height="600"
+          style="filter: drop-shadow(0 5px 5px #000);"
+          alt="Vendor hall"
+          format="avif"
+          class="-mb-24 sm:-mb-24 md:-mb-12 bg-white rounded-lg rotate-3 h-48 xl:h-64 z-40 bg-auto object-cover"
+        />
+        <Image
+          src={venue2}
+          height="600"
+          style="filter: drop-shadow(0 5px 5px #000);"
+          alt="Swimming pool"
+          format="avif"
+          class="-mb-8 md:mb-2 bg-white rounded-lg -rotate-3 h-48 xl:h-64 z-30 bg-auto object-cover"
+        />
+      </div>
+      <div class="mt-24 lg:mt-12 flex flex-col z-20 gap-y-1 cursor-default">
+        <div
+          class="tracking-wider drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] flex items-center justify-center text-center w-full text-2xl sm:text-5xl md:text-5xl text-white"
+        >
+          Marriott Orlando<br />Airport Lakeside
+        </div>
+        <div
+          class="-mb-1 tracking-wider drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] flex items-center justify-center text-center w-full sm:text-xl md:text-xl text-base text-white"
+        >
+          7499 Augusta National Dr.
+        </div>
+        <div
+          class="-mt-1 tracking-wider drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] flex items-center justify-center text-center w-full sm:text-xl md:text-xl text-base text-white"
+        >
+          Orlando, FL 32822
+        </div>
+      </div>
+      <a
+        href="https://www.marriott.com/events/start.mi?id=1716473258666&key=GRP"
+        target="_blank"
+        class="z-20"
+      >
+        <button
+          style="font-family: 'Saveur Sans Regular';"
+          class="z-50 mt-2 duration-300 border-green-600 border bg-emerald-400 hover:bg-emerald-600 rounded text-black px-2 py-1 tracking-wider text-xl"
+        >
+          Book Now
+        </button>
+      </a>
+    </div>
+    <Image
+      alt="Drink"
+      src={drink}
+      width={400}
+      format="avif"
+      class="hidden 2xl:block z-30 absolute md:right-[6%] md:bottom-[5%] rounded-lg w-96 h-auto md:w-80"
+    />
+  </section>
+  <div
+    class="z-50 rotate-[-10deg] rounded-lg absolute w-32 h-32 sm:w-48 xl:w-64 xl:h-64 sm:h-48 left-[2%] md:right-auto bottom-[50%] md:bottom-[10%] md:left-[4%]"
+  >
+    <Image
+      alt="Sticky note"
+      src={note2}
+      width={200}
+      format="avif"
+      class="absolute w-48 h-auto xl:w-64"
+    />
+    <div
+      style="font-family: 'Single Day';"
+      class="absolute cursor-default w-28 sm:w-36 xl:w-56 left-[0.5rem] sm:left-[1.5rem] xl:left-[1rem] top-[17%] font-medium text-center text-xs sm:text-base xl:text-2xl"
+    >
+      If booking via phone, call <span class="font-bold">800-380-6751</span> and
+      mention the <span class="font-bold">Mare Fair</span> Group Name
+    </div>
+  </div>
+  <Footer />
+</Layout>
+
+<style
+  define:vars={{
+    venue1: `url(${optimizedVenue1.src})`,
+    venue2: `url(${optimizedVenue2.src})`,
+    venue3: `url(${optimizedVenue3.src})`,
+    venue4: `url(${optimizedVenue4.src})`,
+    venue5: `url(${optimizedVenue5.src})`,
+    venue6: `url(${optimizedVenue6.src})`,
+    venue7: `url(${optimizedVenue7.src})`,
+    venue8: `url(${optimizedVenue8.src})`,
+    venue9: `url(${optimizedVenue9.src})`,
+  }}
+>
+  body {
+    overflow-x: hidden;
+  }
+
+  #venue {
+    font-family: "Saveur Sans Regular", sans-serif !important;
+  }
+
+  .fold {
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+    filter: drop-shadow(0 10px 10px #000);
+    width: 24rem;
+    height: 36rem;
+    box-sizing: border-box;
+    transition: 0.75s;
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(0 2px 2px #000) brightness(90%) grayscale(100)
+      hue-rotate(0deg);
+  }
+
+  .fold-1 {
+    background: var(--venue7);
+    z-index: 50;
+    rotate: -2deg;
+    top: 40%;
+    left: 50%;
+    border-top: 10px solid #66b2b2;
+    border-bottom: 10px solid #66b2b2;
+    background-size: cover;
+    /* background-position: center; */
+    background-position: 0px 0;
+    transform: translate(-50%, -50%) skewY(0deg) rotateY(0deg) scale(0.9);
+  }
+
+  .fold-1:hover,
+  .fold-1.is-active {
+    transform: translate(-50%, -50%) skewY(7deg) rotateY(0deg) scale(0.9);
+    filter: drop-shadow(0 50px 50px #000);
+    rotate: 0deg;
+  }
+
+  .fold-1:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: calc(100% + 20px);
+    background: var(--venue8);
+    background-size: cover;
+    background-position: -150px 0;
+    top: -10px;
+    left: -80%;
+    box-sizing: border-box;
+    border-top: 10px solid #66b2b2;
+    border-bottom: 10px solid #66b2b2;
+    border-left: 10px solid #66b2b2;
+    border-right: 5px solid #66b2b2;
+    transform: perspective(100000px) skewY(-15deg) rotateY(-90deg);
+    transform-origin: right;
+    box-shadow: inset -50px 0 50px rgb(0, 0, 0, 0.1);
+    transition: 0.75s;
+  }
+
+  .fold-1:hover:before,
+  .fold-1.is-active:before {
+    transform: perspective(100000px) skewY(-15deg) rotateY(0deg);
+    /* box-shadow: -15px 15px 25px #66b2b2, -15px 15px 25px #66b2b2, -15px -15px 25px #66b2b2; */
+  }
+
+  .fold-1:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: calc(100% + 20px);
+    top: -10px;
+    right: -80%;
+    background: var(--venue1);
+    background-size: cover;
+    background-position: -180px 0;
+    border-top: 10px solid #66b2b2;
+    border-bottom: 10px solid #66b2b2;
+    border-right: 10px solid #66b2b2;
+    border-left: 5px solid #66b2b2;
+    box-sizing: border-box;
+    transform: perspective(100000px) skewY(-15deg) rotateY(-90deg);
+    transform-origin: left;
+    box-shadow: inset 50px 0 50px rgb(0, 0, 0, 0.1);
+    transition: 0.75s;
+  }
+  .fold-1:hover:after,
+  .fold-1.is-active:after {
+    transform: perspective(100000px) skewY(-15deg) rotateY(0deg);
+  }
+
+  .fold-2 {
+    background: var(--venue3);
+    rotate: 2deg;
+    top: 40%;
+    left: 34%;
+    border-top: 10px solid #fdba74;
+    border-bottom: 10px solid #fdba74;
+    background-size: cover;
+    background-position: 0px 0;
+    transform: translate(-50%, -50%) skewY(0deg) rotateY(0deg) scale(0.9);
+  }
+
+  .fold-2:hover,
+  .fold-2.is-active {
+    transform: translate(-50%, -50%) skewY(7deg) rotateY(0deg) scale(0.9);
+    filter: drop-shadow(0 50px 50px #000);
+    rotate: 0deg;
+  }
+
+  .fold-2:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: calc(100% + 20px);
+    background: var(--venue4);
+    background-size: cover;
+    background-position: -250px 0;
+    top: -10px;
+    left: -80%;
+    box-sizing: border-box;
+    border-top: 10px solid #fdba74;
+    border-bottom: 10px solid #fdba74;
+    border-left: 10px solid #fdba74;
+    border-right: 5px solid #fdba74;
+    transform: perspective(100000px) skewY(-15deg) rotateY(-90deg);
+    transform-origin: right;
+    box-shadow: inset -50px 0 50px rgb(0, 0, 0, 0.1);
+    transition: 0.75s;
+  }
+
+  .fold-2:hover:before,
+  .fold-2.is-active:before {
+    transform: perspective(100000px) skewY(-15deg) rotateY(0deg);
+    /* box-shadow: -15px 15px 25px #66b2b2, -15px 15px 25px #66b2b2, -15px -15px 25px #66b2b2; */
+  }
+
+  .fold-2:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: calc(100% + 20px);
+    top: -10px;
+    right: -80%;
+    background: var(--venue9);
+    background-size: cover;
+    background-position: -70px 0;
+    border-top: 10px solid #fdba74;
+    border-bottom: 10px solid #fdba74;
+    border-right: 10px solid #fdba74;
+    border-left: 5px solid #fdba74;
+    box-sizing: border-box;
+    transform: perspective(100000px) skewY(-15deg) rotateY(-90deg);
+    transform-origin: left;
+    box-shadow: inset 50px 0 50px rgb(0, 0, 0, 0.1);
+    transition: 0.75s;
+  }
+  .fold-2:hover:after,
+  .fold-2.is-active:after {
+    transform: perspective(100000px) skewY(-15deg) rotateY(0deg);
+  }
+
+  .fold-3 {
+    background: var(--venue2);
+    rotate: 2deg;
+    top: 40%;
+    left: 64%;
+    border-top: 10px solid #fef3c7;
+    border-bottom: 10px solid #fef3c7;
+    background-size: cover;
+    background-position: -20px 0;
+    transform: translate(-50%, -50%) skewY(0deg) rotateY(0deg) scale(0.9);
+  }
+
+  .fold-3:hover,
+  .fold-3.is-active {
+    transform: translate(-50%, -50%) skewY(7deg) rotateY(0deg) scale(0.9);
+    filter: drop-shadow(0 50px 50px #000);
+    rotate: 0deg;
+  }
+
+  .fold-3:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: calc(100% + 20px);
+    background: var(--venue5);
+    background-size: cover;
+    background-position: -500px 0;
+    top: -10px;
+    left: -80%;
+    box-sizing: border-box;
+    border-top: 10px solid #fef3c7;
+    border-bottom: 10px solid #fef3c7;
+    border-left: 10px solid #fef3c7;
+    border-right: 5px solid #fef3c7;
+    transform: perspective(100000px) skewY(-15deg) rotateY(-90deg);
+    transform-origin: right;
+    box-shadow: inset -50px 0 50px rgb(0, 0, 0, 0.1);
+    transition: 0.75s;
+  }
+
+  .fold-3:hover:before,
+  .fold-3.is-active:before {
+    transform: perspective(100000px) skewY(-15deg) rotateY(0deg);
+    /* box-shadow: -15px 15px 25px #66b2b2, -15px 15px 25px #66b2b2, -15px -15px 25px #66b2b2; */
+  }
+
+  .fold-3:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: calc(100% + 20px);
+    top: -10px;
+    right: -80%;
+    background: var(--venue6);
+    background-size: cover;
+    background-position: -200px 0;
+    border-top: 10px solid #fef3c7;
+    border-bottom: 10px solid #fef3c7;
+    border-right: 10px solid #fef3c7;
+    border-left: 5px solid #fef3c7;
+    box-sizing: border-box;
+    transform: perspective(100000px) skewY(-15deg) rotateY(-90deg);
+    transform-origin: left;
+    box-shadow: inset 50px 0 50px rgb(0, 0, 0, 0.1);
+    transition: 0.75s;
+  }
+  .fold-3:hover:after,
+  .fold-3.is-active:after {
+    transform: perspective(100000px) skewY(-15deg) rotateY(0deg);
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const center = document.getElementById("fold-1");
+    const left = document.getElementById("fold-2");
+    const right = document.getElementById("fold-3");
+
+    if (!center || !left || !right) {
+      return;
+    }
+
+    const els = [center, left, right];
+    center.addEventListener("mouseover", (e) => {
+      center.style.zIndex = "50";
+      left.style.zIndex = "40";
+      right.style.zIndex = "40";
+    });
+
+    left.addEventListener("mouseover", (e) => {
+      center.style.zIndex = "40";
+      left.style.zIndex = "50";
+      right.style.zIndex = "40";
+    });
+
+    right.addEventListener("mouseover", (e) => {
+      center.style.zIndex = "40";
+      left.style.zIndex = "40";
+      right.style.zIndex = "50";
+    });
+
+    els.forEach((el) => {
+      el.addEventListener("mouseout", (e) => {
+        center.style.zIndex = "50";
+        left.style.zIndex = "40";
+        right.style.zIndex = "40";
+      });
+    });
+  });
+</script>

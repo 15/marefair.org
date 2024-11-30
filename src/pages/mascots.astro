@@ -1,0 +1,728 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import postcard from "@assets/cards/mascots.png";
+import img1 from "@assets/mascots/fair_flyer_postcard.png";
+import img2 from "@assets/mascots/morning_mimosa_postcard.png";
+import img3 from "@assets/mascots/matinee_card.png";
+import img8 from "@assets/mascots/soiree_card.png";
+import img4 from "@assets/mascots/ff.png";
+import img5 from "@assets/mascots/mm.png";
+import img6 from "@assets/mascots/m.png";
+import img7 from "@assets/mascots/s.png";
+import Footer from "@components/Footer.astro";
+import button from "@assets/ornaments/Mare_Fair_2_Badge.png";
+import Back from "@components/Back.astro";
+---
+
+<Layout title="Mare Fair 2024 | Our Mascots">
+  <section
+    class="overflow-x-clip w-full mx-auto p-2 background-texture flex flex-col items-center justify-center cursor-default h-full sm:h-[calc(100vh-3rem)] sm:min-h-160"
+  >
+    <Back />
+    <dialog class="p-0 cursor-default" id=`dialog-ff`>
+      <div
+        class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+        id="close-ff"
+      >
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+            fill="currentColor"></path>
+        </svg>
+      </div>
+      <div
+        class="overflow-hidden p-4 md:p-8 bg-blue-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+      >
+        <div class="flex items-center justify-center w-full lg:pl-6">
+          <Image
+            src={img4}
+            format="avif"
+            height="800"
+            alt="Fair Flyer"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg -rotate-3 p-4"
+          />
+        </div>
+        <div class="flex flex-col w-auto lg:ml-12">
+          <div
+            class="pt-4 pb-2 md:py-4 text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase"
+          >
+            Fair Flyer
+          </div>
+          <div
+            class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+          >
+            Fair Flyer is nothing short of a maestro in her field, constantly
+            seeking opportunities to put on spectacular conventions for scores
+            of ponies to enjoy. Her special talent shines in getting events off
+            the ground, transforming mere gatherings into memorable experiences
+            that resonate deeply with everypony within a ten nautical mile
+            radius. Soaring with boundless passion and backed by a hoof-picked
+            team of con-loving ponies, she's committed to organizing an
+            unforgettable get-together that'll certainly be the talk of the
+            town!
+          </div>
+          <div
+            class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+          >
+            The sight of ponies thoroughly reveling in the moment, radiating
+            genuine happiness, is what sets her world alight, fueling her
+            eagerness to bring Mare Fair back this year. With her unwavering
+            determination, she's returning to Orlando to craft enduring memories
+            that will linger long in the hearts of all who attend!
+          </div>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="p-0 cursor-default" id=`dialog-mm`>
+      <div
+        class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+        id="close-mm"
+      >
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+            fill="currentColor"></path>
+        </svg>
+      </div>
+      <div
+        class="overflow-hidden p-4 md:p-8 bg-orange-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-160"
+      >
+        <div class="flex items-center justify-center w-full lg:pl-6">
+          <Image
+            src={img5}
+            format="avif"
+            height="800"
+            alt="Morning Mimosa"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-56 xl:min-w-72 bg-white rounded-lg -rotate-3 p-4"
+          />
+        </div>
+        <div class="flex flex-col w-auto lg:ml-12">
+          <div
+            class="pt-4 pb-2 md:py-4 text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase"
+          >
+            Morning Mimosa
+          </div>
+          <div
+            class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+          >
+            Hailing from the sunny state of Florida, Morning Mimosa is set to
+            help host another unforgettable extravaganza right in her own
+            backyard&mdash;a second Mare Fair! A charming blend of nerdy and
+            eccentric, this earth pony can be a real <span class="italic"
+              >hoof</span
+            >-ful. Don't be fooled by her unassuming appearance, though! Beneath
+            her seemingly reserved exterior is a true wild card, ever ready to
+            dive into unforeseen adventures (which she'll undoubtably ramble on
+            about for months on end). To put it briefly, if somepony offered her
+            20 bucks to wrestle a gator...
+          </div>
+          <div
+            class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+          >
+            <span class="italic">She's getting that 20 bucks.</span>
+          </div>
+          <div
+            class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+          >
+            Around others, she's unmistakably the nerd that everypony's already
+            familiar with. But once the lights dim and the festivities commence,
+            prepare to be captivated by an entirely different mare...
+          </div>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="p-0 cursor-default" id=`dialog-m`>
+      <div
+        class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+        id="close-m"
+      >
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+            fill="currentColor"></path>
+        </svg>
+      </div>
+      <div
+        class="overflow-hidden p-4 md:p-8 bg-amber-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-144"
+      >
+        <div class="flex items-center justify-center w-full lg:pl-6">
+          <Image
+            src={img6}
+            format="avif"
+            height="800"
+            alt="Matinée"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-48 bg-white rounded-lg -rotate-3 p-4"
+          />
+        </div>
+        <div class="flex flex-col w-auto lg:ml-12">
+          <div
+            class="pt-4 pb-2 md:py-4 text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase"
+          >
+            Matinée
+          </div>
+          <div
+            class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+          >
+            Matinée is a bubbly pegasus with a passion for cosplay! She loves
+            putting on a show and spreading joy with her creative outfits. Ever
+            the excitable mare, she savors the fun and cherishes the moments
+            when she succeeds in getting somepony to break out of their shell.
+            Occasionally, she <span class="italic">can</span> go a bit overboard,
+            impulsively putting anypony into the limelight, but her intentions are
+            always pure and kind-hearted.
+          </div>
+          <div
+            class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+          >
+            Alongside her twin sister, Soirée, she's always there to assist her
+            good friend, Fair Flyer, with various events. These occasions are
+            perfect for her to bring happy smiles and show off her array of
+            dazzling costumes!
+          </div>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="p-0 cursor-default" id=`dialog-s`>
+      <div
+        class="block md:hidden absolute left-2 top-2 hover:bg-red-200 rounded-lg text-stone-600"
+        id="close-s"
+      >
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+            fill="currentColor"></path>
+        </svg>
+      </div>
+      <div
+        class="overflow-hidden p-4 md:p-8 bg-amber-50 flex flex-col lg:flex-row items-center justify-center w-full h-auto sm:w-120 md:w-160 lg:w-240 xl:w-288 lg:h-144"
+      >
+        <div class="flex items-center justify-center w-full lg:pl-6">
+          <Image
+            src={img7}
+            format="avif"
+            height="800"
+            alt="Soirée"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-auto h-48 sm:h-64 lg:h-auto lg:min-w-48 bg-white rounded-lg -rotate-3 p-4"
+          />
+          <!-- <Image
+            src={img7}
+            height="800"
+            alt="Matinée and Soirée"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="w-auto h-56 md:h-auto bg-white rounded-lg rotate-3 p-2"
+          /> -->
+        </div>
+        <div class="flex flex-col w-auto lg:ml-12">
+          <div
+            class="pt-4 pb-2 md:py-4 text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left tracking-wide font-semibold uppercase"
+          >
+            Soirée
+          </div>
+          <div
+            class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+          >
+            Soirée might always look like she'd rather be elsewhere, but there's
+            much more to the earth pony than meets the eye. Far more reserved
+            compared to Matinée, her twin sister, she tends to adopt a sardonic
+            and somewhat angsty perspective on things. Her way of speaking her
+            mind is as blunt as a hammer, and it doesn't quite match the grace
+            her name suggests. Yet, beneath her seemingly intimidating exterior
+            lies a mare brimming with passion. She'll try to hide it, but at the
+            heart of it all, she adores performing. In time, you'll notice her
+            as the one singing with the most vigor or dancing with the greatest
+            joy at any party.
+          </div>
+          <div
+            class="py-1 md:py-2 text-sm sm:text-base md:text-lg xl:text-lg leading-snug sm:leading-normal"
+          >
+            Her cosplay isn't a bid for attention&mdash;it's a form of genuine
+            self-expression. When she accompanies Fair Flyer to events, <span
+              class="italic">that's</span
+            > when her true brilliance shines through.
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="w-full md:w-208 lg:w-240 xl:w-288 h-full relative">
+      <ul class="flex flex-col sm:flex-row items-center justify-center">
+        <div
+          class="w-full sm:w-auto sm:absolute fourth -mb-48 sm:mb-0 sm:mt-0 mt-8"
+          style="filter: drop-shadow(0 5px 5px #000);"
+        >
+          <Image
+            src={postcard}
+            format="avif"
+            height={600}
+            class="-rotate-6 rounded-xl w-72 mx-auto"
+            transition:name="postcard-mascots"
+            style=" animation: idle 8s var(--sine) 0s infinite forwards;"
+            alt="Mascots postcard"
+          />
+        </div>
+        <div
+          class="gap-y-8 sm:gap-y-0 mt-4 sm:mt-0 flex flex-col sm:flex-row items-center justify-center w-full sm:block"
+        >
+          <li
+            class="sm:absolute fair-flyer cursor-pointer card-flip zoomout delay-2"
+          >
+            <Image
+              id="fair-flyer"
+              format="avif"
+              src={img1}
+              height={600}
+              alt="Fair Flyer"
+              class="rounded-lg mx-auto max-h-96 sm:max-h-120 lg:max-h-full w-auto hover:rotate-3 duration-500 magic hover:scale-[1.05]"
+            />
+          </li>
+          <div class="flex flex-col sm:block sm:gap-y-0 gap-y-8">
+            <li
+              class="sm:absolute morning-mimosa cursor-pointer card-flip zoomout delay-1"
+            >
+              <Image
+                id="morning-mimosa"
+                format="avif"
+                src={img2}
+                height={600}
+                alt="Morning Mimosa"
+                class="rounded-lg mx-auto max-h-auto sm:max-h-120 lg:max-h-full w-auto hover:rotate-3 duration-500 magic hover:scale-[1.05]"
+              />
+            </li>
+            <li
+              class="sm:absolute matinee cursor-pointer card-flip zoomout delay-3"
+            >
+              <Image
+                id="matinee"
+                format="avif"
+                src={img3}
+                height={600}
+                alt="Matinée"
+                class="rounded-lg mx-auto max-h-96 sm:max-h-120 lg:max-h-full w-auto hover:rotate-3 duration-500 magic hover:scale-[1.05]"
+              />
+            </li>
+            <li
+              class="sm:absolute soiree cursor-pointer card-flip zoomout delay-4"
+            >
+              <Image
+                id="soiree"
+                format="avif"
+                src={img8}
+                height={600}
+                alt="Soirée"
+                class="rounded-lg mx-auto max-h-96 sm:max-h-120 lg:max-h-full w-auto hover:rotate-3 duration-500 magic hover:scale-[1.05]"
+              />
+            </li>
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <Image
+      alt="Button"
+      format="avif"
+      src={button}
+      width={600}
+      style="filter: drop-shadow(0 5px 5px #000);"
+      class="hidden rotate-12 xl:block z-0 duration-500 absolute md:right-[3%] md:top-[2%] rounded-full w-64 h-auto md:w-64"
+    />
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  @media (min-width: 640px) {
+    .fourth {
+      z-index: 0;
+      width: 50%;
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .fourth {
+      z-index: 0;
+    }
+  }
+
+  dialog {
+    font-family: Poppins, Arial, sans-serif;
+    @apply rounded-xl;
+    filter: drop-shadow(0 50px 50px #000);
+    outline: none;
+  }
+
+  dialog[open] {
+    animation: fade 0.3s ease-in-out normal;
+  }
+
+  dialog::backdrop {
+    background-image: linear-gradient(45deg, #000, #000);
+    opacity: 0.5;
+  }
+
+  dialog:focus {
+    outline: none;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  li {
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 5px 5px #000);
+    transition: all 0.3s ease;
+  }
+
+  .character {
+    cursor: pointer;
+  }
+
+  .fair-flyer {
+    z-index: 4;
+    width: 30%;
+    left: -2%;
+    top: 25%;
+    rotate: -3.5deg;
+  }
+
+  .matinee {
+    z-index: 3;
+    width: 30%;
+    left: 20%;
+    top: 43%;
+    rotate: 4deg;
+  }
+
+  .soiree {
+    z-index: 4;
+    width: 30%;
+    left: 47%;
+    top: 43%;
+    rotate: -4deg;
+  }
+
+  .morning-mimosa {
+    z-index: 5;
+    width: 50%;
+    left: 66%;
+    top: 30%;
+    rotate: 10deg;
+  }
+
+  .slide-left {
+    animation: slideLeft 0.6s cubic-bezier(0.61, 0.25, 0.61, 0.99) 0.1s forwards;
+  }
+
+  @keyframes slideLeft {
+    0% {
+      left: -75%;
+      rotate: -15deg;
+    }
+    100% {
+      left: -5%;
+      rotate: -3.5deg;
+    }
+  }
+
+  .slide-bottom {
+    animation: slideBottom 0.6s cubic-bezier(0.61, 0.25, 0.61, 0.99) 0.1s
+      forwards;
+  }
+
+  @keyframes slideBottom {
+    0% {
+      top: -175%;
+      rotate: -4deg;
+    }
+    100% {
+      top: 64%;
+      rotate: 4deg;
+    }
+  }
+
+  .slide-right {
+    animation: slideRight 0.6s cubic-bezier(0.61, 0.25, 0.61, 0.99) 0.1s
+      forwards;
+  }
+
+  @keyframes slideRight {
+    0% {
+      left: 175%;
+      rotate: 15deg;
+    }
+    100% {
+      left: 72%;
+      rotate: 5deg;
+    }
+  }
+
+  .card-flip {
+    animation-duration: 0.75s;
+    animation-delay: 0.5s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+  }
+
+  /* Glow In */
+  .card-flip.glow {
+    animation-name: animate-glow;
+    animation-timing-function: ease;
+  }
+
+  .card-flip.zoomout {
+    animation-name: animate-zoomout;
+    animation-timing-function: ease;
+    animation-duration: 0.2s;
+  }
+
+  @keyframes animate-glow {
+    0% {
+      opacity: 0;
+      /* filter: brightness(3) saturate(3); */
+      transform: scale(0.8, 0.8);
+    }
+    100% {
+      opacity: 1;
+      /* filter: brightness(1) saturate(1); */
+      transform: scale(1, 1);
+    }
+  }
+
+  @keyframes animate-zoomout {
+    0% {
+      opacity: 0;
+      /* filter: brightness(3) saturate(3); */
+      transform: scale(1.1, 1.1);
+    }
+    100% {
+      opacity: 1;
+      /* filter: brightness(1) saturate(1); */
+      transform: scale(1, 1);
+    }
+  }
+
+  .delay-1 {
+    animation-delay: 0.1s;
+  }
+  .delay-2 {
+    animation-delay: 0.2s;
+  }
+  .delay-3 {
+    animation-delay: 0.3s;
+  }
+  .delay-4 {
+    animation-delay: 0.4s;
+  }
+
+  @media (max-width: 768px) {
+    .fair-flyer {
+      z-index: 4;
+      width: 25%;
+      left: 4%;
+      top: 25%;
+      rotate: -3.5deg;
+    }
+
+    .matinee {
+      z-index: 3;
+      width: 25%;
+      left: 23%;
+      top: 43%;
+      rotate: 4deg;
+    }
+
+    .soiree {
+      z-index: 4;
+      width: 25%;
+      left: 46%;
+      top: 43%;
+      rotate: -4deg;
+    }
+
+    .morning-mimosa {
+      z-index: 5;
+      width: 45%;
+      left: 63%;
+      top: 30%;
+      rotate: 10deg;
+    }
+  }
+  @media (max-width: 640px) {
+    .fair-flyer {
+      z-index: 4;
+      width: 100%;
+      rotate: 0deg;
+      @apply px-2;
+    }
+
+    .morning-mimosa {
+      z-index: 2;
+      width: 100%;
+      rotate: 0deg;
+      @apply px-2;
+    }
+
+    .matinee {
+      z-index: 3;
+      width: 100%;
+      rotate: 0deg;
+      @apply px-2;
+    }
+
+    .soiree {
+      z-index: 3;
+      width: 100%;
+      rotate: 0deg;
+      @apply px-2;
+    }
+
+    .card-flip {
+      animation: none;
+    }
+
+    /* Glow In */
+    .card-flip.glow {
+      animation: none;
+    }
+
+    .card-flip.zoomout {
+      animation: none;
+    }
+
+    .delay-1 {
+      animation-delay: 0s;
+    }
+    .delay-2 {
+      animation-delay: 0s;
+    }
+    .delay-3 {
+      animation-delay: 0s;
+    }
+    .delay-4 {
+      animation-delay: 0s;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const fairFlyerDialog = document.getElementById("dialog-ff");
+    const fairFlyerImg = document.getElementById("fair-flyer");
+
+    if (fairFlyerDialog instanceof HTMLDialogElement && fairFlyerImg) {
+      fairFlyerImg.addEventListener("click", () => {
+        fairFlyerDialog.showModal();
+      });
+    }
+    const fairFlyerClose = document.getElementById("close-ff");
+    if (fairFlyerClose && fairFlyerDialog instanceof HTMLDialogElement) {
+      fairFlyerDialog.addEventListener("click", (e) => {
+        if (e.target === fairFlyerDialog) {
+          fairFlyerDialog.close();
+        }
+      });
+      fairFlyerClose.addEventListener("click", () => {
+        fairFlyerDialog.close();
+      });
+    }
+
+    const morningMimosaDialog = document.getElementById("dialog-mm");
+    const morningMimosaImg = document.getElementById("morning-mimosa");
+    if (morningMimosaDialog instanceof HTMLDialogElement && morningMimosaImg) {
+      morningMimosaImg.addEventListener("click", () => {
+        morningMimosaDialog.showModal();
+      });
+    }
+    const morningMimosaClose = document.getElementById("close-mm");
+    if (
+      morningMimosaClose &&
+      morningMimosaDialog instanceof HTMLDialogElement
+    ) {
+      morningMimosaDialog.addEventListener("click", (e) => {
+        if (e.target === morningMimosaDialog) {
+          morningMimosaDialog.close();
+        }
+      });
+      morningMimosaClose.addEventListener("click", () => {
+        morningMimosaDialog.close();
+      });
+    }
+
+    const matineeDialog = document.getElementById("dialog-m");
+    const matineeImg = document.getElementById("matinee");
+    if (matineeDialog instanceof HTMLDialogElement && matineeImg) {
+      matineeImg.addEventListener("click", () => {
+        matineeDialog.showModal();
+      });
+    }
+    const matineeClose = document.getElementById("close-m");
+    if (matineeClose && matineeDialog instanceof HTMLDialogElement) {
+      matineeDialog.addEventListener("click", (e) => {
+        if (e.target === matineeDialog) {
+          matineeDialog.close();
+        }
+      });
+      matineeClose.addEventListener("click", () => {
+        matineeDialog.close();
+      });
+    }
+
+    const soireeDialog = document.getElementById("dialog-s");
+    const soireeImg = document.getElementById("soiree");
+    if (soireeDialog instanceof HTMLDialogElement && soireeImg) {
+      soireeImg.addEventListener("click", () => {
+        soireeDialog.showModal();
+      });
+    }
+    const soireeClose = document.getElementById("close-s");
+    if (soireeClose && soireeDialog instanceof HTMLDialogElement) {
+      soireeDialog.addEventListener("click", (e) => {
+        if (e.target === soireeDialog) {
+          soireeDialog.close();
+        }
+      });
+      soireeClose.addEventListener("click", () => {
+        soireeDialog.close();
+      });
+    }
+  });
+</script>

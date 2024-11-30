@@ -1,61 +1,75 @@
 ---
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
+const { id, image_url, href, type, alt, enabled = true } = Astro.props;
+import { Image } from "astro:assets";
+const images = import.meta.glob("../assets/cards/*");
 
-const { href, title, body } = Astro.props;
+const angles = {
+  main: 5,
+  register: -3,
+  apply: 5,
+  venue: -5,
+  scrapbook: 9,
+  mascots: -5,
+  contact: 3,
+  coc: 2,
+  credits: -3,
+  schedule: -5,
+  vendors: 3,
+  musicians: -2,
+  map: 3,
+};
+
+const z = {
+  main: 10,
+  register: 40,
+  apply: 30,
+  venue: 30,
+  scrapbook: 20,
+  mascots: 30,
+  contact: 20,
+  coc: 10,
+  credits: 40,
+  schedule: 10,
+  vendors: 20,
+  musicians: 10,
+  map: 30,
+};
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+<div
+  style=`rotate: ${angles[id]}deg;`
+  class=`z-${z[id]} max-h-120 sm:max-h-72 md:max-h-80 lg:max-h-80 xl:max-h-104 2xl:max-h-120 flex flex-col items-center justify-center mx-2 my-0 md:mx-2 md:my-0 ${enabled ? 'md:hover:scale-[1.05]' : ''} ${enabled ? (type === '0' ? 'hover:-rotate-3' : 'hover:rotate-3') : ''} duration-500`
+>
+  {
+    enabled ? (
+      <a href={href} class="pointer">
+        <div
+          style="filter: drop-shadow(0 2px 2px #000);"
+          transition:name={`postcard-${id}`}
+        >
+          <Image
+            class="magic rounded-lg relative max-h-104 sm:max-h-80 md:max-h-80 lg:max-h-80 xl:max-h-104 2xl:max-h-120 w-auto"
+            src={images[image_url]()}
+            alt={alt}
+            height={600}
+            format="avif"
+          />
+        </div>
+      </a>
+    ) : (
+      <div
+        style="filter: drop-shadow(0 2px 2px #000) brightness(60%) grayscale(100) hue-rotate(0deg);"
+        transition:name={`postcard-${id}`}
+        class="cursor-not-allowed"
+      >
+        <Image
+          class="rounded-lg relative"
+          src={images[image_url]()}
+          alt={alt}
+          height={600}
+          format="avif"
+        />
+      </div>
+    )
+  }
+</div>

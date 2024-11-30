@@ -1,0 +1,90 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import apply from "@assets/cards/apply.png";
+import Footer from "@components/Footer.astro";
+import button from "@assets/ornaments/Mare_Fair_2_Badge.png";
+import musicians from "@assets/badges/MusicianSite.png";
+import vendors from "@assets/badges/VendorSite.png";
+import panelists from "@assets/badges/PanelistSite.png";
+import volunteers from "@assets/badges/VolunteersSite.png";
+import Back from "@components/Back.astro";
+
+---
+
+<Layout title="Mare Fair 2024 | Applications">
+  <section
+    class="overflow-x-hidden relative w-full mx-auto cursor-default flex pt-0 pb-0 lg:pt-12 lg:pb-0 items-center justify-center h-full lg:h-[calc(100vh-3rem)]"
+  >
+    <Back />
+
+    <div
+      class="w-full lg:w-288 h-full relative flex flex-col items-center justify-center gap-8 md:gap-0"
+    >
+      <div
+        class="z-0 w-48 lg:w-72 block lg:absolute top-0 -mb-16 mt-8 lg:mt-0 lg:mb-0 lg:-top-16 lg:rotate-12 lg:-right-48"
+        style="filter: drop-shadow(0 2px 2px #000);"
+      >
+        <Image
+          src={apply}
+          height={600}
+          transition:name="postcard-apply"
+          alt="Apply now"
+          class="rounded-lg"
+          style=" animation: idle 8s var(--sine) 0s infinite forwards;"
+        />
+      </div>
+      <div class="flex flex-col gap-8 sm:gap-16 z-20 pb-12 sm:mb-0">
+        <div
+          class="px-16 sm:px-0 flex flex-col sm:flex-row gap-8 sm:gap-16 lg:gap-32 items-center justify-center"
+        >
+          <Image
+              style="filter: drop-shadow(0 5px 5px #000);"
+              src={volunteers}
+              alt="Volunteers"
+              width={600}
+              class="hover:scale-[1.1] cursor-default magic hover:-rotate-6 duration-500 rounded-lg -rotate-3 flex items-center justify-center w-auto sm:h-56 md:h-64 lg:h-64 xl:h-80"
+            />
+            <Image
+              style="filter: drop-shadow(0 5px 5px #000);"
+              src={vendors}
+              alt="Vendors"
+              width={600}
+              class="hover:scale-[1.1] cursor-default magic hover:rotate-6 duration-500 rounded-lg rotate-3 flex items-center justify-center w-auto sm:h-56 md:h-64 lg:h-64 xl:h-80"
+            />
+        </div>
+        <div
+          class="px-16 sm:px-0 flex flex-col sm:flex-row gap-8 sm:gap-16 lg:gap-32 items-center justify-center"
+        >
+
+            <Image
+              style="filter: drop-shadow(0 5px 5px #000);"
+              src={panelists}
+              alt="Panelists"
+              width={600}
+              class="hover:scale-[1.1] cursor-default magic hover:rotate-6 duration-500 rounded-lg rotate-3 flex items-center justify-center w-auto sm:h-56 md:h-64 lg:h-64 xl:h-80"
+            />
+            <Image
+              style="filter: drop-shadow(0 5px 5px #000);"
+              src={musicians}
+              alt="Musicians"
+              width={600}
+              class="hover:scale-[1.1] cursor-default magic hover:-rotate-6 duration-500 rounded-lg -rotate-3 flex items-center justify-center w-auto sm:h-56 md:h-64 lg:h-64 xl:h-80"
+            />
+        </div>
+      </div>
+    </div>
+    <Image
+      alt="Button"
+      src={button}
+      width={600}
+      style="filter: drop-shadow(0 5px 5px #000);"
+      class="hidden rotate-12 2xl:block z-0 duration-500 absolute md:left-[3%] md:bottom-[5%] rounded-full w-64 h-auto md:w-80"
+    />
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+</script>

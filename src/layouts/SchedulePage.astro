@@ -1,0 +1,276 @@
+---
+import Schedule from "@layouts/Schedule.astro";
+import img1 from "@assets/signages/Mare Stage - Rocket-LawnChair.png";
+import img2 from "@assets/signages/The Plone Hangar - PJ.png";
+import img3 from "@assets/signages/Thursday Theater - floralshitpost.png";
+import img4 from "@assets/signages/Wheely Bopper Speedway Signage - Jargon Scott.png";
+import img5 from "@assets/signages/Room for (You) - TruthOrMare.png";
+import img6 from "@assets/signages/Terri Softmare Studio - Batsy.png";
+import img7 from "@assets/signages/Vendor Stalls - AnonTheAnon.png";
+import Room from "@components/schedule/Room.astro";
+
+// noinspection JSUnusedGlobalSymbols
+interface Props {
+  day: DayOfTheWeek;
+  starttime: string;
+  endtime: string;
+  additionalevents?: { [key: string]: string }
+}
+
+const {
+  day = "Friday",
+  starttime: START_TIME = "10:00",
+  endtime: END_TIME = "04:00",
+  additionalevents = {}
+} = Astro.props
+
+export type DayOfTheWeek = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
+export enum RATING {
+  Safe = 'safe',
+  Suggestive = 'suggestive',
+  Questionable = 'questionable',
+  Explicit = 'explicit',
+};
+export enum ROOM {
+  Mare_Stage = 0,
+  Plone_Hangar = 1,
+  Thursday_Theater = 2,
+  Wheely_Bopper_Intl_Speedway = 3,
+  Room_uuuu = 4,
+  Terri_Softmare_Studio = 5,
+  Concert = 6,
+  Vendor_Stalls = 7,
+  UNKNOWN = 8,
+}
+
+export type Event = {
+  placeholder?: false;
+  title: string;
+  host: string;
+  description: string;
+  startDate: Date;
+  start: string;
+  endDate: Date;
+  end: string;
+  day: DayOfTheWeek;
+  timeslots: number;
+  rating: RATING;
+  room: ROOM;
+  isConcert: boolean;
+}
+export type PlaceholderEvent = {
+  placeholder: true,
+  timeslots: number,
+  startDate: Date,
+}
+
+const convertTime = (d: Date) => {
+  const hours = d.getHours();
+  let hString = hours.toString().padStart(2, "0");
+  let suffix = "";
+  const mString = d.getMinutes().toString().padStart(2, "0");
+  if (hours === 0) {
+    hString = "12";
+    suffix = "AM";
+  } else if (hours < 12) {
+    suffix = "AM";
+  } else if (hours === 12) {
+    suffix = "PM";
+  } else {
+    hString = (hours - 12).toString().padStart(2, "0");
+    suffix = "PM";
+  }
+
+  return `${hString}:${mString} ${suffix}`;
+}
+
+
+import rawEventsE from '@data/schedule-e.json';
+import rawEventsG from '@data/schedule-g.json';
+
+function fetchEvents() {
+  interface RawEvent {
+    "application-name": string;
+    "start-time": string;
+    "end-time": string;
+    "business-name": string;
+    "Panel description"?: string[];
+    "Set description"?: string[];
+    "Rate your panel"?: string[];
+    "room-or-table-id": string;
+  }
+
+  const events = [rawEventsG,rawEventsE].map((rawEvents : RawEvent[]) => {
+    try {
+      return rawEvents.map(ev => {
+        const start = new Date(ev["start-time"]);
+        const end = new Date(ev["end-time"]);
+        return {
+          title: ev["application-name"],
+          host: ev["business-name"],
+          description: (ev["Panel description"] || ev["Set description"])?.join("\n") || "",
+          startDate: start,
+          start: convertTime(start),
+          endDate: end,
+          end: convertTime(end),
+          timeslots: Math.round((end.getTime() - start.getTime()) / (30 * 60 * 1000)),
+          day: (() => {
+            const dClone = new Date(start.getTime());
+            dClone.setHours(dClone.getHours() - 6); // Offset by 6 hours to make sure events past 12AM are still counted on this day
+            return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][dClone.getDay()] as DayOfTheWeek;
+          })(),
+          rating: (() => {
+            switch ((ev["Rate your panel"] || [])[0]) {
+              case "safe - nothing sexual":
+                return RATING.Safe;
+              case "suggestive - slightly sexual topics and innuendo":
+                return RATING.Suggestive;
+              case "questionable - sexual discussion but nothing displayed on monitors":
+                return RATING.Questionable;
+              case "explicit - we're going to be showing clop images and/or reading actual clop fics":
+              default:
+                return RATING.Explicit;
+            }
+          })(),
+          room: (() => {
+            switch (ev["room-or-table-id"]) {
+              case "Mare Events":
+              case "Mare Stage":
+              case "Concert":
+                return ROOM.Mare_Stage;
+              case "Plone Hangar":
+                return ROOM.Plone_Hangar;
+              case "Room For (You)":
+                return ROOM.Room_uuuu;
+              case "Terri Softmare Studio":
+                return ROOM.Terri_Softmare_Studio;
+              case "Thursday Theater":
+                return ROOM.Thursday_Theater;
+              case "Wheely Bopper International Speedway":
+                return ROOM.Wheely_Bopper_Intl_Speedway;
+              case "Vendor Stalls":
+              case "Clopper's Cave":
+                return ROOM.Vendor_Stalls;
+              default:
+                return ROOM.UNKNOWN;
+            }
+          })(),
+          isConcert: ev["room-or-table-id"] === "Concert"
+        }
+      });
+    } catch (error) {
+      console.warn(error);
+      return [];
+    }
+  })
+  return events.flat();
+};
+
+const remoteEvents = fetchEvents().filter(event => {
+  if (event.day === day) return true;
+  else return false;
+});
+remoteEvents.sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
+
+const events: {[key: number]: (Event|PlaceholderEvent)[]} = {
+  [ROOM.Mare_Stage]: [],
+  [ROOM.Plone_Hangar]: [],
+  [ROOM.Room_uuuu]: [],
+  [ROOM.Terri_Softmare_Studio]: [],
+  [ROOM.Thursday_Theater]: [],
+  [ROOM.Wheely_Bopper_Intl_Speedway]: [],
+  [ROOM.Vendor_Stalls]: [],
+};
+remoteEvents.forEach(event => {
+  if (Array.isArray(events[event.room])) events[event.room].push(event);
+});
+
+Object.keys(events).forEach(room => {
+  const placeholderEvents: PlaceholderEvent[] = [];
+  events[room].forEach((event: Event, index, evs) => {
+    if (index === (events[room].length - 1)) return;
+    const nextEvent: Event = evs[index + 1];
+    placeholderEvents.push({
+      placeholder: true,
+      startDate: event.endDate,
+      timeslots: Math.round((nextEvent.startDate.getTime() - event.endDate.getTime()) / (30 * 60 * 1000))
+    });
+  });
+  {
+    const firstEvent: Event | undefined = events[room][0];
+    if (firstEvent) {
+      const fEStartDate = firstEvent.startDate;
+      const startDate = new Date(`${fEStartDate.getFullYear()}-${fEStartDate.getMonth() + 1}-${fEStartDate.getDate()} ${START_TIME}:00`);
+      placeholderEvents.push({
+        placeholder: true,
+        startDate,
+        timeslots: Math.round((fEStartDate.getTime() - startDate.getTime()) / (30 * 60 * 1000))
+      });
+    }
+  }
+  {
+    const lastEvent: Event | undefined = events[room][events[room].length - 1];
+    if (lastEvent) {
+      const fEEndDate = lastEvent.endDate;
+      const startDate = new Date(`${fEEndDate.getFullYear()}-${fEEndDate.getMonth() + 1}-${fEEndDate.getDate() + (
+        (parseInt(END_TIME) <= 10 && fEEndDate.getHours() >= 10) ? 1 : 0
+      )} ${END_TIME}:00`);
+      placeholderEvents.push({
+        placeholder: true,
+        startDate,
+        timeslots: Math.round((startDate.getTime() - fEEndDate.getTime()) / (30 * 60 * 1000))
+      });
+    }
+  }
+  if (events[room].length === 0) {
+    placeholderEvents.push({
+      placeholder: true,
+      timeslots: 1000,
+      startDate: new Date(`${remoteEvents[0]?.startDate.getFullYear()}-${remoteEvents[0]?.startDate.getDate()}-${remoteEvents[0]?.startDate.getMonth() + 1} ${START_TIME}`)
+    });
+  }
+  events[room] = events[room].concat(
+    placeholderEvents.filter(event => event.timeslots > 0)
+  );
+  events[room].sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
+
+});
+---
+<Schedule day={day} additionalevents={additionalevents}>
+  <Room
+    roomname="Mare Stage"
+    roomsrc={img1}
+    events={events[ROOM.Mare_Stage]}
+  />
+  <Room
+    roomname="Plone Hangar"
+    roomsrc={img2}
+    events={events[ROOM.Plone_Hangar]}
+  />
+  <Room
+    roomname="Thursday Theater"
+    roomsrc={img3}
+    events={events[ROOM.Thursday_Theater]}
+  />
+  <Room
+    roomname="Wheely Bopper Int'l Speedway"
+    roomsrc={img4}
+    events={events[ROOM.Wheely_Bopper_Intl_Speedway]}
+  />
+  <Room
+    roomname="Room for (You)"
+    roomsrc={img5}
+    events={events[ROOM.Room_uuuu]}
+  />
+  <Room
+    roomname="Terri Softmare Studio"
+    roomsrc={img6}
+    events={events[ROOM.Terri_Softmare_Studio]}
+  />
+  <Room
+    roomname="Vendor Stalls"
+    roomsrc={img7}
+    events={events[ROOM.Vendor_Stalls]}
+  />
+</Schedule>
+

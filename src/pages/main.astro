@@ -1,0 +1,92 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Card from "@components/Card.astro";
+import Footer from "@components/Footer.astro";
+import cards from "@data/cards.json";
+---
+
+<Layout title="Mare Fair 2024 | Main Page">
+  <section
+    class="relative px-4 sm:px-0 lg:pt-12 pt-12 overflow-x-clip background-texture flex flex-col items-center justify-center"
+  >
+    <div
+      class="flex sm:block flex-col mx-auto my-0 max-w-full sm:max-w-full md:max-w-176 lg:max-w-224 xl:max-w-288 2xl:max-w-352 relative w-full h-full sm:h-512 md:h-512 lg:h-336 xl:h-448 2xl:h-496"
+    >
+      <div
+        class="sm:absolute sm:left-[0%] sm:top-[0%] md:left-[0%] md:top-[0%] md:right-auto lg:left-[0%] lg:right-auto h-auto z-10"
+      >
+        <Card {...cards[0]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[60%] sm:top-[0%] md:left-[60%] md:right-auto md:top-[0%] lg:left-[47%] lg:top-[0%] h-auto z-40"
+      >
+        <Card {...cards[1]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[0%] sm:top-[17%] md:left-[0%] md:right-auto md:top-[17%] lg:left-[0%] lg:right-auto lg:top-[25%] h-auto z-30"
+      >
+        <Card {...cards[2]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[60%] sm:top-[17%] md:left-[60%] md:right-auto md:top-[17%] lg:left-[74%] lg:top-[0%] h-auto z-40"
+      >
+        <Card {...cards[3]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[0%] sm:top-[34%] md:left-[0%] md:right-auto md:top-[34%] lg:left-[46%] lg:top-[25%] h-auto z-40"
+      >
+        <Card {...cards[4]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[33%] sm:top-[34%] md:left-[33%] md:right-auto md:top-[34%] lg:left-[71%] lg:top-[25%] h-auto z-40"
+      >
+        <Card {...cards[5]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[64%] sm:top-[34%] md:left-[64%] md:top-[34%] lg:left-[48%] lg:top-[50%] lg:right-auto h-auto z-40"
+      >
+        <Card {...cards[6]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[66%] sm:top-[50%] md:left-[66%] md:right-auto md:top-[50%] lg:left-[74%] lg:top-[50%] h-auto z-30"
+      >
+        <Card {...cards[7]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[-2%] sm:top-[50%] md:left-[-2%] md:right-auto md:top-[50%] lg:left-[0%] lg:right-auto lg:top-[50%] h-auto z-20"
+      >
+        <Card {...cards[8]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[0%] sm:top-[67%] md:left-[0%] md:right-auto md:top-[67%] lg:left-[0%] lg:right-auto lg:top-[75%] h-auto z-20"
+      >
+        <Card {...cards[9]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[33%] sm:top-[67%] md:left-[33%] md:right-auto md:top-[67%] lg:left-[25%] lg:top-[75%] h-auto z-30"
+      >
+        <Card {...cards[10]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[66%] sm:top-[67%] md:left-[66%] md:right-auto md:top-[67%] lg:left-[52%] lg:right-auto lg:top-[75%] h-auto z-10"
+      >
+        <Card {...cards[11]} enabled={true} />
+      </div>
+      <div
+        class="sm:absolute sm:left-[38%] sm:top-[84%] md:left-[38%] md:right-auto md:top-[84%] lg:left-[75%] lg:top-[75%] h-auto z-40"
+      >
+        <Card {...cards[12]} enabled={true} />
+      </div>
+    </div>
+    <Footer />
+  </section>
+
+  <script>
+    document.addEventListener("scroll", () => {
+      if (window.location.pathname.includes("/main")) {
+        const storedScrollPosition = localStorage.getItem("scroll");
+        localStorage.setItem("scroll", window.scrollY.toString());
+      }
+    });
+  </script>
+</Layout>

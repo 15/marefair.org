@@ -1,0 +1,851 @@
+---
+import { Image } from "astro:assets";
+import pc0 from "@assets/cards/mare_fair_postcard_1.png";
+import note1 from "@assets/notes/yellow_register.png";
+import note2 from "@assets/notes/orange_enter_contrast.png";
+import hoof1 from "@assets/hoof/fair_flyer.png";
+import hoof2 from "@assets/hoof/matinee.png";
+import hoof3 from "@assets/hoof/mimosa_bracelet.png";
+import scroll from "@assets/ornaments/DeskItemsMF24-Scroll.png";
+import quill from "@assets/ornaments/DeskItemsMF24-InkWell.png";
+---
+
+<section class="flex flex-col items-center justify-center">
+  <Image
+    alt="Fair Flyer hoof"
+    format="avif"
+    src={hoof1}
+    width={300}
+    class="hoof absolute idle-hoof slide-down-hoof w-2/3 h-auto md:w-auto md:h-1/3"
+    id="hoof"
+  />
+
+  <Image
+    alt="Matinee hoof"
+    format="avif"
+    src={hoof2}
+    width={300}
+    class="hoof absolute idle-hoof w-2/3 h-auto md:w-auto md:h-1/3"
+    id="hoof2"
+  />
+
+  <Image
+    alt="Morning Mimosa hoof"
+    format="avif"
+    src={hoof3}
+    width={300}
+    class="hoof absolute idle-hoof w-2/3 h-auto md:w-auto md:h-1/3"
+    id="hoof3"
+  />
+
+  <Image
+    alt="Soiree hoof"
+    format="avif"
+    src={hoof2}
+    width={300}
+    class="hoof absolute idle-hoof w-2/3 h-auto md:w-auto md:h-1/3"
+    id="hoof4"
+  />
+
+  <Image
+    alt="Mare Fair 2024"
+    format="avif"
+    src={pc0}
+    height={600}
+    class="absolute rounded-lg postcard slide-down w-5/6 h-auto md:w-auto md:h-1/2"
+    id="postcard"
+    transition:name="postcard-main"
+  />
+
+  <Image
+    alt="Scroll"
+    format="avif"
+    src={scroll}
+    width={400}
+    style="rotate: 75deg;"
+    class="hidden md:block z-50 animate zoomout delay-2 duration-500 absolute md:left-[3%] md:top-[40%] rounded-lg w-96 h-auto xl:w-120"
+  />
+
+  <Image
+    alt="Quill and ink"
+    format="avif"
+    src={quill}
+    width={400}
+    style="rotate: 75deg;"
+    class="hidden md:block z-50 animate zoomout delay-3 duration-500 absolute md:right-[3%] md:top-[40%] rounded-lg w-96 h-auto xl:w-120"
+  />
+
+  <div
+    class="absolute flex flex-row justify-center gap-x-[6vw] md:gap-x-[3vw] z-[200] top-[68%] sm:top-[77%] md:top-[77%] w-5/6 h-auto md:w-auto md:h-1/5"
+  >
+    <a
+      href="/register/"
+      class="hover:rotate-2 duration-500 animate zoomout delay-2 flex items-center justify-end"
+    >
+      <Image
+        alt="Register"
+        format="avif"
+        src={note1}
+        width={400}
+        class="w-auto h-32 sm:h-40 md:h-40 max-h-[20vh] lg:w-auto lg:h-full note"
+      />
+    </a>
+    <a
+      href="/main/"
+      class="hover:-rotate-2 duration-500 animate zoomout delay-3 flex items-center justify-start"
+    >
+      <Image
+        alt="Enter"
+        format="avif"
+        src={note2}
+        width={400}
+        class="w-auto h-32 sm:h-40 md:h-40 max-h-[20vh] lg:w-auto lg:h-full note"
+      />
+    </a>
+  </div>
+
+  <div
+    class="absolute w-full event-text animate glow delay-1 event-date uppercase whitespace-nowrap"
+    style="text-shadow: 3px 3px 1px #000;"
+  >
+    September 27th&mdash;29th
+  </div>
+  <div
+    class="absolute w-full event-text animate glow delay-1 event-location uppercase whitespace-nowrap"
+    style="text-shadow: 3px 3px 1px #000;"
+  >
+    Orlando, Florida
+  </div>
+</section>
+
+<style>
+  body,
+  html {
+    @apply m-0 p-0 h-full;
+  }
+
+  .event-date {
+    @apply flex items-center justify-center font-semibold text-white;
+    @apply drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] text-4xl;
+  }
+
+  .event-location {
+    @apply flex items-center justify-center font-semibold text-white;
+    @apply drop-shadow-[0_0.4vh_0.4vh_rgba(0,0,0,0.8)] text-2xl font-semibold;
+  }
+
+  .event-text {
+    /* top: 60%; */
+    /* @apply tracking-widest; */
+    letter-spacing: 0.2em;
+    font-family: "Saveur Sans Regular", sans-serif;
+  }
+
+  @media (max-width: 640px) {
+    .event-date {
+      @apply text-4xl;
+      top: 53%;
+    }
+    .event-location {
+      @apply text-2xl;
+      top: 60%;
+    }
+    .event-text {
+      /* top: 60%; */
+      /* @apply tracking-widest; */
+      letter-spacing: 0.025em;
+      font-family: "Saveur Sans Regular", sans-serif;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .event-date {
+      @apply text-[5vh];
+      top: 63%;
+    }
+    .event-location {
+      @apply text-[3vh];
+      top: 70%;
+    }
+    .event-text {
+      /* top: 60%; */
+      /* @apply tracking-widest; */
+      letter-spacing: 0.025em;
+      font-family: "Saveur Sans Regular", sans-serif;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .event-date {
+      @apply text-[6vh];
+      top: 63%;
+    }
+    .event-location {
+      @apply text-[4vh];
+      top: 70%;
+    }
+    .event-text {
+      letter-spacing: 0.025em;
+      font-family: "Saveur Sans Regular", sans-serif;
+    }
+  }
+  @media (min-width: 1024px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+    .event-text {
+      letter-spacing: 0.2em;
+      font-family: "Saveur Sans Regular", sans-serif;
+    }
+  }
+  @media (min-width: 1536px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+  @media (min-width: 2304px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+  @media (min-width: 2560px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+  @media (min-width: 2816px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+  @media (min-width: 3072px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+  @media (min-width: 3328px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+  @media (min-width: 3584px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+
+  @media (min-width: 3840px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+  @media (min-width: 4864px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+  @media (min-width: 5888px) {
+    .event-date {
+      @apply text-[6vh];
+    }
+    .event-location {
+      @apply text-[4vh];
+    }
+  }
+
+  .postcard {
+    /* transform: rotate(-10deg); */
+    top: 8%;
+    rotate: -5deg;
+    /* background-image: url("../assets/mare_fair_postcard_1.png"); */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    filter: drop-shadow(0 2px 2px #000);
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 100;
+    display: flex;
+  }
+
+  .hoof {
+    z-index: 101;
+  }
+
+  .slide-down {
+    animation: slideDown 1.2s cubic-bezier(0.61, 0.25, 0.61, 0.99) 0s forwards;
+  }
+
+  .slide-down-hoof {
+    animation: slideDownHoof 2.4s cubic-bezier(0.61, 0.25, 0.61, 0.99) 0s
+      forwards;
+  }
+
+  .idle-hoof {
+    left: 37%;
+    top: -100%;
+  }
+
+  .shake {
+    animation: shake 20s infinite 0s ease;
+  }
+
+  @keyframes shake {
+    0%,
+    50%,
+    100%,
+    43%,
+    93% {
+      rotate: -5deg;
+      top: 8%;
+      box-shadow: 0 0 0 0;
+    }
+    25%,
+    75%,
+    18%,
+    68% {
+      rotate: 5deg;
+      top: 8%;
+      box-shadow: 0 0 0 0;
+    }
+    3% {
+      rotate: -5deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #66b2b2;
+    }
+    4.5% {
+      rotate: -8deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #66b2b2;
+    }
+    6% {
+      rotate: 5deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #66b2b2;
+    }
+    28% {
+      rotate: 5deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #fef3c7;
+    }
+    29.5% {
+      rotate: 8deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #fef3c7;
+    }
+    31% {
+      rotate: -5deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #fef3c7;
+    }
+    53% {
+      rotate: -5deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #fdba74;
+    }
+    54.5% {
+      rotate: -8deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #fdba74;
+    }
+    56% {
+      rotate: 5deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #fdba74;
+    }
+    78% {
+      rotate: 5deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #fef3c7;
+    }
+    79.5% {
+      rotate: 8deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #fef3c7;
+    }
+    81% {
+      rotate: -5deg;
+      top: 8%;
+      box-shadow: 0 0 25px 15px #fef3c7;
+    }
+  }
+
+  .reach {
+    animation: reachHoof 20s ease 0s forwards infinite;
+  }
+
+  .reach-2 {
+    animation: reachHoof2 20s ease 5s forwards infinite;
+  }
+
+  .reach-3 {
+    animation: reachHoof 20s ease 10s forwards infinite;
+  }
+
+  .reach-4 {
+    animation: reachHoof2 20s ease 15s forwards infinite;
+  }
+
+  .animate {
+    animation-duration: 0.75s;
+    animation-delay: 0.5s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+  }
+
+  /* Glow In */
+  .animate.glow {
+    animation-name: animate-glow;
+    animation-timing-function: ease;
+  }
+
+  .animate.zoomout {
+    animation-name: animate-zoomout;
+    animation-timing-function: ease;
+    animation-duration: 0.2s;
+  }
+
+  @keyframes animate-glow {
+    0% {
+      opacity: 0;
+      /* filter: brightness(3) saturate(3); */
+      transform: scale(0.8, 0.8);
+    }
+    100% {
+      opacity: 1;
+      /* filter: brightness(1) saturate(1); */
+      transform: scale(1, 1);
+    }
+  }
+
+  @keyframes animate-zoomout {
+    0% {
+      opacity: 0;
+      /* filter: brightness(3) saturate(3); */
+      transform: scale(1.1, 1.1);
+    }
+    100% {
+      opacity: 1;
+      /* filter: brightness(1) saturate(1); */
+      transform: scale(1, 1);
+    }
+  }
+
+  .delay-1 {
+    animation-delay: 0.8s;
+  }
+  .delay-2 {
+    animation-delay: 1.2s;
+  }
+  .delay-3 {
+    animation-delay: 1.2s;
+  }
+  .delay-4 {
+    animation-delay: 1.2s;
+  }
+
+  @keyframes slideDown {
+    0% {
+      top: -75%;
+    }
+    100% {
+      top: 8%;
+    }
+  }
+
+  @keyframes slideDownHoof {
+    0% {
+      left: 37%;
+      top: -100%;
+    }
+    50% {
+      left: 37%;
+      top: -10%;
+    }
+    100% {
+      left: 37%;
+      top: -100%;
+      /* transform: translateY(50%); */
+    }
+  }
+
+  @keyframes reachHoof {
+    0% {
+      rotate: -5deg;
+      left: 37%;
+      top: -100%;
+    }
+    3% {
+      rotate: -5deg;
+      left: 37%;
+      top: -10%;
+    }
+    4.5% {
+      rotate: -12deg;
+      left: 36%;
+      top: -7%;
+    }
+    6% {
+      rotate: 2deg;
+      left: 38%;
+      top: -12%;
+    }
+    18% {
+      rotate: 2deg;
+      left: 38%;
+      top: -100%;
+    }
+    25% {
+      rotate: 2deg;
+      left: 37%;
+      top: -100%;
+    }
+  }
+
+  @keyframes reachHoof2 {
+    0% {
+      rotate: 5deg;
+      left: 47%;
+      top: -100%;
+    }
+    3% {
+      rotate: 5deg;
+      left: 47%;
+      top: -10%;
+    }
+    4.5% {
+      rotate: 12deg;
+      left: 48%;
+      top: -7%;
+    }
+    6% {
+      rotate: -2deg;
+      left: 46%;
+      top: -12%;
+    }
+    18% {
+      rotate: -2deg;
+      left: 46%;
+      top: -100%;
+    }
+    25% {
+      rotate: -2deg;
+      left: 47%;
+      top: -100%;
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    .reach {
+      animation: none;
+    }
+
+    .reach-2 {
+      animation: none;
+    }
+
+    .reach-3 {
+      animation: none;
+    }
+
+    .reach-4 {
+      animation: none;
+    }
+
+    .shake {
+      animation: none;
+    }
+
+    .postcard {
+      top: 8%;
+      /* top: -75%; */
+      /* animation: slideDown 1.2s cubic-bezier(0.61, 0.25, 0.61, 0.99) 0s forwards; */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .animate {
+      animation-duration: 0.75s;
+      animation-delay: 0s;
+      animation-name: animate-fade;
+      animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+      animation-fill-mode: backwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+    .delay-2 {
+      animation-delay: 0.2s;
+    }
+    .delay-3 {
+      animation-delay: 0.2s;
+    }
+
+    @keyframes slideDown {
+      0% {
+        top: 12%;
+      }
+      100% {
+        top: 12%;
+      }
+    }
+
+    @keyframes shake {
+      0%,
+      50%,
+      100%,
+      43%,
+      93% {
+        rotate: -5deg;
+        top: 12%;
+        box-shadow: 0 0 0 0;
+      }
+      25%,
+      75%,
+      18%,
+      68% {
+        rotate: 5deg;
+        top: 12%;
+        box-shadow: 0 0 0 0;
+      }
+      3% {
+        rotate: -5deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #66b2b2;
+      }
+      4.5% {
+        rotate: -8deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #66b2b2;
+      }
+      6% {
+        rotate: 5deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #66b2b2;
+      }
+      28% {
+        rotate: 5deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #fef3c7;
+      }
+      29.5% {
+        rotate: 8deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #fef3c7;
+      }
+      31% {
+        rotate: -5deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #fef3c7;
+      }
+      53% {
+        rotate: -5deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #fdba74;
+      }
+      54.5% {
+        rotate: -8deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #fdba74;
+      }
+      56% {
+        rotate: 5deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #fdba74;
+      }
+      78% {
+        rotate: 5deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #fef3c7;
+      }
+      79.5% {
+        rotate: 8deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #fef3c7;
+      }
+      81% {
+        rotate: -5deg;
+        top: 12%;
+        box-shadow: 0 0 25px 15px #fef3c7;
+      }
+    }
+
+    @keyframes slideDownHoof {
+      0% {
+        left: 20%;
+        top: -100%;
+      }
+      50% {
+        left: 20%;
+        top: -100%;
+      }
+      100% {
+        left: 20%;
+        top: -100%;
+        /* transform: translateY(50%); */
+      }
+    }
+
+    @keyframes reachHoof {
+      0% {
+        rotate: -5deg;
+        left: 10%;
+        top: -100%;
+      }
+      3% {
+        rotate: -5deg;
+        left: 10%;
+        top: -10%;
+      }
+      4.5% {
+        rotate: -12deg;
+        left: 9%;
+        top: -7%;
+      }
+      6% {
+        rotate: 2deg;
+        left: 11%;
+        top: -12%;
+      }
+      18% {
+        rotate: 2deg;
+        left: 11%;
+        top: -100%;
+      }
+      25% {
+        rotate: 2deg;
+        left: 10%;
+        top: -100%;
+      }
+    }
+
+    @keyframes reachHoof2 {
+      0% {
+        rotate: 5deg;
+        left: 30%;
+        top: -100%;
+      }
+      3% {
+        rotate: 5deg;
+        left: 30%;
+        top: -10%;
+      }
+      4.5% {
+        rotate: 12deg;
+        left: 31%;
+        top: -7%;
+      }
+      6% {
+        rotate: -2deg;
+        left: 29%;
+        top: -12%;
+      }
+      18% {
+        rotate: -2deg;
+        left: 29%;
+        top: -100%;
+      }
+      25% {
+        rotate: -2deg;
+        left: 30%;
+        top: -100%;
+      }
+    }
+  }
+</style>
+
+<script>
+  // If user has animation effects turned off, remove view transition attribute from postcard.
+  // Due to the way Astro's ViewTransition component works, keeping the view transition attribute
+  // will prevent any animations from playing.
+
+  const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`);
+  if (isReduced.matches) {
+    document
+      .getElementById("postcard")
+      .removeAttribute("data-astro-transition-scope");
+  }
+
+  document.addEventListener("astro:after-swap", () => {
+    const postcard = document.getElementById("postcard");
+    const hoof = document.getElementById("hoof");
+    const hoof2 = document.getElementById("hoof2");
+    const hoof3 = document.getElementById("hoof3");
+    const hoof4 = document.getElementById("hoof4");
+    const animate = document.querySelectorAll(".animate");
+
+    [
+      { el: postcard, animation: [20, 0], className: "shake" },
+      { el: hoof, animation: [20, 0], className: "reach" },
+      { el: hoof2, animation: [20, 5], className: "reach-2" },
+      { el: hoof3, animation: [20, 10], className: "reach-3" },
+      { el: hoof4, animation: [20, 15], className: "reach-4" },
+    ].forEach((x) => {
+      if (x.el) {
+        x.el.style.animationDuration = "0s";
+        x.el.style.animationDelay = "0s";
+        x.el.classList.add(x.className);
+        x.el.style.animationDuration = `${x.animation[0]}s`;
+        x.el.style.animationDelay = `${x.animation[1]}s`;
+      }
+    });
+
+    if (animate) {
+      animate.forEach((x) => {
+        x.style.animationDuration = "0s";
+        x.style.animationDelay = "0s";
+      });
+    }
+  });
+
+  document.addEventListener("astro:page-load", () => {
+    setTimeout(() => {
+      const postcard = document.getElementById("postcard");
+      const hoof = document.getElementById("hoof");
+      const hoof2 = document.getElementById("hoof2");
+      const hoof3 = document.getElementById("hoof3");
+      const hoof4 = document.getElementById("hoof4");
+      if (postcard) {
+        postcard.classList.add("shake");
+      }
+      if (hoof) {
+        hoof.classList.add("reach");
+        hoof2.classList.add("reach-2");
+        hoof3.classList.add("reach-3");
+        hoof4.classList.add("reach-4");
+      }
+    }, 4000);
+  });
+</script>

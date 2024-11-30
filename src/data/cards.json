@@ -1,0 +1,93 @@
+[
+  {
+    "id": "main",
+    "href": "/",
+    "image_url": "../assets/cards/mare_fair_postcard_1.png",
+    "type": "0",
+    "alt": "Home"
+  },
+  {
+    "id": "schedule",
+    "href": "/schedule",
+    "image_url": "../assets/cards/schedule.png",
+    "type": "0",
+    "alt": "Schedule"
+  },
+  {
+    "id": "venue",
+    "href": "/venue/",
+    "image_url": "../assets/cards/venue.png",
+    "type": "1",
+    "alt": "Venue"
+  },
+  {
+    "id": "map",
+    "href": "/map/",
+    "image_url": "../assets/cards/map.png",
+    "type": "0",
+    "alt": "Map"
+  },
+  {
+    "id": "vendors",
+    "href": "/vendors/",
+    "image_url": "../assets/cards/vendors.png",
+    "type": "0",
+    "alt": "Vendors"
+  },
+  {
+    "id": "musicians",
+    "href": "/musicians/",
+    "image_url": "../assets/cards/musicians.png",
+    "type": "0",
+    "alt": "Musicians"
+  },
+  {
+    "id": "register",
+    "href": "/register/",
+    "image_url": "../assets/cards/register.png",
+    "type": "1",
+    "alt": "Register"
+  },
+  {
+    "id": "apply",
+    "href": "/apply/",
+    "image_url": "../assets/cards/apply.png",
+    "type": "0",
+    "alt": "Apply now"
+  },
+  {
+    "id": "contact",
+    "href": "/contact/",
+    "image_url": "../assets/cards/contact.png",
+    "type": "0",
+    "alt": "Contact us"
+  },
+  {
+    "id": "scrapbook",
+    "href": "/scrapbook/",
+    "image_url": "../assets/cards/scrapbook.png",
+    "type": "0",
+    "alt": "Scrapbook"
+  },
+  {
+    "id": "mascots",
+    "href": "/mascots/",
+    "image_url": "../assets/cards/mascots.png",
+    "type": "1",
+    "alt": "Mascots"
+  },
+  {
+    "id": "coc",
+    "href": "/coc/",
+    "image_url": "../assets/cards/coc.png",
+    "type": "1",
+    "alt": "Code of Conduct"
+  },
+  {
+    "id": "credits",
+    "href": "/credits/",
+    "image_url": "../assets/cards/credits.png",
+    "type": "0",
+    "alt": "Credits"
+  }
+]

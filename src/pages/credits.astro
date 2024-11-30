@@ -1,0 +1,363 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Footer from "@components/Footer.astro";
+import passport from "@assets/cards/credits.png";
+import phone from "@assets/ornaments/DeskItemsMF24-Phone.png";
+import clips from "@assets/ornaments/DeskItemsMF24-Paperclips.png";
+
+import { getImage } from "astro:assets";
+import passport1 from "@assets/credits/Mare_Fair_Passport_en_Negro-1.png";
+import passport2 from "@assets/credits/Mare_Fair_Passport-1.png";
+
+const optimizedPassport1 = await getImage({
+  src: passport1,
+  format: "avif",
+  width: 400,
+});
+const optimizedPassport2 = await getImage({
+  src: passport2,
+  format: "avif",
+  width: 400,
+});
+
+import artists from "@data/artists.json";
+import Back from "@components/Back.astro";
+---
+
+<Layout title="Mare Fair 2024 | Credits">
+  <section
+    class="overflow-x-hidden overflow-y-hidden w-full mx-auto p-2 background-texture flex flex-col items-center justify-center h-full md:h-[calc(100vh-3rem)] min-h-192 md:min-h-192"
+  >
+    <Back /><div
+      class="md:px-0 absolute top-16 md:top-0 md:right-[15%] rotate-12"
+    >
+      <Image
+        src={passport}
+        format="avif"
+        height={600}
+        style="filter: drop-shadow(0 5px 5px #000); animation: idle 8s var(--sine) 0s infinite forwards;"
+        alt="Passport"
+        transition:name="postcard-credits"
+        class="bg-white rounded-lg xl:w-[20rem] sm:w-[16.5rem] w-[12rem] h-[19.2rem] sm:h-[26.4rem] xl:h-[32rem]"
+      />
+    </div>
+    <div class="flex flex-col items-center justify-center md:min-h-240">
+      <div
+        class="pt-20 md:pb-0 md:pt-0 flex md:flex-row flex-row md:gap-y-0 gap-y-2 items-center justify-center"
+      >
+        <div
+          id="book-1"
+          class="book mr-48 sm:mr-64 xl:mr-72 hover:translate-x-48 xl:hover:translate-x-80 duration-500 hover:rotate-[93deg]"
+        >
+          <div class="back"></div>
+          <div class="page6 bg-white">
+            <div
+              style="font-family: Poppins, Arial, sans-serif;"
+              class="-rotate-90 flex flex-col w-full h-full items-start mt-12 sm:mt-16 justify-center"
+            >
+              <div
+                id="developer-0"
+                class="hover:bg-blue-200 duration-300 w-[19rem] sm:w-[24.5rem] xl:w-[28rem] flex justify-center items-center rounded mx-0 py-2 my-0.5 sm:my-1 px-2"
+              >
+                <div class="mx-2 flex flex-col">
+                  <div class="font-semibold text-xl sm:text-2xl xl:text-3xl">
+                    15
+                  </div>
+                  <div class="text-sm sm:text-base xl:text-lg">
+                    Web and UI/UX design, frontend development, QA testing<br />
+                    <span
+                      class="text-[0.6rem] sm:text-xs text-neutral-600 font-semibold"
+                      >(Please report any website bugs to 15@marefair.org)</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                id="developer-1"
+                class="hover:bg-blue-200 duration-300 w-max flex justify-center items-center rounded mx-0 py-2 my-0.5 sm:my-1 px-2"
+              >
+                <div class="mx-2 flex flex-col">
+                  <div class="font-semibold text-base sm:text-lg xl:text-xl">
+                    Kahas
+                  </div>
+                  <div class="text-xs sm:text-sm xl:text-base">
+                    Con registration system, server administration
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page5 bg-white">
+            <div
+              style="font-family: Poppins, Arial, sans-serif;"
+              class="font-bold whitespace-nowrap text-5xl sm:text-6xl xl:text-7xl rotate-90 scale-x-[-1] flex flex-col w-full h-full text-center items-center justify-center"
+            >
+              Developers
+            </div>
+          </div>
+          <div class="page4"></div>
+          <div class="page3"></div>
+          <div class="page2"></div>
+          <div class="page1"></div>
+          <div class="front"></div>
+        </div>
+        <div
+          id="book-2"
+          class="book mr-48 sm:mr-64 xl:mr-96 hover:translate-x-4 xl:hover:translate-x-24 duration-500 hover:rotate-[93deg]"
+        >
+          <div class="back"></div>
+          <div class="page6 bg-white">
+            <div
+              style="font-family: Poppins, Arial, sans-serif;"
+              class="-rotate-90 flex flex-col h-full items-center justify-center"
+            >
+              <div class="flex items-center justify-center">
+                {
+                  [2, 3, 4].map((i) => (
+                    <div class="flex flex-col">
+                      {artists.slice(6 * i, 6 * i + 6).map((a) => (
+                        <div
+                          id={`artist-${a.id}`}
+                          class="artist hover:bg-blue-200 duration-300 w-[6.5rem] sm:w-[8.5rem] xl:w-40 flex items-center rounded mx-1 my-0 sm:py-0.5 xl:py-1"
+                        >
+                          <div class="mx-1 sm:mx-2 flex flex-col">
+                            <div class="whitespace-nowrap font-semibold text-[0.7rem] sm:text-sm xl:text-base">
+                              {a.name}
+                            </div>
+                            <div class="whitespace-nowrap text-[0.6rem] sm:text-xs xl:text-sm">
+                              {a.title}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+          <div class="page5 bg-white">
+            <div
+              style="font-family: Poppins, Arial, sans-serif;"
+              class="font-bold whitespace-nowrap text-5xl sm:text-6xl xl:text-7xl rotate-90 scale-x-[-1] flex flex-col gap-y-2 lg:gap-y-4 w-full h-full items-center justify-center"
+            >
+              Artists
+              <div class="font-normal flex items-center justify-center">
+                {
+                  [0, 1, 2].map((i) => (
+                    <div class="flex flex-col">
+                      {artists.slice(4 * i, 4 * i + 4).map((a) => (
+                        <div
+                          id={`artist-${a.id}`}
+                          class="artist hover:bg-blue-200 duration-300 w-[6.5rem] sm:w-[8.5rem] xl:w-40 flex items-center rounded mx-1 my-1 sm:my-0 sm:py-0.5 xl:py-1"
+                        >
+                          <div class="mx-1 sm:mx-2 flex flex-col gap-y-1 sm:gap-y-0">
+                            <div class="font-semibold text-[0.7rem] sm:text-sm xl:text-base">
+                              {a.name}
+                            </div>
+                            <div class="text-[0.6rem] sm:text-xs xl:text-sm">
+                              {a.title}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+          <div class="page4"></div>
+          <div class="page3"></div>
+          <div class="page2"></div>
+          <div class="page1"></div>
+          <div class="front"></div>
+        </div>
+      </div>
+    </div>
+    <Image
+      alt="Fair Flyer looking at phone"
+      format="avif"
+      src={phone}
+      width={400}
+      class="hidden 2xl:block z-0 duration-500 rotate-[-15deg] absolute md:left-[10%] md:bottom-[10%] rounded-lg w-96 h-auto md:w-72"
+    />
+    <Image
+      alt="Paper clips"
+      format="avif"
+      src={clips}
+      width={400}
+      class="hidden 2xl:block z-0 duration-500 rotate-[15deg] absolute md:right-[15%] md:bottom-[20%] rounded-lg w-96 h-auto md:w-40"
+    />
+  </section>
+  <Footer />
+</Layout>
+
+<style
+  define:vars={{
+    passport1: `url(${optimizedPassport1.src})`,
+    passport2: `url(${optimizedPassport2.src})`,
+  }}
+>
+  .book {
+    transform-style: preserve-3d;
+    @apply relative cursor-pointer xl:h-[32rem] sm:h-[26.4rem] h-[20.8rem];
+    backface-visibility: visible;
+    perspective: 1500px;
+  }
+
+  #book-1 {
+    rotate: -5deg;
+    z-index: 30;
+  }
+
+  #book-2 {
+    rotate: 5deg;
+    z-index: 40;
+  }
+
+  #book-1 .front,
+  #book-1 .back {
+    background: var(--passport1);
+    background-size: cover;
+  }
+
+  #book-2 .front,
+  #book-2 .back {
+    background: var(--passport2);
+    background-size: cover;
+  }
+
+  .front {
+    filter: drop-shadow(0 10px 10px #000);
+  }
+
+  .front,
+  .back,
+  .page1,
+  .page2,
+  .page3,
+  .page4,
+  .page5,
+  .page6 {
+    transform-style: preserve-3d;
+    @apply xl:w-[20rem] sm:w-[16.5rem] w-[13rem] h-full absolute left-0 top-0;
+    transform-origin: left center;
+    transition:
+      transform 0.5s ease-in-out,
+      box-shadow 0.35s ease-in-out;
+  }
+
+  .front,
+  .page1,
+  .page3,
+  .page5 {
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+  }
+
+  .back,
+  .page2,
+  .page4,
+  .page6 {
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+  }
+
+  .page1 {
+    background: #efefef;
+  }
+
+  .page2 {
+    background: #efefef;
+  }
+
+  .page3 {
+    background: #f5f5f5;
+  }
+
+  .page4 {
+    background: #f5f5f5;
+  }
+
+  .book:hover .front {
+    transform: rotateY(-160deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .book:hover .page1 {
+    transform: rotateY(-150deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .book:hover .page2 {
+    transform: rotateY(-30deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .book:hover .page3 {
+    transform: rotateY(-140deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .book:hover .page4 {
+    transform: rotateY(-40deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .book:hover .page5 {
+    transform: rotateY(-130deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .book:hover .page6 {
+    transform: rotateY(-50deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .book:hover .back {
+    transform: rotateY(-20deg) scale(1.1);
+  }
+
+  #book-1:hover,
+  #book-2:hover {
+    z-index: 100;
+  }
+</style>
+<style is:inline>
+  .tippy-box {
+    rotate: 8deg;
+    font-family: Poppins, Arial, sans-serif;
+  }
+
+  @media (max-width: 768px) {
+    .tippy-box {
+      font-size: 0.75rem; /* 12px */
+      line-height: 1rem; /* 16px */
+    }
+  }
+</style>
+
+<script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+  import "tippy.js/animations/shift-away-extreme.css";
+  import artists from "@data/artists.json";
+
+  document.addEventListener("astro:page-load", () => {
+    artists.forEach((a) => {
+      const artist = document.getElementById(`artist-${a.id}`);
+      if (artist && a.description) {
+        tippy(artist, {
+          content: a.description,
+          // trigger: "click",
+          placement: "bottom",
+          animation: "shift-away-extreme",
+          allowHTML: true,
+          hideOnClick: false,
+        });
+      }
+    });
+  });
+</script>

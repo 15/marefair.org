@@ -1,0 +1,562 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image, getImage } from "astro:assets";
+import Footer from "@components/Footer.astro";
+import Back from "@components/Back.astro";
+
+import map from "@assets/cards/map.png";
+
+import floor2 from "@assets/map/marriot merged map/second configuration/marriot merged map.png";
+
+const optimizedFloor2 = await getImage({
+  src: floor2,
+  format: "avif",
+  width: 1080,
+});
+import floordata from "@data/floors.js";
+
+import signage6 from "@assets/signages/Clopper's Cave - JayArr.png";
+import signage3 from "@assets/signages/Fair Flyer's Charity Room - Seafood Dinner.png";
+import signage8 from "@assets/signages/Floor Bored's Battle Station - lockheart.png";
+import signage11 from "@assets/signages/Janny Closet - Welost.png";
+import signage12 from "@assets/signages/Mare Square - Optimus.png";
+import signage9 from "@assets/signages/Mare Stage - Rocket-LawnChair.png";
+import signage1 from "@assets/signages/Marechandise - Sigil.png";
+import signage2 from "@assets/signages/Mare_Gallery_Banner_24b_Smol.png";
+import signage10 from "@assets/signages/Room for (You) - TruthOrMare.png";
+import signage13 from "@assets/signages/Terri Softmare Studio - Batsy.png";
+import signage7 from "@assets/signages/The Plone Hangar - PJ.png";
+import signage5 from "@assets/signages/Thursday Theater - floralshitpost.png";
+import signage14 from "@assets/signages/Vendor Stalls - AnonTheAnon.png";
+import signage4 from "@assets/signages/Wheely Bopper Speedway Signage - Jargon Scott.png";
+import signage15 from "@assets/signages/Registeration - Pabbles.png";
+
+
+import room1 from "@assets/map/marriot merged map/second configuration/con store.png";
+import room2 from "@assets/map/marriot merged map/second configuration/mare gallery.png";
+import room3 from "@assets/map/marriot merged map/second configuration/fair flyer charity.png";
+import room4 from "@assets/map/marriot merged map/second configuration/wheely bopper.png";
+import room5 from "@assets/map/marriot merged map/second configuration/thursday theater.png";
+import room6 from "@assets/map/marriot merged map/second configuration/cloppers cove.png";
+import room7 from "@assets/map/marriot merged map/second configuration/plone hangar.png";
+import room8 from "@assets/map/marriot merged map/second configuration/floorb battlestation.png";
+import room9 from "@assets/map/marriot merged map/second configuration/mare stage.png";
+import room10 from "@assets/map/marriot merged map/second configuration/room for you.png";
+import room11 from "@assets/map/marriot merged map/second configuration/janny closet.png";
+import room12 from "@assets/map/marriot merged map/second configuration/mare square.png";
+import room13 from "@assets/map/marriot merged map/second configuration/terri softmare.png";
+import room14 from "@assets/map/marriot merged map/second configuration/vendor stalls.png";
+import room15 from "@assets/map/marriot merged map/second configuration/registration table.png";
+
+const rooms = [room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12, room13, room14, room15];
+---
+
+<Layout title="Mare Fair 2024 | Vendors">
+  <section
+    class="w-full mx-auto background-texture cursor-default flex flex-col items-center"
+  >
+    <Back />
+    <!-- <dialog id="dialog-1" class="p-0 cursor-default">
+      Marechandise
+    </dialog> -->
+    <div
+      class="md:px-0 absolute hidden 2xl:block bottom-0 md:bottom-[5%] md:left-[2%] rotate-6 z-50"
+    >
+      <Image
+        src={map}
+        format="avif"
+        height={400}
+        style="filter: drop-shadow(0 5px 5px #000); animation: idle 8s var(--sine) 0s infinite forwards;"
+        alt="Vendors"
+        transition:name="postcard-map"
+        class="bg-white rounded-lg w-48 md:w-60 xl:w-84 z-50"
+      />
+    </div>
+      <div
+        class="flex flex-col lg:flex-row gap-y-12 gap-x-16 lg:mt-4 w-full lg:items-center items-center lg:justify-center"
+      >
+        <div
+          class="mt-12 bg-[#fcf1e0] flex flex-col lg:flex-row items-center rotate-0 lg:rotate-0 rounded w-11/12 md:w-2/3 lg:w-144 xl:w-160 h-min aspect-[0.8487]"
+          style={`filter: drop-shadow(0 5px 5px #000); transform: rotate(-3deg); background-image: url(${optimizedFloor2.src}); background-size: contain;
+          background-repeat: no-repeat;`}
+        >
+          <div class="w-full aspect-[0.8487] relative">
+            {
+              floordata.map(({id, left, top, width, height, skewX, skewY}, i) => (
+                <Image id={`room-${i+1}`} format="avif" src={rooms[i]} width={800} alt={`Room #${i+1}`} class={`w-full absolute highlight-orange z-0 opacity-0 duration-300`}/> 
+                <div id={id} style={`left: ${left}%; top: ${top}%; width: ${width}%; height: ${height}%; transform: skewX(${skewX}deg) skewY(${skewY}deg);`} class="bg-transparent table z-10">
+                  
+                </div>
+              ))
+            }
+          </div>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-5 lg:w-108 gap-4 xl:gap-4 xl:w-144">     
+          <div
+            id="signage-15"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage15}
+              width={150}
+              alt="Registration"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Registration
+            </div>
+          </div>
+          <div
+            id="signage-9"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:-rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage9}
+              width={150}
+              alt="Mare Stage"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Mare Stage
+            </div>
+          </div>
+          <div
+            id="signage-14"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage14}
+              width={150}
+              alt="Vendor Stalls"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Vendor Stalls
+            </div>
+          </div>
+          <div
+            id="signage-12"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:-rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage12}
+              width={150}
+              alt="Mare Square"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Mare Square
+            </div>
+          </div>
+          <div
+            id="signage-8"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage8}
+              width={150}
+              alt="Floor Bored's Battle Station"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Floor Bored's Battle Station
+            </div>
+          </div>
+          <div
+            id="signage-7"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:-rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage7}
+              width={150}
+              alt="Plone Hangar"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Plone Hangar
+            </div>
+          </div>
+          <div
+            id="signage-10"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage10}
+              width={150}
+              alt="Room for (You)"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Room for (You)
+            </div>
+          </div>
+          <div
+            id="signage-13"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:-rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage13}
+              width={150}
+              alt="Terri Softmare Studio"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Terri Softmare Studio
+            </div>
+          </div>
+          <div
+            id="signage-6"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage6}
+              width={150}
+              alt="Clopper's Cave"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Clopper's Cave
+            </div>
+          </div>
+          <div
+            id="signage-11"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:-rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage11}
+              width={150}
+              alt="Janny Closet"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Janny Closet
+            </div>
+          </div>
+          <div
+            id="signage-5"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage5}
+              width={150}
+              alt="Thursday Theater"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Thursday Theater
+            </div>
+          </div>
+          <div
+            id="signage-4"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:-rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage4}
+              width={150}
+              alt="Wheely Bopper International Speedway"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Wheely Bopper Int'l Speedway
+            </div>
+          </div>
+          <div
+            id="signage-1"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage1}
+              width={150}
+              alt="Marechandise / Con Store"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Marechandise + Con Store
+            </div>
+          </div>
+          <div
+            id="signage-2"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:-rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage2}
+              width={150}
+              alt="Mare Gallery"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Mare Gallery
+            </div>
+          </div>
+          <div
+            id="signage-3"
+            style="filter: drop-shadow(0 2px 2px #000);"
+            class="bg-white rounded flex flex-col magic w-28 sm:w-20 xl:w-24 cursor hover:rotate-3 cursor-pointer hover:scale-[1.05] duration-300"
+          >
+            <Image
+              format="avif"
+              src={signage3}
+              width={150}
+              alt="Fair Flyer's Charity Room"
+            />
+            <div class="leading-3 border-black border-t lg:h-10 h-10 text-center flex items-center justify-center text-xs uppercase font-bold">
+              Fair Flyer's Charity Room
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <Footer />
+</Layout>
+
+<script>
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/animations/shift-away-extreme.css";
+
+const floorData = [
+  {
+    id: "1",
+    name: "Marechandise / Con Store",
+    left: 60,
+    top: 67,
+    width: 10,
+    height: 4,
+    skewX: 42,
+    skewY: -17,
+    rotate: 1,
+  },
+  {
+    id: "2",
+    name: "Mare Gallery",
+    left: 66,
+    top: 63,
+    width: 20,
+    height: 4,
+    skewX: 42,
+    skewY: -17,
+    rotate: 0,
+  },
+  {
+    id: "3",
+    name: "Fair Flyer's Charity Room",
+    left: 48,
+    top: 63,
+    width: 9,
+    height: 4.5,
+    skewX: 42,
+    skewY: -17,
+    rotate: 1,
+  },
+  {
+    id: "4",
+    name: "Wheely Bopper Int'l Speedway",
+    left: 55,
+    top: 61,
+    width: 9,
+    height: 4.5,
+    skewX: 42,
+    skewY: -17,
+    rotate: 0,
+  },
+  {
+    id: "5",
+    name: "Thursday Theater",
+    left: 60,
+    top: 57,
+    width: 20,
+    height: 4,
+    skewX: 42,
+    skewY: -17,
+    rotate: 1,
+  },
+  {
+    id: "6",
+    name: "Clopper's Cave",
+    left: 38,
+    top: 16,
+    width: 6,
+    height: 5,
+    skewX: -30,
+    skewY: 12,
+    rotate: 1,
+  },
+  {
+    id: "7",
+    name: "Plone Hangar",
+    left: 11,
+    top: 24,
+    width: 7,
+    height: 12,
+    skewX: -36,
+    skewY: 12,
+    rotate: 0,
+  },
+  {
+    id: "8",
+    name: "Floor Bored's Battle Station",
+    left: 19,
+    top: 25,
+    width: 7,
+    height: 9,
+    skewX: -36,
+    skewY: 12,
+    rotate: 1,
+  },
+  {
+    id: "9",
+    name: "Mare Stage",
+    left: 24,
+    top: 27,
+    width: 16,
+    height: 9,
+    skewX: -27,
+    skewY: 12,
+    rotate: 0,
+  },
+  {
+    id: "10",
+    name: "Room for (You)",
+    left: 39,
+    top: 30,
+    width: 7,
+    height: 5.5,
+    skewX: -27,
+    skewY: 12,
+    rotate: 1,
+  },
+  {
+    id: "11",
+    name: "Janny Closet",
+    left: 37,
+    top: 35.5,
+    width: 7,
+    height: 3,
+    skewX: -27,
+    skewY: 12,
+    rotate: 0,
+  },
+  {
+    id: "12",
+    name: "Mare Square",
+    left: 11,
+    top: 36.5,
+    width: 34,
+    height: 4,
+    skewX: -34,
+    skewY: 12,
+    rotate: 0,
+  },
+  {
+    id: "13",
+    name: "Terri Softmare Studio",
+    left: 57.5,
+    top: 13.5,
+    width: 6,
+    height: 3,
+    skewX: 30,
+    skewY: -17,
+    rotate: 0,
+  },
+  {
+    id: "14",
+    name: "Vendor Stalls",
+    left: 68,
+    top: 6,
+    width: 18,
+    height: 8,
+    skewX: 30,
+    skewY: -17,
+    rotate: 1,
+  },
+  {
+    id: "15",
+    name: "Registration",
+    left: 31,
+    top: 40,
+    width: 6,
+    height: 3,
+    skewX: -30,
+    skewY: 12,
+    rotate: 1,
+  },
+];
+
+document.addEventListener("astro:page-load", () => {
+  let activeID;
+  floorData.forEach(({ id, left, top, width, height, name, rotate}, i) => {
+    const room = document.getElementById(id);
+    const signage = document.getElementById(`signage-${id}`);
+    const location = document.getElementById(`room-${id}`);
+    const dialog = document.getElementById(`dialog-${id}`);
+    if (room && signage) {
+      tippy(room, {
+        content: `<span class='text-lg text-center font-semibold tracking-wide'>${name.toUpperCase()}</span>`,
+        placement: i !== 14 ? "top" : "bottom",
+        animation: "shift-away-extreme",
+        allowHTML: true,
+      });
+      tippy(room, {
+        content: `<span class='text-lg text-center font-semibold tracking-wide'>${name.toUpperCase()}</span>`,
+        placement: i !== 14 ? "top" : "bottom",
+        animation: "shift-away-extreme",
+        allowHTML: true,
+        triggerTarget: signage
+      });
+    }
+    
+    const highlight = () => {
+      if (activeID) {
+        document.getElementById(`room-${activeID}`).style.opacity = 0;
+        document.getElementById(`signage-${activeID}`).style = "filter: drop-shadow(0 2px 2px #000);";
+      }
+      location.style.opacity = 1;
+      signage.classList.add("magic");
+      signage.style = `box-shadow: 0 0 25px 15px #66b2b2; transform: scale(1.05) rotate(${rotate % 2 ? '-3' : '3'}deg)`;
+      activeID = id;
+    };
+
+    if (room && location && signage) {
+      room.addEventListener("mouseenter", () => {
+        highlight();
+      });
+      signage.addEventListener("mouseenter", () => {
+        highlight();
+      });
+      signage.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth'});
+      });
+
+      // signage.addEventListener("click", () => {
+      //   dialog.showModal();
+      // })
+
+      // dialog.addEventListener("click", (e) => {
+      //   if (e.target === dialog) {
+      //     dialog.close();
+      //   }
+      // })
+    }
+  });
+});
+</script>
+
+<style>
+  .table {
+    @apply text-center flex items-center  justify-center cursor-pointer  absolute;
+  }
+</style>

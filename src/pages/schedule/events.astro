@@ -1,0 +1,38 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import Back from "@components/Back.astro";
+
+import ScheduleHeader from "@components/schedule/ScheduleHeader.astro";
+---
+
+<Layout title="Mare Fair 2024 | Schedule">
+  <Back />
+  <section
+    class="mx-auto pl-2 pr-2 lg:pr-0 lg:pl-12 cursor-default flex flex-col pt-12 pb-0 lg:pt-12 lg:pb-0 items-center justify-center w-full"
+  >
+    <ScheduleHeader />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-8">
+      <div
+        class="bg-black text-white w-full md:w-96 2xl:w-120 relative rounded p-4 border border-black flex flex-col gap-y-1 h-full"
+        style="font-family: 'Single Day'; filter: drop-shadow(0 2px 2px #000);"
+      >
+        <div class="font-semibold text-2xl leading-none">
+          Many Anons Running with Equines
+        </div>
+        <div class="font-medium text-xl leading-none">
+          Friday/Saturday/Sunday @ 7:00 AM-8:00 AM (60 minutes)
+        </div>
+        <div
+          class="leading-5 text-lg mt-2"
+          set:html="Plush equines that is. Come get up early and burn off those con calories by doing some distance running. Any skill and fitness levels are welcome to participate. (Plushies Optional) (Meet in the Lobby)"
+        />
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style></style>

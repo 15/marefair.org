@@ -1,0 +1,312 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Footer from "@components/Footer.astro";
+import contact from "@assets/cards/contact.png";
+import coffee from "@assets/ornaments/DeskItemsMF24-CoffeeCup.png";
+import portfolio from "@assets/ornaments/DeskItemsMF24-ExecutivePortfolio.png";
+import Back from "@components/Back.astro";
+---
+
+<Layout title="Mare Fair 2024 | Contact">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant Garamond:wght@400;500;600;700"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni Moda:wght@400;500;600;700"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Balthazar:wght@400;500;600;700"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic Neue:wght@400;500;600;700"
+    rel="stylesheet"
+  />
+  <section
+    class="w-full mx-auto md:p-2 background-texture flex flex-col items-center justify-center cursor-default h-full"
+  >
+    <Back />
+    <div
+      class="z-10 relative mt-12 mb-6 md:mb-0 md:mt-12 flex flex-col gap-y-8 md:gap-y-8 items-center justify-center"
+    >
+      <!-- <div
+        class="hidden lg:block absolute z-50 top-40 "
+        style="filter: drop-shadow(0 2px 2px #000);"
+      >
+        <Image
+          src={contact}
+          width="400"
+          transition:name="postcard-contact"
+          alt=""
+        />
+      </div> -->
+      <div
+        class="w-screen px-4 md:mx-0 flex flex-col md:gap-y-0 gap-y-8 md:flex-row gap-x-0 md:gap-x-16 items-center justify-center"
+      >
+        <div
+          class="max-w-96 sm:max-w-full magic business-card rounded-[1px] relative bateman p-4 md:p-8 h-48 w-full sm:h-48 sm:w-96 lg:h-56 lg:w-112 2xl:h-64 2xl:w-128 flex flex-col"
+        >
+          <div class="flex flex-col justify-between h-full">
+            <div class="flex justify-between w-full">
+              <div class="text-xs md:text-base font-bold">927 929 2024</div>
+              <div class="flex flex-col items-center justify-center">
+                <div class="text-xl md:text-2xl -mb-2 font-semibold">
+                  Snowpity Inc.
+                </div>
+                <div class="text-sm font-semibold">Mare Fair 2024</div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center w-full font-bold text-2xl md:text-3xl z-50"
+            >
+              <a
+                class="hover:underline underline-offset-4 z-50 email"
+                onclick={(e) => e.stopPropagation()}
+                href="mailto:exec@marefair.org">exec@marefair.org</a
+              >
+            </div>
+          </div>
+          <div
+            class="absolute m-auto left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center w-full"
+          >
+            <div class="text-3xl -mb-2 font-semibold">Head Pony in Charge</div>
+            <div class="text-xl font-semibold">Vice President</div>
+          </div>
+        </div>
+        <div
+          class="max-w-96 sm:max-w-full magic business-card rounded-[1px] relative patten p-4 md:p-8 h-48 w-full sm:h-48 sm:w-96 lg:h-56 lg:w-112 2xl:h-64 2xl:w-128 flex flex-col"
+        >
+          <div class="flex flex-col justify-between h-full">
+            <div class="flex justify-between w-full">
+              <div class="text-xs md:text-base font-bold">927 929 2024</div>
+              <div class="flex flex-col items-center justify-center">
+                <div class="text-xl md:text-2xl -mb-2 font-semibold">
+                  Snowpity Inc.
+                </div>
+                <div class="text-sm font-semibold">Mare Fair 2024</div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center w-full font-bold text-xl md:text-2xl z-50"
+            >
+              <a
+                class="hover:underline underline-offset-4 z-50 email"
+                onclick={(e) => e.stopPropagation()}
+                href="mailto:pr@marefair.org">pr@marefair.org</a
+              >
+            </div>
+          </div>
+          <div
+            class="absolute m-auto left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center w-full"
+          >
+            <div class="text-3xl -mb-2 font-semibold">Public Relations</div>
+            <div class="text-xl font-semibold">Vice President</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-screen px-4 md:mx-0 flex flex-col md:gap-y-0 gap-y-8 md:flex-row gap-x-0 md:gap-x-16 items-center justify-center"
+      >
+        <div
+          class="max-w-96 sm:max-w-full magic business-card rounded-[1px] relative bryce p-4 md:p-8 h-48 w-full sm:h-48 sm:w-96 lg:h-56 lg:w-112 2xl:h-64 2xl:w-128 flex flex-col"
+        >
+          <div class="flex flex-col justify-between h-full">
+            <div class="flex justify-between w-full">
+              <div class="text-xs md:text-base font-medium">927 929 2024</div>
+              <div class="flex flex-col items-center justify-center">
+                <div class="text-xl md:text-2xl -mb-2 font-medium">
+                  Snowpity Inc.
+                </div>
+                <div class="text-sm font-medium">Mare Fair 2024</div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center w-full font-medium text-lg md:text-xl z-50"
+            >
+              <a
+                class="hover:underline underline-offset-4 z-50 email"
+                onclick={(e) => e.stopPropagation()}
+                href="mailto:attendees@marefair.org">attendees@marefair.org</a
+              >
+            </div>
+          </div>
+          <div
+            class="absolute m-auto left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center w-full"
+          >
+            <div class="text-3xl -mb-2 font-medium">Attendee Relations</div>
+            <div class="text-xl font-medium">Vice President</div>
+          </div>
+        </div>
+        <div
+          class="max-w-96 sm:max-w-full magic business-card rounded-[1px] relative allen p-4 md:p-8 h-48 w-full sm:h-48 sm:w-96 lg:h-56 lg:w-112 2xl:h-64 2xl:w-128 flex flex-col"
+        >
+          <div class="flex flex-col justify-between h-full">
+            <div class="flex justify-between w-full">
+              <div class="text-xs md:text-base font-bold">927.929.2024</div>
+              <div class="flex flex-col items-center justify-center">
+                <div class="text-xl md:text-2xl -mb-2 font-semibold">
+                  Snowpity Inc.
+                </div>
+                <div class="text-sm font-semibold">Mare Fair 2024</div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center w-full font-semibold text-2xl md:text-3xl z-50"
+            >
+              <a
+                class="hover:underline underline-offset-4 z-50 email"
+                onclick={(e) => e.stopPropagation()}
+                href="mailto:charity@marefair.org">charity@marefair.org</a
+              >
+            </div>
+          </div>
+          <div
+            class="absolute m-auto left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center w-full"
+          >
+            <div class="text-3xl -mb-2 font-semibold">Charity</div>
+            <div class="text-xl font-semibold">Vice President</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-screen px-4 md:mx-0 flex flex-col md:gap-y-0 gap-y-8 md:flex-row gap-x-0 md:gap-x-16 items-center justify-center"
+      >
+        <!-- <div
+          class="magic-you business-card rounded-[1px] relative you p-4 md:p-8 h-48 w-full sm:h-48 sm:w-96 lg:h-56 lg:w-112 2xl:h-64 2xl:w-128 flex flex-col"
+        >
+          <div class="flex flex-col justify-between h-full">
+            <div class="flex justify-between w-full">
+              <div class="text-xs md:text-base font-bold">927 929 2024</div>
+              <div class="flex flex-col items-center justify-center">
+                <div class="text-lg md:text-xl -mb-2 font-semibold">
+                  Snowpity Inc.
+                </div>
+                <div class="text-sm font-semibold">Mare Fair 2024</div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-center w-full font-bold text-xl md:text-2xl z-50"
+            >
+              <a
+                class="hover:underline underline-offset-4 z-50 email"
+                onclick={(e) => e.stopPropagation()}
+                href="mailto:exec@marefair.org">tech@marefair.org</a
+              >
+            </div>
+          </div>
+          <div
+            class="absolute m-auto left-0 right-0 top-0 bottom-0 flex flex-col justify-center items-center w-full"
+          >
+            <div class="text-3xl -mb-2 font-semibold">(YOU)</div>
+            <div class="text-xl font-semibold">Technology</div>
+          </div>
+        </div> -->
+        <div class="w-128 flex justify-center items-center">
+          <Image
+            format="avif"
+            src={contact}
+            alt="Contact us postcard"
+            transition:name="postcard-contact"
+            height={600}
+            style="filter: drop-shadow(0 5px 5px #000); animation: idle 8s var(--sine) 0s infinite forwards;"
+            class="rounded-lg h-48 sm:h-48 lg:h-56 2xl:h-64 w-auto"
+          />
+        </div>
+      </div>
+    </div>
+    <Image
+      format="avif"
+      alt="Portfolio"
+      src={portfolio}
+      width={400}
+      class="hidden 2xl:block z-0 duration-500 absolute md:left-[5%] md:bottom-[5%] rounded-lg w-96 h-auto md:w-120"
+    />
+    <Image
+      format="avif"
+      alt="Cup of coffee"
+      src={coffee}
+      width={400}
+      class="hidden 2xl:block z-0 rotate-[60deg] duration-500 absolute md:right-[5%] md:bottom-[6%] rounded-lg w-96 h-auto md:w-64"
+    />
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  .business-card {
+    cursor: pointer;
+    filter: drop-shadow(0 5px 5px #000);
+    font-variant: small-caps;
+    background-image: url("/textured-paper.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+  .bateman {
+    background-color: #fefefe;
+    font-family: "Cormorant Garamond", Garamond, "Times New Roman", serif;
+    @apply hover:-rotate-3 duration-500 md:hover:scale-[1.1];
+  }
+
+  .patten {
+    background-color: #fefefe;
+    font-family: "Bodoni Moda", "Times New Roman", serif;
+    @apply hover:rotate-3 duration-500 md:hover:scale-[1.1];
+  }
+
+  .bryce {
+    background-color: #efefef;
+    font-family: Helvetica, Arial, sans-serif;
+    @apply hover:-rotate-3 duration-500 md:hover:scale-[1.1];
+  }
+
+  .allen {
+    background-color: #fefefe;
+    font-family: Balthazar, "Palatino Linotype", Palatino, "Book Antiqua", serif;
+    @apply hover:rotate-3 duration-500 md:hover:scale-[1.1];
+  }
+
+  .you {
+    background-color: #fefefe;
+    font-family: "Comic Sans MS", "Comic Neue", sans-serif;
+    @apply hover:-rotate-3 duration-500 md:hover:scale-[1.1];
+  }
+</style>
+
+<script>
+  import tippy from "tippy.js";
+  import "tippy.js/dist/tippy.css";
+  import "tippy.js/animations/shift-away-extreme.css";
+
+  document.addEventListener("astro:page-load", () => {
+    const clickedCards = [false, false, false, false];
+
+    const cards = document.querySelectorAll(".business-card");
+    cards.forEach((card, idx) => {
+      card.addEventListener("click", async (e) => {
+        clickedCards[idx] = true;
+        await navigator.clipboard.writeText(
+          card.getElementsByClassName("email")[0].innerHTML
+        );
+        if (clickedCards.every(Boolean)) {
+          // triggerAchievement("achievement-cards");
+        }
+      });
+
+      tippy(card, {
+        // default
+        trigger: "click",
+        content: "Email copied to clipboard",
+        placement: "bottom",
+        animation: "shift-away-extreme",
+        // hideOnClick: false
+      });
+    });
+  });
+</script>

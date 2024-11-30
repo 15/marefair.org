@@ -1,0 +1,250 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import Back from "@components/Back.astro";
+
+import { Image } from "astro:assets";
+import safe from "@assets/schedule/RatingsVectorsSafe.png";
+import suggestive from "@assets/schedule/RatingsVectorsSuggestive.png";
+import questionable from "@assets/schedule/RatingsVectorsQuestionable.png";
+import explicit from "@assets/schedule/RatingsVectorsExplicit.png";
+import unrated from "@assets/schedule/RatingsUnrated.png";
+
+import ScheduleHeader from "@components/schedule/ScheduleHeader.astro";
+---
+
+<Layout title="Mare Fair 2024 | Schedule">
+  <Back />
+  <section
+    class="mx-auto pl-2 pr-2 lg:pr-0 lg:pl-12 cursor-default flex flex-col pt-12 pb-0 lg:pt-12 lg:pb-0 items-center justify-center w-full"
+  >
+    <ScheduleHeader />
+
+    <div class="w-auto px-0 md:px-8 rounded mb-8 md:mb-16">
+      <div
+        style="text-shadow: 3px 3px 1px black;"
+        class="tracking-wide text-center text-white font-bold uppercase text-4xl lg:text-6xl mb-8 lg:mb-12"
+      >
+        Event Rooms Schedule
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div
+          style="filter: drop-shadow(0 5px 5px #000);"
+          class="w-full xl:w-min bg-amber-50 border-black uppercase flex justify-between text-4xl"
+        >
+          <div
+            class="h-84 w-full lg:w-96 xl:w-144 2xl:w-160 flex flex-col gap-y-1 text-center items-center justify-center px-4 xl:px-8"
+          >
+            <div
+              class="mb-2 font-bold text-3xl lg:text-4xl xl:text-5xl text-center uppercase"
+            >
+              Registration
+            </div>
+
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              6:00 PM &ndash; 11:00 PM (Thurs)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              8:30 AM &ndash; 7:30 PM (Fri)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              8:30 AM &ndash; 7:30 PM (Sat)
+            </div>
+          </div>
+          <Image
+            format="avif"
+            src="/images/schedule/registration-336.heif"
+            width={128}
+            height={336}
+            alt="Registration"
+            class="h-84 w-auto border-l-2 border-black"
+          />
+        </div>
+
+        <div
+          style="filter: drop-shadow(0 5px 5px #000);"
+          class="w-full xl:w-min bg-amber-50 border-black uppercase flex justify-between text-4xl"
+        >
+          <div
+            class="h-84 w-full lg:w-96 xl:w-144 2xl:w-160 flex flex-col gap-y-1 text-center items-center justify-center px-4 xl:px-8"
+          >
+            <div
+              class="mb-2 font-bold text-3xl lg:text-4xl xl:text-5xl text-center uppercase"
+            >
+              Fair Flyer's Charity Room
+            </div>
+            <div class="text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap">
+              12:00 PM &ndash; 8:00 PM
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              Friday & Saturday
+            </div>
+          </div>
+          <Image
+            format="avif"
+            src="/images/schedule/fairflyer-336.heif"
+            width={128}
+            height={336}
+            alt="Fair Flyer's Charity Room"
+            class="h-84 w-auto border-l-2 border-black"
+          />
+        </div>
+
+        <div
+          style="filter: drop-shadow(0 5px 5px #000);"
+          class="w-full xl:w-min bg-amber-50 border-black uppercase flex justify-between text-4xl"
+        >
+          <div
+            class="h-84 w-full lg:w-96 xl:w-144 2xl:w-160 flex flex-col gap-y-1 text-center items-center justify-center px-4 xl:px-8"
+          >
+            <div
+              class="mb-2 font-bold text-3xl lg:text-4xl xl:text-5xl text-center uppercase"
+            >
+              Floor Bored's Battle Station
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              1:00 PM &ndash; 11:00 PM (Fri)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              10:00 AM &ndash; 10:00 PM (Sat)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              8:00 AM &ndash; 3:00 PM (Sun)
+            </div>
+          </div>
+          <Image
+            format="avif"
+            src="/images/schedule/floorbored-336.heif"
+            width={128}
+            height={336}
+            alt="Floor Bored's Battle Station"
+            class="h-84 w-auto border-l-2 border-black"
+          />
+        </div>
+
+        <div
+          style="filter: drop-shadow(0 5px 5px #000);"
+          class="w-full xl:w-min bg-amber-50 border-black uppercase flex justify-between text-4xl"
+        >
+          <div
+            class="h-84 w-full lg:w-96 xl:w-144 2xl:w-160 flex flex-col gap-y-1 text-center items-center justify-center px-4 xl:px-8"
+          >
+            <div
+              class="mb-2 font-bold text-3xl lg:text-4xl xl:text-5xl text-center uppercase"
+            >
+              Mare Gallery
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              12:00 PM &ndash; 6:00 PM (Fri)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              11:00 AM &ndash; 6:00 PM (Sat)
+            </div>
+          </div>
+          <Image
+            format="avif"
+            src="/images/schedule/maregallery-336.heif"
+            width={128}
+            height={336}
+            alt="Mare Gallery"
+            class="h-84 w-auto border-l-2 border-black"
+          />
+        </div>
+
+        <div
+          style="filter: drop-shadow(0 5px 5px #000);"
+          class="w-full xl:w-min bg-amber-50 border-black uppercase flex justify-between text-4xl"
+        >
+          <div
+            class="h-84 w-full lg:w-96 xl:w-144 2xl:w-160 flex flex-col gap-y-1 text-center items-center justify-center px-4 xl:px-8"
+          >
+            <div
+              class="mb-2 font-bold text-3xl lg:text-4xl xl:text-5xl text-center uppercase"
+            >
+              Con Store (Sponsors Only)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              11:00 AM &ndash; 12:00 PM (Fri)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              10:00 AM &ndash; 10:30 AM (Sat)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              10:00 AM &ndash; 10:30 AM (Sun)
+            </div>
+          </div>
+          <Image
+            format="avif"
+            src="/images/schedule/marechandise-336.heif"
+            width={128}
+            height={336}
+            alt="Con Store (Sponsors only)"
+            class="h-84 w-auto border-l-2 border-black"
+          />
+        </div>
+
+        <div
+          style="filter: drop-shadow(0 5px 5px #000);"
+          class="w-full xl:w-min bg-amber-50 border-black uppercase flex justify-between text-4xl"
+        >
+          <div
+            class="h-84 w-full lg:w-96 xl:w-144 2xl:w-160 flex flex-col gap-y-1 text-center items-center justify-center px-4 xl:px-8"
+          >
+            <div
+              class="mb-2 font-bold text-3xl lg:text-4xl xl:text-5xl text-center uppercase"
+            >
+              Con Store
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              12:00 PM &ndash; 6:00 PM (Fri)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              10:30 AM &ndash; 6:00 PM (Sat)
+            </div>
+            <div class="text-xl lg:text-2xl xl:text-3xl whitespace-nowrap">
+              10:30 AM &ndash; 6:00 PM (Sun)
+            </div>
+          </div>
+          <Image
+            format="avif"
+            src="/images/schedule/marechandise-336.heif"
+            width={128}
+            height={336}
+            alt="Con Store"
+            class="h-84 w-auto border-l-2 border-black"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .room1 {
+    @apply bg-pink-200;
+  }
+  .room2 {
+    @apply bg-orange-200;
+  }
+  .room3 {
+    @apply bg-blue-200;
+  }
+  .room4 {
+    @apply bg-green-200;
+  }
+  .room5 {
+    @apply bg-red-200;
+  }
+  .room6 {
+    @apply bg-purple-200;
+  }
+  .room8 {
+    @apply bg-indigo-200;
+  }
+  .concert {
+    @apply bg-black text-white;
+  }
+</style>
